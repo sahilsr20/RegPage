@@ -34,3 +34,13 @@
     align-items: center;
     width: 72%;
 }
+
+.rightDiv p {
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+.rightDiv p:hover {
+    color: #f45725;
+}
