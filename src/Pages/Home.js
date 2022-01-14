@@ -6,7 +6,11 @@ export default function Home() {
   return (
     <div>
       <Nav />
-      <UpComingEvents />
+      <UpComingEvents
+        eventName="Upcoming Events"
+        btnName0="Register Now 🚀"
+        btnName1="Register Now 🚀"
+      />
     </div>
   );
 }
