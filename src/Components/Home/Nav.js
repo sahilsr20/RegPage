@@ -1,5 +1,6 @@
 import React from "react";
 import HCss from "./CSS/Nav.module.css";
+import NavEventsDiv from "./NavEventsDiv";
 
 import img0 from "./../../ReqImg/LightDarkIcon.svg";
 import img1 from "./../../ReqImg/FedLogo.svg";
@@ -12,7 +13,7 @@ export default function Nav() {
         <p className={HCss.fedP}>FED</p>
       </div>
       <div className={HCss.rightDiv}>
-        <div>Events</div>
+        <NavEventsDiv />
         <p>Podcasts</p>
         <p>Blogs</p>
         <p>Our Team</p>
