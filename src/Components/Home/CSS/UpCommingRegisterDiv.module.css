@@ -1,6 +1,11 @@
 .RegmDiv {
     width: 500px;
     background-color: red;
+    padding: 30px;
 }
 
-.flexDiv {}
+.flexDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
