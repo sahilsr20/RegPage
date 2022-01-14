@@ -7,8 +7,8 @@ export default function UpComingEvents() {
     <div className={UceCss.UcsmDiv}>
       <p className={UceCss.upcomingEventsP}>Upcoming Events</p>
       <div className={UceCss.RegDiv}>
-        <UpCommingRegisterDiv />
-        <UpCommingRegisterDiv />
+        <UpCommingRegisterDiv btnName="Register Now 🚀" />
+        <UpCommingRegisterDiv btnName="Register Now 🚀" />
       </div>
     </div>
   );

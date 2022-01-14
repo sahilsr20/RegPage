@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap");
 .RegmDiv {
-    /* width: 500px; */
     background-color: #f8f8f8;
     padding: 30px;
     border-radius: 32px;
@@ -10,6 +9,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+
+.rightDiv {
+    width: 360px;
 }
 
 .h1Title {
@@ -25,6 +28,7 @@
 
 .DateDiv {
     font-family: "Manrope", sans-serif;
+    font-weight: 700;
     text-align: center;
     margin-right: 30px;
 }
@@ -35,4 +39,19 @@
 
 .hammerImg {
     margin-top: 12px;
+}
+
+.regBtn {
+    font-family: "Manrope", sans-serif;
+    float: right;
+    margin-top: 25px;
+    border-radius: 16px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 67px;
+    background-color: #ffffff;
+    outline: none;
+    border-width: 0px;
+    color: #f45725;
+    font-weight: 700;
 }
