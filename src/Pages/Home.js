@@ -1,6 +1,7 @@
 import React from "react";
 import Nav from "./../Components/Home/Nav";
 import Events from "../Components/Home/Events";
+// import FormTwo from "./FormTwo";
 
 export default function Home() {
   return (
