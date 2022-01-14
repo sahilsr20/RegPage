@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import RegCss from "./CSS/UpCommingRegisterDiv.module.css";
 
 import img0 from "./../../ReqImg/hammer.svg";
@@ -21,7 +22,9 @@ export default function UpCommingRegisterDiv(props) {
             id. Ut scelerisque in non integerut scelerisque in non integert
             aliquam et id. Ut scelerisque in non integer.
           </p>
-          <button className={RegCss.regBtn}>{props.btnName}</button>
+          <Link to="/" className={RegCss.regBtn}>
+            {props.btnName}
+          </Link>
         </div>
       </div>
     </div>
