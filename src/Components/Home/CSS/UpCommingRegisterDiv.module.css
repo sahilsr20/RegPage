@@ -54,4 +54,10 @@
     border-width: 0px;
     color: #f45725;
     font-weight: 700;
+    transition: all 0.3s;
+}
+
+.regBtn:hover {
+    background-color: #f45725;
+    color: white;
 }

@@ -1,8 +1,8 @@
 import React from "react";
-import UceCss from "./CSS/UpComingEvents.module.css";
+import UceCss from "./CSS/Events.module.css";
 import UpCommingRegisterDiv from "./UpCommingRegisterDiv";
 
-export default function UpComingEvents(props) {
+export default function Events(props) {
   return (
     <div className={UceCss.UcsmDiv}>
       <p className={UceCss.upcomingEventsP}>{props.eventName}</p>
