@@ -1,10 +1,10 @@
 import React from "react";
-import HomeC from "./../Components/Home/HomeC";
+import Nav from "./../Components/Home/Nav";
 
 export default function Home() {
   return (
     <div>
-      <HomeC />
+      <Nav />
     </div>
   );
 }

@@ -1,0 +1,17 @@
+.HmDiv {
+    height: 40px;
+    padding: 20px 40px 60px 40px;
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rightDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: blue;
+}
