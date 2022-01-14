@@ -3,21 +3,23 @@ import BasicTextInput from "../components/BasicITextInput";
 import RadioInputs from "../components/RadioInputs";
 
 const FormOne = () => {
-    return (<
+    return ( <
         div >
         <
-            BasicTextInput name="FirstName"
-            label="Basic Details" />
+        BasicTextInput name = "FirstName"
+        label = "Basic Details" / >
         <
-            BasicTextInput name="LastName" />
+        BasicTextInput name = "LastName" / >
         <
-            BasicTextInput name="Mobile Number"
-            label="Mobile Number" />
+        BasicTextInput name = "Mobile Number"
+        label = "Mobile Number" / >
         <
-            RadioInputs question="Pronoun"
-            radioList={["He/Him", "She/Her", "They/Them", "jkafhsjak"]
-            }/> </div>
-        );
+        RadioInputs question = "Pronoun"
+        radioList = {
+            ["He/Him", "She/Her", "They/Them"]
+        }
+        /> </div >
+    );
 };
 
-        export default FormOne;
+export default FormOne;
