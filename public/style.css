@@ -1,6 +1,8 @@
 .darkmode--activated p,
 .darkmode--activated li,
-.darkmode--activated #darkh1Title {
+.darkmode--activated #darkh1Title,
+.darkmode--activated #darkLab,
+.darkmode--activated #darkImp {
   color: white;
 }
 
@@ -19,7 +21,9 @@
   box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.1);
 }
 
-.darkmode--activated #darkUpCommingRegisterDiv {
+.darkmode--activated #darkUpCommingRegisterDiv,
+.darkmode--activated #darkImp,
+.darkmode--activated #optBtn {
   background-color: #1e1e1e;
 }
 
@@ -30,4 +34,16 @@
 
 .darkmode--activated #darkLink:hover {
   background-color: #f45725;
+}
+
+.darkmode--activated .slide,
+.darkmode--activated .formPDiv {
+  background-color: #0f0e0e;
+  color: white;
+}
+
+.darkmode--activated .slick-next:before,
+.darkmode--activated .slick-prev:before {
+  background-color: #1e1e1e;
+  color: white !important;
 }
