@@ -1,58 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap");
+.HnDiv {
+  position: relative;
+}
 .textDiv {
-    position: relative;
-    display: flex;
-    height: 100vh;
-    width: 100%;
-    background-color: pink;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  backdrop-filter: blur(2px);
+  justify-content: center;
+  align-items: center;
 }
 
 .slide {
-    background-color: grey;
-    width: 60%;
+  background-color: grey;
+  width: 60%;
 }
 
 .home {
-    background-color: red;
-}
-
-.News {
-    background-color: blue;
-}
-
-.Contact {
-    background-color: green;
+  background-color: red;
 }
 
 .slick-next:before {
-    content: "Next";
-    color: black;
-    background-color: blue;
+  content: "Next";
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  color: #f45725;
+  padding: 10px 107px;
+  background-color: white;
 }
 
 .slick-slider {
-    position: static;
+  position: static;
 }
 
 .slick-prev,
 .slick-next {
-    position: absolute;
-    top: 90%;
-    z-index: 2;
-    transform: translate(0, 0%);
+  position: absolute;
+  top: 90%;
+  z-index: 2;
+  transform: translate(0, 0%);
 }
 
 .slick-next {
-    right: 25%;
+  right: 35%;
 }
 
 .slick-prev {
-    left: 25%;
+  left: 20%;
 }
 
 .slick-prev:before {
-    content: "Prev";
-    background-color: yellow;
-    color: black;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  content: "Prev";
+  color: #f45725;
+  background-color: white;
+  padding: 10px 107px;
 }
