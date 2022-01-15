@@ -40,6 +40,7 @@
 .slick-next {
   position: absolute;
   top: 90%;
+  border-radius: 16px;
   z-index: 2;
   transform: translate(0, 0%);
 }
