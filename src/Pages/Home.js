@@ -9,6 +9,8 @@ import Frame31 from "./../Components/Form/Frame31";
 import Frame30 from "./../Components/Form/Frame30";
 import "./CSS/Test.css";
 
+import HighlightOffIcon from '@material-ui/icons/HighlightOff';
+
 export default function Home() {
   var settings = {
     dots: false,
@@ -19,6 +21,12 @@ export default function Home() {
     slidesToScroll: 1,
     autoplay: false,
   };
+
+  const closeBtnF = async function (e) {
+    document.getElementById("textDiv").style.opacity = "0";
+    document.getElementById("textDiv").style.visibility = "hidden";
+
+  }
 
   return (
     <div className="HnDiv">
@@ -39,6 +47,7 @@ export default function Home() {
         btnName1="Comming Soon 🚀"
       />
       <div id="textDiv">
+        <HighlightOffIcon fontSize="large" id="closeBtn" onClick={closeBtnF} />
         <Sliders {...settings} className="slide">
           <div className="home">
             <FormOne />

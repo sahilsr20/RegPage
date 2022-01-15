@@ -17,11 +17,6 @@
   align-items: center;
 }
 
-#textDivVis {
-  opacity: 1;
-  visibility: visible;
-}
-
 .slide {
   background-color: grey;
   width: 60%;
@@ -69,4 +64,13 @@
   background-color: white;
   padding: 10px 107px;
   border-radius: 16px;
+}
+
+#closeBtn {
+  position: absolute;
+  top: 8%;
+  right: 22%;
+  color: #f45725;
+  z-index: 2;
+  cursor: pointer;
 }

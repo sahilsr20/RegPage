@@ -9,7 +9,6 @@ export default function UpCommingRegisterDiv(props) {
   const regDiv = function (e) {
     document.getElementById("textDiv").style.opacity = "1";
     document.getElementById("textDiv").style.visibility = "visible";
-    console.log(document.getElementById("textDiv"));
   };
   return (
     <div className={RegCss.RegmDiv}>
