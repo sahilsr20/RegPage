@@ -32,10 +32,10 @@
 }
 
 .slick-next:before {
-  content: "Next";
+  content: "Next" !important;
   font-family: "Manrope", sans-serif;
   font-size: 15px;
-  color: #f45725;
+  color: #f45725 !important;
   padding: 10px 107px;
   border-radius: 16px;
   background-color: white;
@@ -48,24 +48,24 @@
 .slick-prev,
 .slick-next {
   position: absolute;
-  top: 90%;
+  top: 90% !important;
   z-index: 2;
   transform: translate(0, 0%);
 }
 
 .slick-next {
-  right: 40%;
+  right: 34% !important;
 }
 
 .slick-prev {
-  left: 21%;
+  left: 3% !important;
 }
 
 .slick-prev:before {
   font-family: "Manrope", sans-serif;
   font-size: 15px;
-  content: "Prev";
-  color: #f45725;
+  content: "Prev" !important;
+  color: #f45725 !important;
   background-color: white;
   padding: 10px 107px;
   border-radius: 16px;
