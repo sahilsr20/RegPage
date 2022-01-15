@@ -1,7 +1,8 @@
+import "./CSS/a.css";
 import React from "react";
 const Option = (props) => {
     return ( <div>
-        < button > { props.option } </button>
+        < button className="button"> { props.option } </button>
          </div>
     );
 };

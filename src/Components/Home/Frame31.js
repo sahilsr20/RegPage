@@ -4,11 +4,13 @@ import Option from "./Option";
 
 const Frame31 = () => {
   return (
-    <div>
-      <p>Playing with a team?</p>
-      <Option option="Going Solo" />
+    <form>
+     <p>Playing with a team?</p>
+      <div className="flex">
+      <Option  option="Going Solo"  />
       <Option option="Imma team player" />
-    </div>
+      </div>
+    </form>
   );
 };
 export default Frame31;
