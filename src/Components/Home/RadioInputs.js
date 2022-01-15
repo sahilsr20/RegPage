@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./CSS/Forms.module.css"
 
 const RadioInput = (props) => {
   return (
@@ -13,10 +14,14 @@ const RadioInputs = (props) => {
   // question and radiolist
   console.log(props.radioList);
   return (
-    <div>
-      <h2 className={styles.textheading}>{props.question}</h2>
+    <div className={styles.inputfields}>
+      <h3 className={styles.textheading}>{props.question}</h3>
       {props.radioList.map((value) => {
-        return <RadioInput key={value} name={value} />;
+        return (
+          <div className={styles.radiobtn}>
+          <RadioInput key={value} name={value} className={styles.radiobtntxt} />
+          </div>
+          );
       })}
     </div>
   );
