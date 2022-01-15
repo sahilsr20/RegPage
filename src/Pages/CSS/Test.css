@@ -22,10 +22,6 @@
   width: 60%;
 }
 
-.home {
-  background-color: red;
-}
-
 .slick-next:before {
   content: "Next" !important;
   font-family: "Manrope", sans-serif;

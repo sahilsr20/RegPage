@@ -9,7 +9,7 @@ import Frame31 from "./../Components/Form/Frame31";
 import Frame30 from "./../Components/Form/Frame30";
 import "./CSS/Test.css";
 
-import HighlightOffIcon from '@material-ui/icons/HighlightOff';
+import HighlightOffIcon from "@material-ui/icons/HighlightOff";
 
 export default function Home() {
   var settings = {
@@ -25,8 +25,7 @@ export default function Home() {
   const closeBtnF = async function (e) {
     document.getElementById("textDiv").style.opacity = "0";
     document.getElementById("textDiv").style.visibility = "hidden";
-
-  }
+  };
 
   return (
     <div className="HnDiv">

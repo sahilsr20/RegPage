@@ -7,13 +7,13 @@ import img1 from "./../../ReqImg/FedLogo.svg";
 
 export default function Nav() {
   return (
-    <div className={HCss.HmDiv}>
+    <div className={HCss.HmDiv} id="darkNav">
       <div className={HCss.logoDiv}>
         <img src={img1} alt="FedLogo" />
         <p className={HCss.fedP}>FED</p>
       </div>
       <div className={HCss.rightDiv}>
-        <NavEventsDiv />
+        <NavEventsDiv pTag="Events" New="New!" />
         <p>Podcasts</p>
         <p>Blogs</p>
         <p>Our Team</p>

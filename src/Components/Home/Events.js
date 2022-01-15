@@ -5,7 +5,9 @@ import UpCommingRegisterDiv from "./UpCommingRegisterDiv";
 export default function Events(props) {
   return (
     <div className={UceCss.UcsmDiv}>
-      <p className={UceCss.upcomingEventsP}>{props.eventName}</p>
+      <p className={UceCss.upcomingEventsP} id="darkCGrey">
+        {props.eventName}
+      </p>
       <div className={UceCss.RegDiv}>
         <UpCommingRegisterDiv btnName={props.btnName0} />
         <UpCommingRegisterDiv btnName={props.btnName1} />
