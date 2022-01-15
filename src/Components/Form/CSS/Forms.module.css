@@ -39,3 +39,7 @@
   font-size: 15px;
   margin-left: 8px;
 }
+
+input[type="radio"]:checked {
+  accent-color: #f45725;
+}
