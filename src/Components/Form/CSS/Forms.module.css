@@ -28,3 +28,14 @@
   font-size: 20px;
   color: #1e1e1e;
 }
+
+.RadioDiv {
+  margin-bottom: 24px;
+}
+
+.radioLable {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  margin-left: 8px;
+}

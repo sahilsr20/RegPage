@@ -1,10 +1,18 @@
 import React from "react";
+import FormCss from "./CSS/Forms.module.css";
 
 const RadioInput = (props) => {
   return (
-    <div>
-      <input type="radio" name={props.name} value={props.name}></input>
-      <label htmlFor={props.name}>{props.name}</label>
+    <div className={FormCss.RadioDiv}>
+      <input
+        type="radio"
+        name={props.name}
+        value={props.name}
+        className={FormCss.radioInp}
+      ></input>
+      <label htmlFor={props.name} className={FormCss.radioLable}>
+        {props.name}
+      </label>
     </div>
   );
 };
