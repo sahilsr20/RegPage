@@ -5,6 +5,8 @@ import Sliders from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import FormOne from "./../Components/Form/FormOne";
+import Frame31 from "./../Components/Form/Frame31";
+import Frame30 from "./../Components/Form/Frame30";
 import "./CSS/Test.css";
 
 export default function Home() {
@@ -40,8 +42,12 @@ export default function Home() {
           <div className="home">
             <FormOne />
           </div>
-          <div className="home">News</div>
-          <div className="home">Contact</div>
+          <div className="home">
+            <Frame30 />
+          </div>
+          <div className="home">
+            <Frame31 />
+          </div>
         </Sliders>
       </div>
     </div>

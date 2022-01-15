@@ -1,0 +1,30 @@
+.impTag {
+  outline: none;
+  width: 320px;
+  border-width: 1px;
+  border-radius: 10px;
+  border-color: #afafaf;
+  padding: 12px;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  margin-bottom: 30px;
+  transition: all 0.3s;
+}
+
+.impTag::-webkit-input-placeholder,
+.impTag:-ms-input-placeholder,
+.impTag::placeholder {
+  font-family: "Manrope", sans-serif;
+}
+
+.impTag:hover {
+  border-color: #f45725;
+}
+
+.lableTag {
+  display: block;
+  margin-bottom: 20px;
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+  color: #1e1e1e;
+}
