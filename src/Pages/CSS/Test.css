@@ -48,7 +48,7 @@
 .slick-prev,
 .slick-next {
   position: absolute;
-  top: 90% !important;
+  top: 92% !important;
   z-index: 2;
   transform: translate(0, 0%);
 }
