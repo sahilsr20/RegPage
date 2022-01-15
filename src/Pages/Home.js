@@ -2,6 +2,7 @@ import React from "react";
 import Nav from "./../Components/Home/Nav";
 import Events from "../Components/Home/Events";
 import Frame31 from "../Components/Home/Frame31";
+import Footer from "../Components/Home/Footer";
 // import FormTwo from "./FormTwo";
 
 export default function Home() {
@@ -24,7 +25,8 @@ export default function Home() {
         btnName0 = "Comming Soon 🚀"
         btnName1 = "Comming Soon 🚀" /
         >
-        <Frame31 />
+        <Footer/>
         </div>
+        
     );
 }
