@@ -1,4 +1,5 @@
 .textDiv {
+    position: relative;
     display: flex;
     height: 100vh;
     width: 100%;
@@ -30,17 +31,24 @@
     background-color: blue;
 }
 
+.slick-slider {
+    position: static;
+}
+
 .slick-prev,
 .slick-next {
-    top: 200%;
+    position: absolute;
+    top: 90%;
+    z-index: 2;
+    transform: translate(0, 0%);
 }
 
 .slick-next {
-    right: 50px;
+    right: 25%;
 }
 
 .slick-prev {
-    left: 50px;
+    left: 25%;
 }
 
 .slick-prev:before {
