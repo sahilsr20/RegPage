@@ -1,0 +1,50 @@
+.textDiv {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: pink;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide {
+    background-color: grey;
+    width: 60%;
+}
+
+.home {
+    background-color: red;
+}
+
+.News {
+    background-color: blue;
+}
+
+.Contact {
+    background-color: green;
+}
+
+.slick-next:before {
+    content: "Next";
+    color: black;
+    background-color: blue;
+}
+
+.slick-prev,
+.slick-next {
+    top: 200%;
+}
+
+.slick-next {
+    right: 50px;
+}
+
+.slick-prev {
+    left: 50px;
+}
+
+.slick-prev:before {
+    content: "Prev";
+    background-color: yellow;
+    color: black;
+}
