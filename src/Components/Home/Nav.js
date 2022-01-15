@@ -51,13 +51,6 @@ export default function Nav(props) {
             className={HCss.LightDarkImg}
             onClick={darkLight}
           />
-          {/* <img
-            src={iniImg}
-            alt="LightDarkImg"
-            className={HCss.LightDarkImg}
-            onClick={darkLight}
-          /> */}
-
         </div>
       </div>
     </div>
