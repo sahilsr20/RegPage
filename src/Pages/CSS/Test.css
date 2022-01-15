@@ -29,6 +29,7 @@
   font-size: 15px;
   color: #f45725;
   padding: 10px 107px;
+  border-radius: 16px;
   background-color: white;
 }
 
@@ -40,17 +41,16 @@
 .slick-next {
   position: absolute;
   top: 90%;
-  border-radius: 16px;
   z-index: 2;
   transform: translate(0, 0%);
 }
 
 .slick-next {
-  right: 35%;
+  right: 40%;
 }
 
 .slick-prev {
-  left: 20%;
+  left: 21%;
 }
 
 .slick-prev:before {
@@ -60,4 +60,5 @@
   color: #f45725;
   background-color: white;
   padding: 10px 107px;
+  border-radius: 16px;
 }
