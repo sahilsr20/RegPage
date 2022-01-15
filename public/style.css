@@ -1,7 +1,3 @@
-.darkmode-toggle {
-  z-index: 100;
-}
-
 .darkmode--activated p,
 .darkmode--activated li,
 .darkmode--activated #darkh1Title {

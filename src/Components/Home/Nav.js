@@ -1,11 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import HCss from "./CSS/Nav.module.css";
 import NavEventsDiv from "./NavEventsDiv";
+import Darkmode from "darkmode-js";
 
 import img0 from "./../../ReqImg/LightDarkIcon.svg";
 import img1 from "./../../ReqImg/FedLogo.svg";
+import img2 from "./../../ReqImg/LightDarkIcon.svg";
 
-export default function Nav() {
+export default function Nav(props) {
+  const [iniImg, setImg] = useState(img0);
+  const options = {
+    bottom: "64px",
+    right: "unset",
+    left: "32px",
+    time: "0.5s",
+    mixColor: "#fff",
+    backgroundColor: "#fff",
+    buttonColorDark: "#1E1E1E",
+    buttonColorLight: "#fff",
+    saveInCookies: false,
+    autoMatchOsTheme: true,
+  };
+
+  const darkLight = async function (e) {
+    const darkmode = new Darkmode(options);
+    darkmode.toggle();
+    if (darkmode.isActivated() == true) {
+      setImg(img2);
+      // console.log("object");
+    }
+  };
+
   return (
     <div className={HCss.HmDiv} id="darkNav">
       <div className={HCss.logoDiv}>
@@ -19,7 +44,21 @@ export default function Nav() {
         <p>Our Team</p>
         <p>Join Us</p>
         <p>Design System</p>
-        <img src={img0} alt="LightDarkImg" className={HCss.LightDarkImg} />
+        <div>
+          <img
+            src={iniImg}
+            alt="LightDarkImg"
+            className={HCss.LightDarkImg}
+            onClick={darkLight}
+          />
+          {/* <img
+            src={iniImg}
+            alt="LightDarkImg"
+            className={HCss.LightDarkImg}
+            onClick={darkLight}
+          /> */}
+
+        </div>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 .impTag {
   outline: none;
   width: 320px;
+  border-style: solid;
   border-width: 1px;
   border-radius: 10px;
   border-color: #afafaf;
@@ -17,7 +18,7 @@
   font-family: "Manrope", sans-serif;
 }
 
-.impTag:hover {
+.impTag:focus {
   border-color: #f45725;
 }
 
@@ -42,4 +43,11 @@
 
 input[type="radio"]:checked {
   accent-color: #f45725;
+}
+
+.radioH2 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 20px;
 }

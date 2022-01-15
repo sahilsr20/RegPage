@@ -20,7 +20,7 @@ const RadioInput = (props) => {
 const RadioInputs = (props) => {
   return (
     <div>
-      <h2>{props.question}</h2>
+      <h2 className={FormCss.radioH2}>{props.question}</h2>
       {props.radioList.map((value) => {
         return <RadioInput key={value} name={value} />;
       })}

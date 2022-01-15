@@ -49,13 +49,19 @@ export default function Home() {
         <HighlightOffIcon fontSize="large" id="closeBtn" onClick={closeBtnF} />
         <Sliders {...settings} className="slide">
           <div className="home">
-            <FormOne />
+            <div className="formPDiv">
+              <FormOne />
+            </div>
           </div>
           <div className="home">
-            <Frame30 />
+            <div className="formPDiv">
+              <Frame30 />
+            </div>
           </div>
           <div className="home">
-            <Frame31 />
+            <div className="formPDiv">
+              <Frame31 />
+            </div>
           </div>
         </Sliders>
       </div>

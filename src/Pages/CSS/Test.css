@@ -18,7 +18,8 @@
 }
 
 .slide {
-  background-color: grey;
+  background-color: #f8f8f8;
+  height: 100%;
   width: 60%;
 }
 
@@ -64,9 +65,33 @@
 
 #closeBtn {
   position: absolute;
-  top: 8%;
-  right: 22%;
+  top: 3%;
+  right: 25%;
   color: #f45725;
   z-index: 2;
   cursor: pointer;
+}
+
+.formPDiv {
+  background-color: #f8f8f8;
+  height: 85vh;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(202, 202, 202);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(182, 182, 182);
 }

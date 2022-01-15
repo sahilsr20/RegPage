@@ -1,13 +1,15 @@
 import React from "react";
-import BasicTextInput from "./BasicITextInput";
 import Option from "./Option";
+import FrCss from "./CSS/Frame31.module.css";
 
 const Frame31 = () => {
   return (
-    <div>
-      <p>Playing with a team?</p>
-      <Option option="Going Solo" />
-      <Option option="Imma team player" />
+    <div className={FrCss.formFr}>
+      <p className={FrCss.frTeamP}>Playing with a team?</p>
+      <div className={FrCss.flexDiv}>
+        <Option option="Going Solo" />
+        <Option option="Imma team player" />
+      </div>
     </div>
   );
 };
