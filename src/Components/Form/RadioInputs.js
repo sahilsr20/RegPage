@@ -18,8 +18,6 @@ const RadioInput = (props) => {
 };
 
 const RadioInputs = (props) => {
-  // question and radiolist
-  console.log(props.radioList);
   return (
     <div>
       <h2>{props.question}</h2>

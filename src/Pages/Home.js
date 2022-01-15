@@ -19,6 +19,7 @@ export default function Home() {
     slidesToScroll: 1,
     autoplay: false,
   };
+
   return (
     <div className="HnDiv">
       <Nav />
@@ -37,7 +38,7 @@ export default function Home() {
         btnName0="Comming Soon 🚀"
         btnName1="Comming Soon 🚀"
       />
-      <div className="textDiv">
+      <div id="textDiv">
         <Sliders {...settings} className="slide">
           <div className="home">
             <FormOne />

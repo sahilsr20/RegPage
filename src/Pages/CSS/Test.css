@@ -2,7 +2,10 @@
 .HnDiv {
   position: relative;
 }
-.textDiv {
+
+#textDiv {
+  opacity: 0;
+  visibility: hidden;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -12,6 +15,11 @@
   backdrop-filter: blur(2px);
   justify-content: center;
   align-items: center;
+}
+
+#textDivVis {
+  opacity: 1;
+  visibility: visible;
 }
 
 .slide {

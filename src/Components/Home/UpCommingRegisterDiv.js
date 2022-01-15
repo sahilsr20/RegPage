@@ -1,10 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import RegCss from "./CSS/UpCommingRegisterDiv.module.css";
+import "./../../Pages/CSS/Test.css";
 
 import img0 from "./../../ReqImg/hammer.svg";
 
 export default function UpCommingRegisterDiv(props) {
+  const regDiv = function (e) {
+    document.getElementById("textDiv").style.opacity = "1";
+    document.getElementById("textDiv").style.visibility = "visible";
+    console.log(document.getElementById("textDiv"));
+  };
   return (
     <div className={RegCss.RegmDiv}>
       <div class={RegCss.flexDiv}>
@@ -22,7 +28,7 @@ export default function UpCommingRegisterDiv(props) {
             id. Ut scelerisque in non integerut scelerisque in non integert
             aliquam et id. Ut scelerisque in non integer.
           </p>
-          <Link to="/" className={RegCss.regBtn}>
+          <Link to="/" className={RegCss.regBtn} onClick={regDiv}>
             {props.btnName}
           </Link>
         </div>
