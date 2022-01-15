@@ -1,29 +1,25 @@
 import React from "react";
-import BasicTextInput from "../components/Home/BasicITextInput";
-import RadioInputs from "../components/Home/RadioInputs";
-import styles from "../components/Home/CSS/forms.module";
+import BasicTextInput from "./../Components/Home/BasicITextInput";
+import RadioInputs from "./../Components/Home/RadioInputs";
+import styles from "../Components/Home/CSS/Forms.module.css";
 
 const FormOne = () => {
   return (
-    <div className={styles.pages}>
-      <div className={styles.inputfields}>
-        <BasicTextInput name="Email" lable="Email" className={styles.names} reqired />
-      </div>
-      <div className={styles.inputfields}>
-        <BasicTextInput name="123456789" lable="Mobile Number" className={styles.names} reqired />
-      </div>
-      <div className={styles.inputfields}>
-        <div className={styles.radiobtn}>
+    <div className={styles.formbox}>
+    <div className={styles.page}>
+        <BasicTextInput name="Email" label="College Email ID"  required />
+
+        <BasicTextInput name="123456789" label="Mobile Number" className={styles.names} required />
+        <BasicTextInput name="KIIT" label="College Name" className={styles.names} required />
           <RadioInputs
-            question="Year"
-            radioList={["1st Year", "2nd Year", "3rd Year", "4rd Year"]}
+            question="Current Year?"
+            radioList={["First", "Second", "Third", "Fourth","Other"]}
           />
-        </div>
-      </div>
-      <div className={styles.btn}>
+      {/* <div className={styles.btn}>
         <button className={styles.btnprev}>Prev</button>
         <button className={styles.btnnext}>Next</button>
-      </div>
+      </div> */}
+    </div>
     </div>
   );
 };

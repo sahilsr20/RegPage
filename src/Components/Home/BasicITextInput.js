@@ -1,13 +1,15 @@
 import React from "react";
-import styles from "./CSS/Forms.module"
+import styles from "./CSS/Forms.module.css"
 
 const BasicTextInput = (props) => {
   return (
-    <div>
+    <div className={styles.inputfields}>
       {props.label != null ? (
-        <label htmlFor={props.name} className={styles.textheading}>{props.label}</label>
+        <label htmlFor={props.name} className={styles.labeltext}>{props.label}</label>
+        // <h3 className={styles.textheading}>{props.label}</h3>
+        
       ) : null}
-      <input name={props.name} placeholder={props.name} type="text"></input>
+     <br></br><input name={props.name} className={styles.names} placeholder={props.name} type="text"></input>
     </div>
   );
 };
