@@ -9,13 +9,21 @@
 }
 
 .modal-card {
-  background-color: white;
+  background-color: #f8f8f8;
   width: 70%;
   z-index: 20;
-  border: black solid 2px;
   position: absolute;
   top: 10px;
   left: 15%;
   min-height: 40vh;
   border-radius: 20px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  border-style: none;
+  color: #f45725;
+  cursor: pointer;
 }

@@ -7,6 +7,8 @@ import Frame31 from "./Frame31";
 import FormFour from "./FormFour";
 import FormSubmitted from "./FormSubmitted";
 
+import HighlightOffIcon from "@material-ui/icons/HighlightOff";
+
 const Modal = (props) => {
   const [form, setForm] = useState("first");
   const closeModal = () => {
@@ -23,7 +25,9 @@ const Modal = (props) => {
         {form === "third" && <FormThree formState={setForm} />}
         {form === "fourth" && <FormFour formState={setForm} />}
         {form === "submitted" && <FormSubmitted />}
-        <button onClick={closeModal}>close modal</button>
+        <button onClick={closeModal}>
+          <HighlightOffIcon fontSize="large" className="closeBtn" />
+        </button>
       </div>
     </div>
   );

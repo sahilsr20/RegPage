@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import BasicTextInput from "./BasicITextInput";
 import RadioInputs from "./RadioInputs";
+import FrOneCss from "./CSS/FormOne.module.css";
 
 const FormOne = (props) => {
   useEffect(() => {
@@ -47,7 +48,7 @@ const FormOne = (props) => {
     props.formState("second");
   };
   return (
-    <div>
+    <div className={FrOneCss.fOnemDiv}>
       <BasicTextInput
         ref={firstNameRef}
         name="FirstName"
@@ -60,8 +61,10 @@ const FormOne = (props) => {
         question="Pronoun"
         radioList={["He/Him", "She/Her", "They/Them"]}
       />
-      {error && <h1>{error}</h1>}
-      <button onClick={nextFunction}>next</button>
+      {error && <h1 className={FrOneCss.errorH1}>{error}</h1>}
+      <button onClick={nextFunction} className={FrOneCss.nextBtn}>
+        Next
+      </button>
     </div>
   );
 };
