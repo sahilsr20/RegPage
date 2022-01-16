@@ -18,7 +18,7 @@ footer {
     flex-direction: row;
     justify-content: space-evenly;
     margin: 0px;
-    border: 1px solid red;
+    border: 1px;
     padding: 0px;
     width: 60%;
     height: 220px;
@@ -39,7 +39,7 @@ li {
 }
 
 .social {
-    border: 1px solid red;
+    border: 1px;
     float: right;
     position: relative;
     bottom: 62px;
@@ -52,7 +52,7 @@ li {
 }
 
 .mail {
-    border: 1px solid red;
+    border: 1px;
     float: right;
     position: relative;
     left: 35px;
