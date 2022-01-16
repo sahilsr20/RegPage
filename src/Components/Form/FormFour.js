@@ -57,40 +57,62 @@ const FormFour = (props) => {
   return (
     <div className={FormCss.fOnemDiv}>
       <div className={FormCss.contDiv}>
-        <div>team details</div>
-        {teamOrSolo === "solo" && <h2>solo</h2>}
-        {teamOrSolo === "team" && <h2>team details</h2>}
+        <div className={FormCss.teamP}>Team Details</div>
+        {teamOrSolo === "solo" && (
+          <h2 className={FormCss.immaTeam} id={FormCss.tH2}>
+            Solo
+          </h2>
+        )}
+        {teamOrSolo === "team" && (
+          <h2 className={FormCss.immaTeam} id={FormCss.tH2}>
+            Team Details
+          </h2>
+        )}
         {stage === "eventBefore" && (
           <div>
-            <h1>have you attended any fed event before?</h1>
-            <button onClick={yesButtonFunc}>yes</button>
-            <button onClick={FirstTimeButtonFunc}>this is our first time</button>
+            <h1 className={FormCss.H1have}>
+              Have you attended any fed event before?
+            </h1>
+            <button onClick={yesButtonFunc} className={FormCss.btn}>
+              Yes
+            </button>
+            <button onClick={FirstTimeButtonFunc} className={FormCss.btn}>
+              This is our first time
+            </button>
           </div>
         )}
         {stage !== "eventBefore" && (
           <div>
-            <h1>have you attended any fed event before?</h1>
-            <h2>{stage}</h2>
+            <h1 className={FormCss.H1have}>
+              Have you attended any fed event before?
+            </h1>
+            <h2 className={FormCss.H2have}>{stage}</h2>
           </div>
         )}
-        {stage === "yes" && (
-          <RadioInputs
-            ref={whichOneRef}
-            question="Which One?"
-            radioList={["Stonkaholic", "Pitchers", "Omega", "Other"]}
-          />
-        )}
-        {stage !== "eventBefore" && (
-          <RadioInputs
-            ref={knowEventRef}
-            question="How did you get to know about this event?"
-            radioList={["Instagram", "Email", "Friends", "Other"]}
-          />
-        )}
+        <div className={FormCss.questionsDiv}>
+          {stage === "yes" && (
+            <RadioInputs
+              ref={whichOneRef}
+              question="Which One?"
+              radioList={["Stonkaholic", "Pitchers", "Omega", "Other"]}
+            />
+          )}
+          {stage !== "eventBefore" && (
+            <RadioInputs
+              ref={knowEventRef}
+              question="How did you get to know about this event?"
+              radioList={["Instagram", "Email", "Friends", "Other"]}
+            />
+          )}
+        </div>
       </div>
-      <button onClick={backFunction} className={FormCss.backBtn}>back</button>
+      <button onClick={backFunction} className={FormCss.backBtn}>
+        back
+      </button>
       {stage !== "eventBefore" && (
-        <button onClick={submitFunction} className={FormCss.nextBtn}>Submit</button>
+        <button onClick={submitFunction} className={FormCss.nextBtn}>
+          Submit
+        </button>
       )}
     </div>
   );

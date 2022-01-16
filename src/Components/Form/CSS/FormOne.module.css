@@ -62,6 +62,7 @@
   padding: 10px 25.5px;
   font-family: "Manrope", sans-serif;
   font-weight: 700;
+  color: white;
   font-size: 15px;
   border-radius: 16px;
   background-color: #f45725;
@@ -69,4 +70,51 @@
 
 .impDivP {
   padding-top: 60px;
+}
+
+.slectedH2,
+.teamP {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.teamP {
+  margin-bottom: 20px;
+}
+
+.slectedH2 {
+  margin-top: 20px;
+  display: inline;
+  padding: 10px 40px;
+  color: white;
+  background-color: #f45725;
+  border-radius: 16px;
+}
+
+#tH2 {
+  margin: 30px 0px;
+}
+
+.H1have {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.H2have {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  display: inline;
+  border-radius: 16px;
+  padding: 10px 67px;
+  color: white;
+  background-color: #f45725;
+}
+
+.questionsDiv {
+  margin-top: 40px;
 }
