@@ -4,8 +4,6 @@ import Events from "../Components/Home/Events";
 import Modal from "../Components/Form/Modal";
 import "./CSS/Test.css";
 
-import HighlightOffIcon from "@material-ui/icons/HighlightOff";
-
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
 
