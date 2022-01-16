@@ -1,14 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap");
 .RegmDiv {
     background-color: #f8f8f8;
-    padding: 30px;
-    border-radius: 32px;
+    padding: 31px 54px;
+    margin: 11px 65px;
+    border-radius: 32px;    
 }
 
 .flexDiv {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .rightDiv {
