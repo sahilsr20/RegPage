@@ -36,7 +36,7 @@ const Footer = () => {
             </div>
             <div className={FCss.main}>
                 <div className={FCss.leftDiv}>
-                    <ul >
+                    <ul>
                         <li className={FCss.bold}>Company</li>
                         <li>About</li>
                         <li>Newsroom</li>
@@ -86,6 +86,16 @@ const Footer = () => {
                             <button className={FCss.getBtn}>Get Started</button>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div className={FCss.footerTail}>
+                <div className={FCss.leftDivTail}>
+                    <p>Made with ❤️</p>
+                    <p>from Federation of Entrepreneurship Development </p>
+                </div>
+                <div className={FCss.rightDivTail}>
+                    <p>To boost the confidence of aspiring entrepreneurs worldwide.</p>
+                    <p>Together we can change the world.</p>
                 </div>
             </div>
         </footer>
