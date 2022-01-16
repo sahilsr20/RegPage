@@ -55,7 +55,7 @@ const FormFour = (props) => {
     navigate("/three");
   };
   return (
-    <div className={FormCss.fOnemDiv}>
+    <div className={FormCss.fOnemDiv} id="darkFormOne">
       <div className={FormCss.contDiv}>
         <div className={FormCss.teamP}>Team Details</div>
         {teamOrSolo === "solo" && (
@@ -73,10 +73,14 @@ const FormFour = (props) => {
             <h1 className={FormCss.H1have}>
               Have you attended any fed event before?
             </h1>
-            <button onClick={yesButtonFunc} className={FormCss.btn}>
+            <button onClick={yesButtonFunc} className={FormCss.btn} id="btnN">
               Yes
             </button>
-            <button onClick={FirstTimeButtonFunc} className={FormCss.btn}>
+            <button
+              onClick={FirstTimeButtonFunc}
+              className={FormCss.btn}
+              id="marN"
+            >
               This is our first time
             </button>
           </div>

@@ -62,7 +62,7 @@ const FormOne = (props) => {
         radioList={["He/Him", "She/Her", "They/Them"]}
       />
       {error && <h1 className={FrOneCss.errorH1}>{error}</h1>}
-      <button onClick={nextFunction} className={FrOneCss.nextBtn}>
+      <button onClick={nextFunction} className={FrOneCss.nextBtn} id="btnN">
         Next
       </button>
     </div>

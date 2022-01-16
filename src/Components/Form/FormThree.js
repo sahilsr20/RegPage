@@ -114,11 +114,13 @@ const FormThree = (props) => {
   };
 
   return (
-    <div className={FormCss.fOnemDiv}>
+    <div className={FormCss.fOnemDiv} id="darkFormOne">
       {stage === "leader" && (
         <div>
           <div className={FormCss.contDiv}>
-            <h1 className={FormCss.H1p}>Playing with a team?</h1>
+            <h1 className={FormCss.H1p} id="h1Play">
+              Playing with a team?
+            </h1>
             <h2 className={FormCss.immaTeam}>Imma team player</h2>
             <div style={{ marginTop: "40px" }}>
               <BasicTextInput
@@ -138,73 +140,80 @@ const FormThree = (props) => {
                 label="College Email ID"
               />
               {error && <h1 className={FormCss.errorH1}>{error}</h1>}
-              <button onClick={addSecMember} className={FormCss.btn}>Add Member</button>
-
+              <button onClick={addSecMember} className={FormCss.btn}>
+                Add Member
+              </button>
             </div>
           </div>
-          <button onClick={backPageFunc} className={FormCss.backBtn}>Back</button>
+          <button onClick={backPageFunc} className={FormCss.backBtn}>
+            Back
+          </button>
         </div>
-      )
-      }
-      {
-        stage === "second" && (
-          <div>
-            <div className={FormCss.contDiv}>
-              <BasicTextInput
-                ref={firstNameRef}
-                name="firstName"
-                label="Basic Details"
-              />
-              <BasicTextInput ref={lastNameRef} name="lastName" />
-              <BasicTextInput
-                ref={mobileNumber}
-                name="MobileNumber"
-                label="Mobile Number"
-              />
-              <BasicTextInput
-                ref={collegeMail}
-                name="collegeMailId"
-                label="College Email ID"
-              />
-              {error && <h1>{error}</h1>}
-              <button onClick={addThirdMember} className={FormCss.btn}>Add Member</button>
-              <h3>team member details</h3>
-            </div>
-            <button onClick={backPageFunc} className={FormCss.backBtn}>back</button>
+      )}
+      {stage === "second" && (
+        <div>
+          <div className={FormCss.contDiv}>
+            <BasicTextInput
+              ref={firstNameRef}
+              name="firstName"
+              label="Basic Details"
+            />
+            <BasicTextInput ref={lastNameRef} name="lastName" />
+            <BasicTextInput
+              ref={mobileNumber}
+              name="MobileNumber"
+              label="Mobile Number"
+            />
+            <BasicTextInput
+              ref={collegeMail}
+              name="collegeMailId"
+              label="College Email ID"
+            />
+            {error && <h1>{error}</h1>}
+            <button onClick={addThirdMember} className={FormCss.btn}>
+              Add Member
+            </button>
+            <h3>team member details</h3>
           </div>
-        )
-      }
-      {
-        stage === "third" && (
-          <div>
-            <div className={FormCss.contDiv}>
-              <BasicTextInput
-                ref={firstNameRef}
-                name="firstName"
-                label="Basic Details"
-              />
-              <BasicTextInput ref={lastNameRef} name="lastName" />
-              <BasicTextInput
-                ref={mobileNumber}
-                name="MobileNumber"
-                label="Mobile Number"
-              />
-              <BasicTextInput
-                ref={collegeMail}
-                name="collegeMailId"
-                label="College Email ID"
-              />
-              <h1>Note: you can only form team of max 3 members</h1>
-              {error && <h1>{error}</h1>}
-              <button onClick={saveThirdMember} className={FormCss.btn}>Add Member</button>
-            </div>
-            <button onClick={backPageFunc} className={FormCss.backBtn}>back</button>
-            <button onClick={nextPageFunc} className={FormCss.nextBtn}>next</button>
+          <button onClick={backPageFunc} className={FormCss.backBtn}>
+            back
+          </button>
+        </div>
+      )}
+      {stage === "third" && (
+        <div>
+          <div className={FormCss.contDiv}>
+            <BasicTextInput
+              ref={firstNameRef}
+              name="firstName"
+              label="Basic Details"
+            />
+            <BasicTextInput ref={lastNameRef} name="lastName" />
+            <BasicTextInput
+              ref={mobileNumber}
+              name="MobileNumber"
+              label="Mobile Number"
+            />
+            <BasicTextInput
+              ref={collegeMail}
+              name="collegeMailId"
+              label="College Email ID"
+            />
+            <h1>Note: you can only form team of max 3 members</h1>
+            {error && <h1>{error}</h1>}
+            <button onClick={saveThirdMember} className={FormCss.btn}>
+              Add Member
+            </button>
           </div>
-        )
-      }
-
-    </div >
+          <button onClick={backPageFunc} className={FormCss.backBtn}>
+            back
+          </button>
+          <button onClick={nextPageFunc} className={FormCss.nextBtn}>
+            next
+          </button>
+        </div>
+      )}
+    </div>
   );
 };
 

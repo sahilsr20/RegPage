@@ -19,3 +19,41 @@
   background-color: #1e1e1e;
   color: white;
 }
+
+.darkmode--activated #darkLink {
+  background-color: #0f0e0e;
+  color: white;
+}
+
+.darkmode--activated #darkLink:hover {
+  background-color: #f45725;
+}
+
+/* modal */
+
+.darkmode--activated #darkFormOne,
+.darkmode--activated .modal-card {
+  background-color: #0f0e0e;
+  color: white;
+}
+
+.darkmode--activated #darkLabel,
+.darkmode--activated #h1Play {
+  color: white;
+}
+
+.darkmode--activated #darkInp {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.darkmode--activated #btnN {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.darkmode--activated #marN {
+  background-color: #1e1e1e;
+  color: white;
+  margin-left: 30px;
+}

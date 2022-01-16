@@ -61,7 +61,7 @@ const FormTwo = (props) => {
     props.formState("frame31");
   };
   return (
-    <div className={FormCss.fOnemDiv}>
+    <div className={FormCss.fOnemDiv} id="darkFormOne">
       <div className={FormCss.contDiv}>
         <BasicTextInput
           ref={collegeMailRef}
@@ -88,8 +88,12 @@ const FormTwo = (props) => {
         {error && <h1>{error}</h1>}
       </div>
 
-      <button onClick={backFunction} className={FormCss.backBtn}>Back</button>
-      <button onClick={nextFunction} className={FormCss.nextBtn}>Next</button>
+      <button onClick={backFunction} className={FormCss.backBtn} id="btnN">
+        Back
+      </button>
+      <button onClick={nextFunction} className={FormCss.nextBtn} id="btnN">
+        Next
+      </button>
     </div>
   );
 };
