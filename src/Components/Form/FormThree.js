@@ -10,16 +10,7 @@ const FormThree = (props) => {
   const lastNameRef = useRef();
   const mobileNumber = useRef();
   const collegeMail = useRef();
-  // const teamFunc = () => {
-  //   dispatch({ type: "teamOrSolo", teamOrSolo: "team" });
-  //   setStage("leader");
-  // };
-  // const soloFunc = () => {
-  //   //navigate to the next page
-  //   dispatch({ type: "teamOrSolo", teamOrSolo: "solo" });
-  //   // navigate("/four");
-  //   props.formState("fourth");
-  // };
+
   const addSecMember = () => {
     if (firstNameRef.current.value.length === 0) {
       setError("first name cannot be empty");

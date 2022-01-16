@@ -1,4 +1,5 @@
 import React from "react";
+import FormCss from "./CSS/FormOne.module.css";
 import { useDispatch } from "react-redux";
 
 const Frame31 = (props) => {
@@ -17,11 +18,21 @@ const Frame31 = (props) => {
     props.formState("second");
   };
   return (
-    <div>
-      <h1>Playing with a team?</h1>
-      <button onClick={() => dispatchFunc("solo")}>Going solo</button>
-      <button onClick={() => dispatchFunc("team")}>Imma team player</button>
-      <button onClick={backFunc}>back</button>
+    <div className={FormCss.fOnemDiv}>
+      <div className={FormCss.contDiv}>
+        <h1 className={FormCss.H1p}>Playing with a team?</h1>
+        <div className={FormCss.flexDiv}>
+          <button onClick={() => dispatchFunc("solo")} className={FormCss.btn}>
+            Going solo
+          </button>
+          <button onClick={() => dispatchFunc("team")} className={FormCss.btn}>
+            Imma team player
+          </button>
+        </div>
+      </div>
+      <button onClick={backFunc} className={FormCss.backBtn}>
+        Back
+      </button>
     </div>
   );
 };

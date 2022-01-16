@@ -1,5 +1,12 @@
 .fOnemDiv {
+  background-color: #f8f8f8;
+  border-radius: 32px;
   padding: 30px;
+}
+
+.contDiv {
+  height: 80vh;
+  overflow-y: scroll;
 }
 
 .errorH1 {
@@ -7,10 +14,13 @@
   color: red;
 }
 
-.nextBtn {
-  position: absolute;
-  bottom: 0%;
-  right: 5%;
+/* .radioM {
+  margin-bottom: 22px;
+} */
+
+.nextBtn,
+.backBtn,
+.btn {
   font-family: "Manrope", sans-serif;
   padding: 10px 107.5px;
   font-weight: 700;
@@ -21,4 +31,27 @@
   color: #f45725;
   float: right;
   margin-bottom: 30px;
+}
+
+.nextBtn {
+  /* bottom: 0%; */
+  position: absolute;
+  right: 5%;
+}
+.backBtn {
+  position: absolute;
+  left: 5%;
+}
+
+.H1p {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #1e1e1e;
+  margin-bottom: 20px;
+}
+
+.flexDiv {
+  display: flex;
+  flex-direction: row;
 }

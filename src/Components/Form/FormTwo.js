@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import BasicTextInput from "./BasicITextInput";
 import RadioInputs from "./RadioInputs";
+import FormCss from "./CSS/FormOne.module.css";
 
 const FormTwo = (props) => {
   const [error, setError] = useState(null);
@@ -60,32 +61,35 @@ const FormTwo = (props) => {
     props.formState("frame31");
   };
   return (
-    <div>
-      <BasicTextInput
-        ref={collegeMailRef}
-        name="CollegeEmailId"
-        label="College Email Id"
-      />
-      <BasicTextInput
-        ref={moibleNumberRef}
-        name="Mobile Number"
-        label="Mobile Number"
-      />
+    <div className={FormCss.fOnemDiv}>
+      <div className={FormCss.contDiv}>
+        <BasicTextInput
+          ref={collegeMailRef}
+          name="CollegeEmailId"
+          label="College Email Id"
+        />
+        <BasicTextInput
+          ref={moibleNumberRef}
+          name="Mobile Number"
+          label="Mobile Number"
+        />
+        <RadioInputs
+          question="College Name"
+          ref={collegeRadioRef}
+          radioList={["KIIT"]}
+          className={FormCss.radioM}
+        />
+        <BasicTextInput ref={OtherRef} name="Other" />
+        <RadioInputs
+          ref={currentYearRef}
+          question="Which Year"
+          radioList={["first", "second", "third", "fourth", "other"]}
+        />
+        {error && <h1>{error}</h1>}
+      </div>
 
-      <RadioInputs
-        question="College Name"
-        ref={collegeRadioRef}
-        radioList={["KIIT"]}
-      />
-      <BasicTextInput ref={OtherRef} name="Other" />
-      <RadioInputs
-        ref={currentYearRef}
-        question="Which Year"
-        radioList={["first", "second", "third", "fourth", "other"]}
-      />
-      {error && <h1>{error}</h1>}
-      <button onClick={backFunction}>back</button>
-      <button onClick={nextFunction}>next</button>
+      <button onClick={backFunction} className={FormCss.backBtn}>Back</button>
+      <button onClick={nextFunction} className={FormCss.nextBtn}>Next</button>
     </div>
   );
 };
