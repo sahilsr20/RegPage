@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import Nav from "./../Components/Home/Nav";
 import Events from "../Components/Home/Events";
-// import Sliders from "react-slick";
 import Modal from "../Components/Form/Modal";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import "./CSS/Test.css";
 
 import HighlightOffIcon from "@material-ui/icons/HighlightOff";
