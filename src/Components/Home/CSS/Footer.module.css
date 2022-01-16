@@ -10,8 +10,15 @@ footer {
 .LogoDiv {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
+}
+
+.logomDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .Img {
@@ -39,6 +46,18 @@ footer {
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
+}
+
+.pDiv {
+  display: inline;
+}
+
+.mailMobo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 40px;
 }
 
 .leftDiv {
@@ -115,6 +134,18 @@ li {
 .emailDiv {
   display: flex;
   flex-direction: row;
+  border-style: solid;
+  margin-top: 16px;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: #afafaf;
+  padding: 1px;
+}
+
+.emailDivMobo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   border-style: solid;
   margin-top: 16px;
   border-radius: 10px;

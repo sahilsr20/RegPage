@@ -14,8 +14,25 @@ const Footer = () => {
     return (
         <footer>
             <div className={FCss.LogoDiv}>
-                <img src={img0} alt="" className={FCss.Img} />
-                <p className={FCss.fedN}>FED</p>
+                <div className={FCss.logomDiv}>
+                    <img src={img0} alt="" className={FCss.Img} />
+                    <p className={FCss.fedN}>FED</p>
+                </div>
+                <div className={FCss.socialMobo}>
+                    <div className={FCss.flex1}>
+                        <img src={img4} alt="" className={FCss.socialIcons} />
+                        <img src={img1} alt="" className={FCss.socialIcons} />
+                        <img src={img2} alt="" className={FCss.socialIcons} />
+                        <img src={img3} alt="" className={FCss.socialIcons} />
+                    </div>
+                </div>
+            </div>
+            <div className={FCss.mailMobo}>
+                <label for="email" className={FCss.newLet}>Newsletter</label>
+                <div className={FCss.emailDivMobo}>
+                    <input type="email" placeholder="Enter your email" className={FCss.impEmail} />
+                    <button className={FCss.getBtn}>Get Started</button>
+                </div>
             </div>
             <div className={FCss.main}>
                 <div className={FCss.leftDiv}>
