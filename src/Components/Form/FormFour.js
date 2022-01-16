@@ -55,40 +55,42 @@ const FormFour = (props) => {
     navigate("/three");
   };
   return (
-    <div>
-      <div>team details</div>
-      {teamOrSolo === "solo" && <h2>solo</h2>}
-      {teamOrSolo === "team" && <h2>team details</h2>}
-      {stage === "eventBefore" && (
-        <div>
-          <h1>have you attended any fed event before?</h1>
-          <button onClick={yesButtonFunc}>yes</button>
-          <button onClick={FirstTimeButtonFunc}>this is our first time</button>
-        </div>
-      )}
+    <div className={FormCss.fOnemDiv}>
+      <div className={FormCss.contDiv}>
+        <div>team details</div>
+        {teamOrSolo === "solo" && <h2>solo</h2>}
+        {teamOrSolo === "team" && <h2>team details</h2>}
+        {stage === "eventBefore" && (
+          <div>
+            <h1>have you attended any fed event before?</h1>
+            <button onClick={yesButtonFunc}>yes</button>
+            <button onClick={FirstTimeButtonFunc}>this is our first time</button>
+          </div>
+        )}
+        {stage !== "eventBefore" && (
+          <div>
+            <h1>have you attended any fed event before?</h1>
+            <h2>{stage}</h2>
+          </div>
+        )}
+        {stage === "yes" && (
+          <RadioInputs
+            ref={whichOneRef}
+            question="Which One?"
+            radioList={["Stonkaholic", "Pitchers", "Omega", "Other"]}
+          />
+        )}
+        {stage !== "eventBefore" && (
+          <RadioInputs
+            ref={knowEventRef}
+            question="How did you get to know about this event?"
+            radioList={["Instagram", "Email", "Friends", "Other"]}
+          />
+        )}
+      </div>
+      <button onClick={backFunction} className={FormCss.backBtn}>back</button>
       {stage !== "eventBefore" && (
-        <div>
-          <h1>have you attended any fed event before?</h1>
-          <h2>{stage}</h2>
-        </div>
-      )}
-      {stage === "yes" && (
-        <RadioInputs
-          ref={whichOneRef}
-          question="Which One?"
-          radioList={["Stonkaholic", "Pitchers", "Omega", "Other"]}
-        />
-      )}
-      {stage !== "eventBefore" && (
-        <RadioInputs
-          ref={knowEventRef}
-          question="How did you get to know about this event?"
-          radioList={["Instagram", "Email", "Friends", "Other"]}
-        />
-      )}
-      <button onClick={backFunction}>back</button>
-      {stage !== "eventBefore" && (
-        <button onClick={submitFunction}>Submit</button>
+        <button onClick={submitFunction} className={FormCss.nextBtn}>Submit</button>
       )}
     </div>
   );
