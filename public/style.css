@@ -36,14 +36,7 @@
   background-color: #f45725;
 }
 
-.darkmode--activated .slide,
 .darkmode--activated .formPDiv {
   background-color: #0f0e0e;
   color: white;
-}
-
-.darkmode--activated .slick-next:before,
-.darkmode--activated .slick-prev:before {
-  background-color: #1e1e1e;
-  color: white !important;
 }

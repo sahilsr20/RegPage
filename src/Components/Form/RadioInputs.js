@@ -1,4 +1,5 @@
 import React from "react";
+import FrCss from "./CSS/Forms.module.css";
 
 const RadioInput = (props) => {
   return (
@@ -9,18 +10,17 @@ const RadioInput = (props) => {
         id={props.value}
         value={props.value}
       ></input>
-      <label htmlFor={props.value}>{props.value}</label>
+      <label htmlFor={props.value} className={FrCss.radioLable}>
+        {props.value}
+      </label>
     </div>
   );
 };
 
 const RadioInputs = React.forwardRef((props, ref) => {
-  // let prop = props.ref;
-  // question and radioList
-  // console.log(props.radioList);
   return (
     <div>
-      <h2>{props.question}</h2>
+      <h2 className={FrCss.radioH2}>{props.question}</h2>
       <form ref={ref}>
         {props.radioList.map((value) => {
           return <RadioInput key={value} value={value} name={props.question} />;

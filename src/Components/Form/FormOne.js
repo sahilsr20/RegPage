@@ -2,8 +2,6 @@ import React, { useRef, useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import BasicTextInput from "./BasicITextInput";
 import RadioInputs from "./RadioInputs";
-// import BasicTextInput from "../components/BasicITextInput";
-// import RadioInputs from "../components/RadioInputs";
 
 const FormOne = (props) => {
   useEffect(() => {
@@ -47,9 +45,7 @@ const FormOne = (props) => {
       },
     });
     props.formState("second");
-    //forward to the next form
   };
-  // let pronounRef = null;
   return (
     <div>
       <BasicTextInput
