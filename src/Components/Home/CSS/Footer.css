@@ -1,0 +1,59 @@
+footer {
+    background: none;
+    background-color: #1E1E1E;
+    color: white;
+    width: 1402px;
+    height: 420px;
+}
+
+.bold {
+    font-weight: bold;
+    color: white;
+    font-size: 21px;
+    line-height: 30px;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0px;
+    border: 1px solid red;
+    padding: 0px;
+    width: 60%;
+    height: 220px;
+    position: relative;
+    top: 160px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    padding-bottom: 3px;
+    font-family: 'Inter', sans-serif;
+    color: #AFAFAF;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.social {
+    border: 1px solid red;
+    float: right;
+    position: relative;
+    bottom: 62px;
+    right: 390px;
+}
+
+.flex1 {
+    margin: 15px;
+}
+
+.mail {
+    border: 1px solid red;
+    float: right;
+    position: relative;
+    right: 220px;
+    top: 80px;
+}
