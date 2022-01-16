@@ -7,6 +7,7 @@ import YouTubeIcon from '@material-ui/icons/YouTube';
 const Footer = () => {
 return(
     <footer>
+        
         <div className="main">
 
         <ul >
@@ -53,9 +54,9 @@ return(
 
         <div className="mail">
          <label for="email" className="bold">Newsletter</label>
-        <form >
-        <input type="email" name="emaiil"  />
-        <Option option = "submit"/>
+        <form className="flex2">
+        <input type="email" placeholder="Enter your email" />
+        <Option option = "Get Started"/>
         </form>
         </div>
         

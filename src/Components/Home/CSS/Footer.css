@@ -7,8 +7,8 @@ footer {
 }
 
 .bold {
-    font-weight: bold;
     color: white;
+    font-family: 'Inter', sans-serif;
     font-size: 21px;
     line-height: 30px;
 }
@@ -48,12 +48,51 @@ li {
 
 .flex1 {
     margin: 15px;
+    justify-content: space-between;
 }
 
 .mail {
     border: 1px solid red;
     float: right;
     position: relative;
-    right: 220px;
-    top: 80px;
+    left: 35px;
+    top: 60px;
+}
+
+.flex2 {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid #AFAFAF;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 420px;
+    height: 69px;
+}
+
+input {
+    background: none;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 30px;
+    /* identical to box height, or 143% */
+    /* Dark Grey */
+    color: #777777;
+}
+
+.button {
+    position: absolute;
+    width: 157px;
+    height: 61px;
+    left: 250px;
+    top: 34px;
+    /* Primary */
+    background: #F45725;
+    color: white;
+    border-radius: 6px;
+    font-size: 21px;
+    line-height: 30px;
+    font-family: 'Inter', sans-serif;
 }
