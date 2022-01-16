@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Nav from "./../Components/Home/Nav";
 import Events from "../Components/Home/Events";
 import Modal from "../Components/Form/Modal";
+import Footer from "./../Components/Home/Footer";
 import "./CSS/Test.css";
 
 export default function Home() {
@@ -32,6 +33,7 @@ export default function Home() {
         btnName1="Comming Soon 🚀"
       />
       {showModal && <Modal modal={setShowModal} />}
+      <Footer />
     </div>
   );
 }
