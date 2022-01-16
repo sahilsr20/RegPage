@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { useDispatch } from "react-redux";
 import BasicTextInput from "./BasicITextInput";
+import FormCss from "./CSS/FormOne.module.css";
 
 const FormThree = (props) => {
   const [stage, setStage] = useState("leader");
@@ -114,6 +115,9 @@ const FormThree = (props) => {
 
   return (
     <div>
+      <div>
+
+      </div>
       {stage === "leader" && (
         <div>
           <h1>Playing with a team?</h1>
