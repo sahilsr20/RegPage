@@ -114,35 +114,35 @@ const FormThree = (props) => {
   };
 
   return (
-    <div>
-      <div>
-
-      </div>
+    <div className={FormCss.fOnemDiv}>
       {stage === "leader" && (
         <div>
-          <h1>Playing with a team?</h1>
-          <h2>Imma team player</h2>
-          <BasicTextInput
-            ref={firstNameRef}
-            name="firstName"
-            label="Team leader Details"
-          />
-          <BasicTextInput ref={lastNameRef} name="lastName" />
-          <BasicTextInput
-            ref={mobileNumber}
-            name="MobileNumber"
-            label="Mobile Number"
-          />
-          <BasicTextInput
-            ref={collegeMail}
-            name="collegeMailId"
-            label="College Email ID"
-          />
+          <div className={FormCss.contDiv}>
+            <h1 className={FormCss.H1p}>Playing with a team?</h1>
+            <h2 className={FormCss.immaTeam}>Imma team player</h2>
+            <div style={{ color: "red" }}>
+              <BasicTextInput
+                ref={firstNameRef}
+                name="firstName"
+                label="Team leader Details"
+              />
+              <BasicTextInput ref={lastNameRef} name="lastName" />
+              <BasicTextInput
+                ref={mobileNumber}
+                name="MobileNumber"
+                label="Mobile Number"
+              />
+              <BasicTextInput
+                ref={collegeMail}
+                name="collegeMailId"
+                label="College Email ID"
+              />
+              {error && <h1 className={FormCss.errorH1}>{error}</h1>}
+              <button onClick={addSecMember} className={FormCss.btn}>Add Member</button>
 
-          {error && <h1>{error}</h1>}
-          <button onClick={addSecMember}>Add Member</button>
-          <button onClick={backPageFunc}>back</button>
-          {/* <button onClick={nextPageFunc}>next</button> */}
+            </div>
+          </div>
+          <button onClick={backPageFunc} className={FormCss.backBtn}>Back</button>
         </div>
       )}
       {stage === "second" && (
@@ -166,7 +166,7 @@ const FormThree = (props) => {
           {error && <h1>{error}</h1>}
           <button onClick={addThirdMember}>Add Member</button>
           <h3>team member details</h3>
-          <button onClick={backPageFunc}>back</button>
+          <button onClick={backPageFunc} className={FormCss.backBtn}>back</button>
           {/* <button onClick={nextPageFunc}>next</button> */}
         </div>
       )}
@@ -191,10 +191,11 @@ const FormThree = (props) => {
           <h1>Note: you can only form team of max 3 members</h1>
           {error && <h1>{error}</h1>}
           <button onClick={saveThirdMember}>Add Member</button>
-          <button onClick={backPageFunc}>back</button>
-          <button onClick={nextPageFunc}>next</button>
+          <button onClick={backPageFunc} className={FormCss.backBtn}>back</button>
+          <button onClick={nextPageFunc} className={FormCss.nextBtn}>next</button>
         </div>
       )}
+
     </div>
   );
 };

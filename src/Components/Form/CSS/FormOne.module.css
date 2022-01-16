@@ -29,12 +29,12 @@
   background-color: white;
   border-width: 0px;
   color: #f45725;
-  float: right;
   margin-bottom: 30px;
 }
 
 .nextBtn {
   /* bottom: 0%; */
+  float: right;
   position: absolute;
   right: 5%;
 }
@@ -54,4 +54,18 @@
 .flexDiv {
   display: flex;
   flex-direction: row;
+}
+
+.immaTeam {
+  display: inline;
+  padding: 10px 25.5px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 16px;
+  background-color: #f45725;
+}
+
+.impDivP {
+  padding-top: 60px;
 }
