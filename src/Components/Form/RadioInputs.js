@@ -1,31 +1,33 @@
 import React from "react";
-import FormCss from "./CSS/Forms.module.css";
 
 const RadioInput = (props) => {
   return (
-    <div className={FormCss.RadioDiv}>
+    <div>
       <input
         type="radio"
         name={props.name}
-        value={props.name}
-        className={FormCss.radioInp}
+        id={props.value}
+        value={props.value}
       ></input>
-      <label htmlFor={props.name} className={FormCss.radioLable}>
-        {props.name}
-      </label>
+      <label htmlFor={props.value}>{props.value}</label>
     </div>
   );
 };
 
-const RadioInputs = (props) => {
+const RadioInputs = React.forwardRef((props, ref) => {
+  // let prop = props.ref;
+  // question and radioList
+  // console.log(props.radioList);
   return (
     <div>
-      <h2 className={FormCss.radioH2}>{props.question}</h2>
-      {props.radioList.map((value) => {
-        return <RadioInput key={value} name={value} />;
-      })}
+      <h2>{props.question}</h2>
+      <form ref={ref}>
+        {props.radioList.map((value) => {
+          return <RadioInput key={value} value={value} name={props.question} />;
+        })}
+      </form>
     </div>
   );
-};
+});
 
 export default RadioInputs;

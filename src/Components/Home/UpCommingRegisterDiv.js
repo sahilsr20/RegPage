@@ -31,7 +31,15 @@ export default function UpCommingRegisterDiv(props) {
             id. Ut scelerisque in non integerut scelerisque in non integert
             aliquam et id. Ut scelerisque in non integer.
           </p>
-          <Link to="/" className={RegCss.regBtn} onClick={regDiv} id="darkLink">
+          <Link
+            to="/"
+            className={RegCss.regBtn}
+            onClick={() => {
+              console.log("hello");
+              props.showModal(true);
+            }}
+            id="darkLink"
+          >
             {props.btnName}
           </Link>
         </div>

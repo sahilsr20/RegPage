@@ -1,22 +1,19 @@
 import React from "react";
-import FormsCss from "./CSS/Forms.module.css";
-const BasicTextInput = (props) => {
+
+const BasicTextInput = React.forwardRef((props, ref) => {
   return (
     <div>
       {props.label != null ? (
-        <label htmlFor={props.name} className={FormsCss.lableTag} id="darkLab">
-          {props.label}
-        </label>
+        <label htmlFor={props.name}>{props.label}</label>
       ) : null}
       <input
+        ref={ref}
         name={props.name}
         placeholder={props.name}
         type="text"
-        className={FormsCss.impTag}
-        id="darkImp"
       ></input>
     </div>
   );
-};
+});
 
 export default BasicTextInput;

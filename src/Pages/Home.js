@@ -1,26 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Nav from "./../Components/Home/Nav";
 import Events from "../Components/Home/Events";
-import Sliders from "react-slick";
+// import Sliders from "react-slick";
+import Modal from "../Components/Form/Modal";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import FormOne from "./../Components/Form/FormOne";
-import Frame31 from "./../Components/Form/Frame31";
-import Frame30 from "./../Components/Form/Frame30";
 import "./CSS/Test.css";
 
 import HighlightOffIcon from "@material-ui/icons/HighlightOff";
 
 export default function Home() {
-  var settings = {
-    dots: false,
-    infinite: false,
-    arrows: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false,
-  };
+  const [showModal, setShowModal] = useState(false);
 
   const closeBtnF = async function (e) {
     document.getElementById("textDiv").style.opacity = "0";
@@ -31,6 +21,7 @@ export default function Home() {
     <div className="HnDiv">
       <Nav />
       <Events
+        showModal={setShowModal}
         eventName="Upcoming Events"
         btnName0="Register Now 🚀"
         btnName1="Register Now 🚀"
@@ -45,26 +36,7 @@ export default function Home() {
         btnName0="Comming Soon 🚀"
         btnName1="Comming Soon 🚀"
       />
-      <div id="textDiv">
-        <HighlightOffIcon fontSize="large" id="closeBtn" onClick={closeBtnF} />
-        <Sliders {...settings} className="slide">
-          <div className="home">
-            <div className="formPDiv">
-              <FormOne />
-            </div>
-          </div>
-          <div className="home">
-            <div className="formPDiv">
-              <Frame30 />
-            </div>
-          </div>
-          <div className="home">
-            <div className="formPDiv">
-              <Frame31 />
-            </div>
-          </div>
-        </Sliders>
-      </div>
+      {showModal && <Modal modal={setShowModal} />}
     </div>
   );
 }

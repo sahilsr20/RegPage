@@ -9,7 +9,10 @@ export default function Events(props) {
         {props.eventName}
       </p>
       <div className={UceCss.RegDiv}>
-        <UpCommingRegisterDiv btnName={props.btnName0} />
+        <UpCommingRegisterDiv
+          btnName={props.btnName0}
+          showModal={props.showModal}
+        />
         <UpCommingRegisterDiv btnName={props.btnName1} />
       </div>
     </div>
