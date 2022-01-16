@@ -5,7 +5,7 @@ const BasicTextInput = React.forwardRef((props, ref) => {
   return (
     <div>
       {props.label != null ? (
-        <label htmlFor={props.name} className={FCss.lableTag}>
+        <label htmlFor={props.name} className={FCss.lableTag} id="darkLabel">
           {props.label}
         </label>
       ) : null}
@@ -13,6 +13,7 @@ const BasicTextInput = React.forwardRef((props, ref) => {
         ref={ref}
         name={props.name}
         className={FCss.impTag}
+        id="darkInp"
         placeholder={props.name}
         type="text"
       ></input>

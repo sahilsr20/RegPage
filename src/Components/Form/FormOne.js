@@ -48,7 +48,7 @@ const FormOne = (props) => {
     props.formState("second");
   };
   return (
-    <div className={FrOneCss.fOnemDiv}>
+    <div className={FrOneCss.fOnemDiv} id="darkFormOne">
       <BasicTextInput
         ref={firstNameRef}
         name="FirstName"

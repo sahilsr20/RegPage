@@ -1,42 +1,21 @@
 .darkmode--activated p,
-.darkmode--activated li,
-.darkmode--activated #darkh1Title,
-.darkmode--activated #darkLab,
-.darkmode--activated #darkImp {
+.darkmode--activated #darkSvg {
   color: white;
 }
-
-.darkmode--activated #darkRed,
-.darkmode--activated #darkSvg {
+.darkmode--activated #darkNav {
+  box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.1);
+}
+.darkmode--activated #darkRed {
   color: #f45725;
 }
 
 .darkmode--activated #darkCGrey,
-.darkmode--activated #darkMonthName,
-.darkmode--activated #darkDes {
+.darkmode--activated #darkDes,
+.darkmode--activated #darkMonthName {
   color: #afafaf;
 }
 
-.darkmode--activated #darkNav {
-  box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.1);
-}
-
-.darkmode--activated #darkUpCommingRegisterDiv,
-.darkmode--activated #darkImp,
-.darkmode--activated #optBtn {
+.darkmode--activated #darkUpCommingRegisterDiv {
   background-color: #1e1e1e;
-}
-
-.darkmode--activated #darkLink {
-  background-color: #0f0e0e;
-  color: white;
-}
-
-.darkmode--activated #darkLink:hover {
-  background-color: #f45725;
-}
-
-.darkmode--activated .formPDiv {
-  background-color: #0f0e0e;
   color: white;
 }
