@@ -28,9 +28,9 @@ export default function Nav(props) {
     <div className={HCss.HmDiv} id={isLightTheme === false? "darkModeNav" : ""}>
       <NavMobo />
       <div className={HCss.hamburgwerDiv} onClick={hamTog}>
-        <div className={HCss.hamLine1} id="darkHamLine"></div>
-        <div className={HCss.hamLine2} id="darkHamLine"></div>
-        <div className={HCss.hamLine3} id="darkHamLine"></div>
+        <div className={HCss.hamLine1} id={isLightTheme === false? ".darkHamLine1" : ""}></div>
+        <div className={HCss.hamLine2} id={isLightTheme === false? ".darkHamLine2" : ""}></div>
+        <div className={HCss.hamLine3} id={isLightTheme === false? ".darkHamLine3" : ""}></div>
       </div>
       <div className={HCss.logoDiv}>
         <img src={img1} alt="FedLogo" />
