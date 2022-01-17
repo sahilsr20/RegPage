@@ -120,7 +120,10 @@
 }
 
 @media only screen and (max-width: 500px) {
+  .logoDivMobo {
+    margin-left: 0px;
+  }
   .LightDarkImg {
-    margin-left: 50px;
+    margin-left: 0px;
   }
 }
