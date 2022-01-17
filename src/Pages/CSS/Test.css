@@ -15,6 +15,9 @@
 #darkModeTitle{
   color: #FFFFFF;
 }
+#darkModeEventBoxbg{
+  background-color: #1E1E1E;
+}
 
 #textDiv {
   opacity: 0;

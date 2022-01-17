@@ -10,11 +10,11 @@ import img0 from "./../../ReqImg/hammer.svg";
 export default function UpCommingRegisterDiv(props) {
   const isLightTheme = useSelector((state) => state.isLightTheme)
   return (
-    <div className={RegCss.RegmDiv} id="darkUpCommingRegisterDiv">
+    <div className={RegCss.RegmDiv} id={isLightTheme === false? "darkModeEventBoxbg" : ""}>
       <div class={RegCss.flexDiv}>
         <div className={RegCss.DateDiv}>
           <div className={RegCss.DatePDiv}>
-            <p>29</p>
+            <p id={isLightTheme === false? "darkModeTitle" : ""}>29</p>
             <p className={RegCss.monthName} id="darkMonthName">
               January
             </p>

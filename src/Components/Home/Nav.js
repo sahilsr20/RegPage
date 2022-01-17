@@ -39,7 +39,7 @@ export default function Nav(props) {
       <div className={HCss.rightDiv}>
         <div className={HCss.logoDivMobo}>
           <img src={img1} alt="FedLogo" />
-          <p className={HCss.fedP}>FED</p>
+          <p className={HCss.fedP} >FED</p>
         </div>
         <div className={HCss.tabs}>
           <NavEventsDiv pTag="Events" New="New!" />
