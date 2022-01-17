@@ -11,10 +11,12 @@ export default function UpCommingRegisterDiv(props) {
     <div className={RegCss.RegmDiv} id="darkUpCommingRegisterDiv">
       <div class={RegCss.flexDiv}>
         <div className={RegCss.DateDiv}>
-          <p>29</p>
-          <p className={RegCss.monthName} id="darkMonthName">
-            January
-          </p>
+          <div className={RegCss.DatePDiv}>
+            <p>29</p>
+            <p className={RegCss.monthName} id="darkMonthName">
+              January
+            </p>
+          </div>
           <img
             src={img0}
             alt="HammerImg"
@@ -31,19 +33,30 @@ export default function UpCommingRegisterDiv(props) {
             aliquam et id. Ut scelerisque in non integert aliquam et id. Ut
             scelerisque in non integer Ut scelerisque in non integert aliquam et
             id. Ut scelerisque in non integerut scelerisque in non integert
-            aliquam et id. Ut scelerisque in non integer.
+            aliquam et id. Ut scelerisque in non integer. Ridiculus cras mi
+            vivamus placera ridiculus cras mi vivamus placerat aliquam et id. Ut
+            scelerisque in non integert aliquam et id. Ut scelerisque in non
+            integer Ut scelerisque in non integert aliquam et id. Ut scelerisque
+            in non integerut scelerisque in non integert aliquam et id. Ut
+            scelerisque in non integer. Ridiculus cras mi vivamus placera
+            ridiculus cras mi vivamus placerat aliquam et id. Ut scelerisque in
+            non integert aliquam et id. Ut scelerisque in non integer Ut
+            scelerisque in non integert aliquam et id. Ut scelerisque in non
+            integerut scelerisque in non integert aliquam et id. Ut scelerisque
+            in non integer.
           </p>
-          <Link
-            to="/"
-            className={RegCss.regBtn}
-            onClick={() => {
-              console.log("hello");
-              props.showModal(true);
-            }}
-            id="darkLink"
-          >
-            {props.btnName}
-          </Link>
+          <div className={RegCss.LinkDiv}>
+            <Link
+              to="/"
+              className={RegCss.regBtn}
+              onClick={() => {
+                props.showModal(true);
+              }}
+              id="darkLink"
+            >
+              {props.btnName}
+            </Link>
+          </div>
         </div>
       </div>
     </div>
