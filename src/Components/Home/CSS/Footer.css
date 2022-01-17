@@ -1,98 +1,98 @@
-footer {
-    background: none;
-    background-color: #1E1E1E;
-    color: white;
-    width: 1402px;
-    height: 420px;
-}
-
-.bold {
-    color: white;
-    font-family: 'Inter', sans-serif;
-    font-size: 21px;
-    line-height: 30px;
-}
-
-.main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 0px;
-    border: 1px;
-    padding: 0px;
-    width: 60%;
-    height: 220px;
-    position: relative;
-    top: 160px;
-}
-
-ul {
-    list-style-type: none;
-}
-
-li {
-    padding-bottom: 3px;
-    font-family: 'Inter', sans-serif;
-    color: #AFAFAF;
-    font-size: 20px;
-    line-height: 30px;
-}
-
-.social {
-    border: 1px;
-    float: right;
-    position: relative;
-    bottom: 62px;
-    right: 390px;
-}
-
-.flex1 {
-    margin: 15px;
-    justify-content: space-between;
-}
-
-.mail {
-    border: 1px;
-    float: right;
-    position: relative;
-    left: 35px;
-    top: 60px;
-}
-
-.flex2 {
-    display: flex;
-    flex-direction: row;
-    border: 2px solid #AFAFAF;
-    box-sizing: border-box;
-    border-radius: 10px;
-    width: 420px;
-    height: 69px;
-}
-
-input {
-    background: none;
-    border: none;
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 21px;
-    line-height: 30px;
-    /* identical to box height, or 143% */
-    /* Dark Grey */
-    color: #777777;
-}
-
-.button {
-    position: absolute;
-    width: 157px;
-    height: 61px;
-    left: 250px;
-    top: 34px;
-    /* Primary */
-    background: #F45725;
-    color: white;
-    border-radius: 6px;
-    font-size: 21px;
-    line-height: 30px;
-    font-family: 'Inter', sans-serif;
-}
+            footer {
+                background: none;
+                background-color: #1E1E1E;
+                color: white;
+                width: 100%;
+                height: 420px;
+            }
+            
+            .bold {
+                color: white;
+                font-family: 'Inter', sans-serif;
+                font-size: 21px;
+                line-height: 30px;
+            }
+            
+            .main {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                margin: 0px;
+                border: 1px;
+                padding: 0px;
+                width: 60%;
+                height: 220px;
+                position: relative;
+                top: 160px;
+            }
+            
+            ul {
+                list-style-type: none;
+            }
+            
+            li {
+                padding-bottom: 3px;
+                font-family: 'Inter', sans-serif;
+                color: #AFAFAF;
+                font-size: 20px;
+                line-height: 30px;
+            }
+            
+            .social {
+                border: 1px;
+                float: right;
+                position: relative;
+                bottom: 62px;
+                right: 390px;
+            }
+            
+            .flex1 {
+                margin: 15px;
+                justify-content: space-between;
+            }
+            
+            .mail {
+                border: 1px;
+                float: right;
+                position: relative;
+                left: 35px;
+                top: 60px;
+            }
+            
+            .flex2 {
+                display: flex;
+                flex-direction: row;
+                border: 2px solid #AFAFAF;
+                box-sizing: border-box;
+                border-radius: 10px;
+                width: 420px;
+                height: 69px;
+            }
+            
+            input {
+                background: none;
+                border: none;
+                font-family: 'Inter', sans-serif;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 21px;
+                line-height: 30px;
+                /* identical to box height, or 143% */
+                /* Dark Grey */
+                color: #777777;
+            }
+            
+            .button {
+                position: absolute;
+                width: 157px;
+                height: 61px;
+                left: 250px;
+                top: 34px;
+                /* Primary */
+                background: #F45725;
+                color: white;
+                border-radius: 6px;
+                font-size: 21px;
+                line-height: 30px;
+                font-family: 'Inter', sans-serif;
+            }
