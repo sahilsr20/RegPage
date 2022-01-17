@@ -1,8 +1,9 @@
 import React from "react";
 import FormCss from "./CSS/FormOne.module.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const Frame31 = (props) => {
+  const isLightTheme = useSelector((state) => state.isLightTheme);
   const dispatch = useDispatch();
   const dispatchFunc = (prop) => {
     dispatch({ type: "teamOrSolo", teamOrSolo: prop });
@@ -18,29 +19,29 @@ const Frame31 = (props) => {
     props.formState("second");
   };
   return (
-    <div className={FormCss.fOnemDiv} id="darkFormOne">
+    <div className={FormCss.fOnemDiv} id={isLightTheme === false? FormCss.darkform : "darkFormOne"}>
       <div className={FormCss.contDiv}>
-        <h1 className={FormCss.H1p} id="h1Play">
+        <h1 className={FormCss.H1p} id={isLightTheme === false? FormCss.darktitle: "h1Play"}>
           Playing with a team?
         </h1>
         <div className={FormCss.flexDiv}>
           <button
             onClick={() => dispatchFunc(false)}
             className={FormCss.btn}
-            id="btnN"
+            id={isLightTheme === false? FormCss.darknext : "btnN"}
           >
             Going solo
           </button>
           <button
             onClick={() => dispatchFunc(true)}
             className={FormCss.btn}
-            id="marN"
+            id={isLightTheme === false? FormCss.darknext : "marN"}
           >
             Imma team player
           </button>
         </div>
       </div>
-      <button onClick={backFunc} className={FormCss.backBtn} id="btnN">
+      <button onClick={backFunc} className={FormCss.backBtn} id={isLightTheme === false? FormCss.darknext : "btnN"}>
         Back
       </button>
     </div>

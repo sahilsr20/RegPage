@@ -4,8 +4,10 @@ import { useDispatch } from "react-redux";
 import BasicTextInput from "./BasicITextInput";
 import RadioInputs from "./RadioInputs";
 import FormCss from "./CSS/FormOne.module.css";
+import {useSelector} from 'react-redux';
 
 const FormTwo = (props) => {
+  const isLightTheme = useSelector((state) => state.isLightTheme)
   const [error, setError] = useState(null);
   const collegeMailRef = useRef();
   const moibleNumberRef = useRef();
@@ -73,7 +75,7 @@ const FormTwo = (props) => {
     props.formState("frame31");
   };
   return (
-    <div className={FormCss.fOnemDiv} id="darkFormOne">
+    <div className={FormCss.fOnemDiv} id={isLightTheme === false? FormCss.darkform : "darkFormOne"}>
       <div className={FormCss.contDiv}>
         <BasicTextInput
           ref={collegeMailRef}
@@ -100,10 +102,10 @@ const FormTwo = (props) => {
         {error && <h1>{error}</h1>}
       </div>
 
-      <button onClick={backFunction} className={FormCss.backBtn} id="btnN">
+      <button onClick={backFunction} className={FormCss.backBtn} id={isLightTheme === false? FormCss.darknext : "btnN"}>
         Back
       </button>
-      <button onClick={nextFunction} className={FormCss.nextBtn} id="btnN">
+      <button onClick={nextFunction} className={FormCss.nextBtn} id={isLightTheme === false? FormCss.darknext : "btnN"}>
         Next
       </button>
     </div>

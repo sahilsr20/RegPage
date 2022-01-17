@@ -64,7 +64,7 @@ const FormOne = (props) => {
     
   };
   return (
-    <div className={FrOneCss.fOnemDiv} id={isLightTheme === false? "darkModeTitle" : ""}>
+    <div className={FrOneCss.fOnemDiv} id={isLightTheme === false? FrOneCss.darkform : ""}>
       <BasicTextInput
         ref={firstNameRef}
         name="FirstName"
@@ -78,7 +78,7 @@ const FormOne = (props) => {
         radioList={["He/Him", "She/Her", "They/Them"]}
       />
       {error && <h1 className={FrOneCss.errorH1}>{error}</h1>}
-      <button onClick={nextFunction} className={FrOneCss.nextBtn} id="btnN">
+      <button onClick={nextFunction} className={FrOneCss.nextBtn} id={isLightTheme === false? FrOneCss.darknext : "btnN"}>
         Next
       </button>
     </div>

@@ -12,10 +12,10 @@ const BasicTextInput = React.forwardRef((props, ref) => {
         </label>
       ) : null}
       <input
+        id={isLightTheme === false? FCss.darkform : ""}
         ref={ref}
         name={props.name}
         className={FCss.impTag}
-        id="darkInp"
         placeholder={props.name}
         type="text"
       ></input>

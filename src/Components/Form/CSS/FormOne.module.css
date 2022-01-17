@@ -118,3 +118,15 @@
 .questionsDiv {
   margin-top: 40px;
 }
+
+#darkform{
+  background-color: #0F0E0E;
+}
+
+#darknext{
+  background-color: #1E1E1E;
+}
+
+#darktitle{
+  color: white;
+}

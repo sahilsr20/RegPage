@@ -37,4 +37,7 @@
     font-size: 18.38px;
     border-style: none;
   }
+  #darkModeHam{
+    background-color: #f7f7f7;
+  }
 }

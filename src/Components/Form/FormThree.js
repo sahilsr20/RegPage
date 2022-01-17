@@ -1,9 +1,10 @@
 import React, { useState, useRef } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import BasicTextInput from "./BasicITextInput";
 import FormCss from "./CSS/FormOne.module.css";
 
 const FormThree = (props) => {
+  const isLightTheme = useSelector((state) => state.isLightTheme);
   const [stage, setStage] = useState("leader");
   const [error, setError] = useState(null);
   const dispatch = useDispatch();
@@ -114,11 +115,11 @@ const FormThree = (props) => {
   };
 
   return (
-    <div className={FormCss.fOnemDiv} id="darkFormOne">
+    <div className={FormCss.fOnemDiv} id={isLightTheme === false? FormCss.darkform : "darkFormOne"}>
       {stage === "leader" && (
         <div>
           <div className={FormCss.contDiv}>
-            <h1 className={FormCss.H1p} id="h1Play">
+            <h1 className={FormCss.H1p} id={isLightTheme === false? FormCss.darktitle: "h1Play"}>
               Playing with a team?
             </h1>
             <h2 className={FormCss.immaTeam}>Imma team player</h2>
@@ -140,12 +141,12 @@ const FormThree = (props) => {
                 label="College Email ID"
               />
               {error && <h1 className={FormCss.errorH1}>{error}</h1>}
-              <button onClick={addSecMember} className={FormCss.btn}>
+              <button onClick={addSecMember} className={FormCss.btn} id={isLightTheme === false? FormCss.darknext : "btnN"}>
                 Add Member
               </button>
             </div>
           </div>
-          <button onClick={backPageFunc} className={FormCss.backBtn}>
+          <button onClick={backPageFunc} className={FormCss.backBtn} id={isLightTheme === false? FormCss.darknext : "btnN"}>
             Back
           </button>
         </div>
@@ -165,17 +166,18 @@ const FormThree = (props) => {
               label="Mobile Number"
             />
             <BasicTextInput
+              
               ref={collegeMail}
               name="collegeMailId"
               label="College Email ID"
             />
             {error && <h1>{error}</h1>}
-            <button onClick={addThirdMember} className={FormCss.btn}>
+            <button onClick={addThirdMember} className={FormCss.btn} id={isLightTheme === false? FormCss.darknext : "btnN"}>
               Add Member
             </button>
             <h3>team member details</h3>
           </div>
-          <button onClick={backPageFunc} className={FormCss.backBtn}>
+          <button onClick={backPageFunc} className={FormCss.backBtn} id={isLightTheme === false? FormCss.darknext : "btnN"}> 
             back
           </button>
         </div>
@@ -201,14 +203,14 @@ const FormThree = (props) => {
             />
             <h1>Note: you can only form team of max 3 members</h1>
             {error && <h1>{error}</h1>}
-            <button onClick={saveThirdMember} className={FormCss.btn}>
+            <button onClick={saveThirdMember} className={FormCss.btn} id={isLightTheme === false? FormCss.darknext : "btnN"}>
               Add Member
             </button>
           </div>
-          <button onClick={backPageFunc} className={FormCss.backBtn}>
+          <button onClick={backPageFunc} className={FormCss.backBtn} id={isLightTheme === false? FormCss.darknext : "btnN"}>
             back
           </button>
-          <button onClick={nextPageFunc} className={FormCss.nextBtn}>
+          <button onClick={nextPageFunc} className={FormCss.nextBtn} id={isLightTheme === false? FormCss.darknext : "btnN"}>
             next
           </button>
         </div>
