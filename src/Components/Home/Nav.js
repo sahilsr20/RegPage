@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import HCss from "./CSS/Nav.module.css";
-import DM from "./../../Pages/CSS/Test.css";
+import {useSelector} from 'react-redux';
 import NavEventsDiv from "./NavEventsDiv";
 import { useDispatch } from "react-redux";
 // import Darkmode from "darkmode-js";
 import NavMobo from "./NavMobo";
 import "./CSS/MoboPop.css";
-import {useSelector} from 'react-redux';
 
 import img0 from "./../../ReqImg/LightDarkIcon.svg";
 import img1 from "./../../ReqImg/FedLogo.svg";
@@ -26,7 +25,7 @@ export default function Nav(props) {
   };
 
   return (
-    <div className={HCss.HmDiv} id={isLightTheme === false? "darkMode" : ""}>
+    <div className={HCss.HmDiv} id={isLightTheme === false? "darkModeNav" : ""}>
       <NavMobo />
       <div className={HCss.hamburgwerDiv} onClick={hamTog}>
         <div className={HCss.hamLine1} id="darkHamLine"></div>

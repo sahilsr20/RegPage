@@ -3,8 +3,17 @@
   position: relative;
   overflow-x: hidden;
 }
-#darkMode{
+#darkModeBody{
   background-color:#0F0E0E;
+  color: #AFAFAF;
+}
+#darkModeNav{
+  background-color:#0F0E0E;
+  color: #FFFFFF;
+  ;
+}
+#darkModeTitle{
+  color: #FFFFFF;
 }
 
 #textDiv {

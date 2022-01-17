@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import RegCss from "./CSS/UpCommingRegisterDiv.module.css";
-import "./../../Pages/CSS/Test.css";
+// import "./../../Pages/CSS/Test.css";
 import "./CSS/MoboPop.css";
+import {useSelector} from 'react-redux';
 
 import img0 from "./../../ReqImg/hammer.svg";
 
 export default function UpCommingRegisterDiv(props) {
+  const isLightTheme = useSelector((state) => state.isLightTheme)
   return (
     <div className={RegCss.RegmDiv} id="darkUpCommingRegisterDiv">
       <div class={RegCss.flexDiv}>
@@ -25,7 +27,7 @@ export default function UpCommingRegisterDiv(props) {
           />
         </div>
         <div className={RegCss.rightDiv}>
-          <h1 className={RegCss.h1Title} id="darkh1Title">
+          <h1 className={RegCss.h1Title} id={isLightTheme === false? "darkModeTitle" : ""}>
             Lorem, ipsum.
           </h1>
           <p className={RegCss.des} id="darkDes">
@@ -52,7 +54,7 @@ export default function UpCommingRegisterDiv(props) {
               onClick={() => {
                 props.showModal(true);
               }}
-              id="darkLink"
+              id={isLightTheme === false? "darkModeNav" : ""}
             >
               {props.btnName}
             </Link>

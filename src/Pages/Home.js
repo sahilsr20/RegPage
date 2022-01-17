@@ -16,7 +16,7 @@ export default function Home() {
   };
 
   return (
-    <div className="HnDiv" id={isLightTheme === false? "darkMode" : ""} >      
+    <div className="HnDiv" id={isLightTheme === false? "darkModeBody" : ""} >      
     <Nav />
       <Events
         showModal={setShowModal}
