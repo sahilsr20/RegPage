@@ -27,7 +27,6 @@ export default function Nav(props) {
     darkmode.toggle();
     if (darkmode.isActivated() == true) {
       setImg(img2);
-      // console.log("object");
     }
   };
 
