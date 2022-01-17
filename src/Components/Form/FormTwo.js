@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import BasicTextInput from "./BasicITextInput";
 import RadioInputs from "./RadioInputs";
 import FormCss from "./CSS/FormOne.module.css";
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
 const FormTwo = (props) => {
   const [error, setError] = useState(null);
@@ -102,6 +103,9 @@ const FormTwo = (props) => {
 
       <button onClick={backFunction} className={FormCss.backBtn} id="btnN">
         Back
+      </button>
+      <button onClick={backFunction} className={FormCss.backBtnMobo} id="btnN">
+        <ArrowBackIcon />
       </button>
       <button onClick={nextFunction} className={FormCss.nextBtn} id="btnN">
         Next
