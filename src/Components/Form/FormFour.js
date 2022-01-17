@@ -1,28 +1,29 @@
 import React, { useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import RadioInputs from "./RadioInputs";
-import { useNavigate } from "react-router-dom";
 import FormCss from "./CSS/FormOne.module.css";
+// import dataConvert from "./dataConvert";
+// import axios from "axios";
 
 const FormFour = (props) => {
   const teamOrSolo = useSelector((state) => state.teamOrSolo);
+  const state = useSelector((state) => state);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const whichOneRef = useRef();
   const knowEventRef = useRef();
   const [stage, setStage] = useState("eventBefore");
   const yesButtonFunc = () => {
-    dispatch({ type: "attendedOtherEvent", attendedOtherEvent: "yes" });
+    dispatch({ type: "attendedOtherEvent", attendedOtherEvent: true });
     setStage("yes");
   };
   const FirstTimeButtonFunc = () => {
     dispatch({
       type: "attendedOtherEvent",
-      attendedOtherEvent: "this is our First Time",
+      attendedOtherEvent: false,
     });
     setStage("this is our First Time");
   };
-  const submitFunction = () => {
+  const submitFunction = async () => {
     let whichOne = null;
     for (let i = 0; i < 4; i++) {
       if (
@@ -42,28 +43,34 @@ const FormFour = (props) => {
     //submit both radio inputs
     dispatch({ type: "whichOne", whichOne: whichOne });
     dispatch({ type: "source", source: knowEvent });
-    //send a post request to the server with all details
-    //delete all local storage
+
+    // REQUEST TO SUBMIT THE DATA
+    // const obj = dataConvert(state);
+    // console.log("the object");
+    // console.log(obj);
+    // const url = "http://localhost:8080/fedReg/saveData";
+    // const response = await axios.post(url, { ...obj });
+    // console.log("this is response");
+    // console.log(response);
+
     localStorage.clear();
-    //navigate to submitted page
-    // navigate("/submitted");
     props.formState("submitted");
   };
 
   const backFunction = () => {
     dispatch({ type: "deleteFormThreeDetails" });
-    navigate("/three");
+    props.formState("frame31");
   };
   return (
     <div className={FormCss.fOnemDiv} id="darkFormOne">
       <div className={FormCss.contDiv}>
         <div className={FormCss.teamP}>Team Details</div>
-        {teamOrSolo === "solo" && (
+        {teamOrSolo === false && (
           <h2 className={FormCss.immaTeam} id={FormCss.tH2}>
             Solo
           </h2>
         )}
-        {teamOrSolo === "team" && (
+        {teamOrSolo === true && (
           <h2 className={FormCss.immaTeam} id={FormCss.tH2}>
             Team Details
           </h2>

@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
+// import axios from "axios";
 import BasicTextInput from "./BasicITextInput";
 import RadioInputs from "./RadioInputs";
 import FormCss from "./CSS/FormOne.module.css";
@@ -18,7 +19,7 @@ const FormTwo = (props) => {
     dispatch({ type: "deleteBasicDetailsOne" });
     props.formState("first");
   };
-  const nextFunction = () => {
+  const nextFunction = async () => {
     if (
       collegeMailRef.current.value.length === 0 ||
       !collegeMailRef.current.value.includes("@")
@@ -45,6 +46,17 @@ const FormTwo = (props) => {
       setError("college name required");
       return;
     }
+
+    // CHECK DATABASE FOR DUPLICATE EMAIL
+    // const url = "http://localhost:8080/fedReg/checkMail";
+    // const response = await axios.post(url, {
+    //   clgmail: collegeMailRef.current.value,
+    // });
+    // if (!response.data.passed) {
+    //   setError("email already registered, please try a different one");
+    //   return;
+    // }
+
     let collegeName = collegeRadioRef.current[0].checked
       ? collegeRadioRef.current[0].value
       : OtherRef.current.value;

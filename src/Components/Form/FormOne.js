@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
+// import axios from "axios";
 import BasicTextInput from "./BasicITextInput";
 import RadioInputs from "./RadioInputs";
 import FrOneCss from "./CSS/FormOne.module.css";
@@ -15,7 +16,7 @@ const FormOne = (props) => {
   const pronounRef = useRef();
   const dispatch = useDispatch();
 
-  const nextFunction = () => {
+  const nextFunction = async () => {
     if (firstNameRef.current.value.length === 0) {
       setError("first name cannot be empty");
       return;
@@ -36,6 +37,17 @@ const FormOne = (props) => {
       return;
     }
     console.log(pronoun);
+
+    // SEND A REQUEST TO CHECK FOR DUPLICATE TEAM NAME
+    // const url = "http://localhost:8080/fedReg/checkTeam";
+    // const response = await axios.post(url, {
+    //   teamname: teamNameRef.current.value,
+    // });
+    // if (!response.data.passed) {
+    //   setError("team already exists, please choose a different team name");
+    //   return;
+    // }
+
     dispatch({
       type: "basicDetailsOne",
       data: {

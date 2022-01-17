@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import HCss from "./CSS/Nav.module.css";
 import NavEventsDiv from "./NavEventsDiv";
-import Darkmode from "darkmode-js";
+import { useDispatch } from "react-redux";
+// import Darkmode from "darkmode-js";
 import NavMobo from "./NavMobo";
 import "./CSS/MoboPop.css";
 
@@ -10,12 +11,16 @@ import img1 from "./../../ReqImg/FedLogo.svg";
 import img2 from "./../../ReqImg/LightDarkIcon.svg";
 
 export default function Nav(props) {
+  const dispatch = useDispatch();
   // const [iniImg, setImg] = useState(img0);
 
   const hamTog = async function (e) {
-    document.getElementById('mDiv').style.display = "block";
-    document.getElementById('hideImg').style.opacity = "0";
-  }
+    document.getElementById("mDiv").style.display = "block";
+    document.getElementById("hideImg").style.opacity = "0";
+  };
+  const toggleLightMode = () => {
+    dispatch({ type: "toggleTheme" });
+  };
 
   return (
     <div className={HCss.HmDiv} id="darkNav">
@@ -47,7 +52,7 @@ export default function Nav(props) {
             src={img0}
             alt="LightDarkImg"
             className={HCss.LightDarkImg}
-          // onClick={darkLight}
+            onClick={toggleLightMode}
           />
         </div>
       </div>

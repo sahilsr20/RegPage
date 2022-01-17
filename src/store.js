@@ -117,7 +117,7 @@ const reducerFunction = (state = initialState, action) => {
     newState.thirdMemberDetails = {
       ...obj,
     };
-    localStorage("thirdMemberDetails", JSON.stringify(obj));
+    localStorage.setItem("thirdMemberDetails", JSON.stringify(obj));
     console.log("thirdMemberDetails");
     console.log(newState);
     return newState;
@@ -146,6 +146,7 @@ const reducerFunction = (state = initialState, action) => {
     let newState = { ...state };
     newState.isLightTheme = !state.isLightTheme;
     localStorage.setItem("toggleTheme", newState.isLightTheme);
+    console.log(newState.isLightTheme);
     return newState;
   } else if (action.type === "deleteBasicDetailsOne") {
     let newState = { ...state };

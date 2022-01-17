@@ -6,7 +6,7 @@ const Frame31 = (props) => {
   const dispatch = useDispatch();
   const dispatchFunc = (prop) => {
     dispatch({ type: "teamOrSolo", teamOrSolo: prop });
-    if (prop === "solo") {
+    if (prop === false) {
       console.log("in if statement");
       props.formState("fourth");
       return;
@@ -25,14 +25,14 @@ const Frame31 = (props) => {
         </h1>
         <div className={FormCss.flexDiv}>
           <button
-            onClick={() => dispatchFunc("solo")}
+            onClick={() => dispatchFunc(false)}
             className={FormCss.btn}
             id="btnN"
           >
             Going solo
           </button>
           <button
-            onClick={() => dispatchFunc("team")}
+            onClick={() => dispatchFunc(true)}
             className={FormCss.btn}
             id="marN"
           >
