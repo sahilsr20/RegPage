@@ -2,6 +2,7 @@ import React from "react";
 import Option from "./../Form/Option";
 import FCss from "./CSS/Footer.module.css";
 import img0 from "./../../ReqImg/FedLogo.svg";
+import "./CSS/MoboPop.css";
 
 import img4 from "./../../ReqImg/instagram.png";
 import img1 from "./../../ReqImg/linkedinF.png";
@@ -13,15 +14,20 @@ const Footer = () => {
     <footer>
       <div className={FCss.LogoDiv}>
         <div className={FCss.logomDiv}>
-          <img src={img0} alt="" className={FCss.Img} />
+          <img src={img0} alt="" className={FCss.Img} id="hideImg" />
           <p className={FCss.fedN}>FED</p>
         </div>
         <div className={FCss.socialMobo}>
           <div className={FCss.flex1}>
-            <img src={img4} alt="" className={FCss.socialIcons} />
-            <img src={img1} alt="" className={FCss.socialIcons} />
-            <img src={img2} alt="" className={FCss.socialIcons} />
-            <img src={img3} alt="" className={FCss.socialIconsLast} />
+            <img src={img4} alt="" className={FCss.socialIcons} id="hideImg" />
+            <img src={img1} alt="" className={FCss.socialIcons} id="hideImg" />
+            <img src={img2} alt="" className={FCss.socialIcons} id="hideImg" />
+            <img
+              src={img3}
+              alt=""
+              className={FCss.socialIconsLast}
+              id="hideImg"
+            />
           </div>
         </div>
       </div>
@@ -76,10 +82,30 @@ const Footer = () => {
           <div className={FCss.social}>
             <p className={FCss.bold}>Social</p>
             <div className={FCss.flex1}>
-              <img src={img4} alt="" className={FCss.socialIcons} />
-              <img src={img1} alt="" className={FCss.socialIcons} />
-              <img src={img2} alt="" className={FCss.socialIcons} />
-              <img src={img3} alt="" className={FCss.socialIcons} />
+              <img
+                src={img4}
+                alt=""
+                className={FCss.socialIcons}
+                id="hideImg"
+              />
+              <img
+                src={img1}
+                alt=""
+                className={FCss.socialIcons}
+                id="hideImg"
+              />
+              <img
+                src={img2}
+                alt=""
+                className={FCss.socialIcons}
+                id="hideImg"
+              />
+              <img
+                src={img3}
+                alt=""
+                className={FCss.socialIcons}
+                id="hideImg"
+              />
             </div>
           </div>
 
