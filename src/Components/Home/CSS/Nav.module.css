@@ -14,6 +14,34 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
+.hamburgwerDiv {
+  height: 20px;
+  width: 24px;
+}
+
+.hamLine1 {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  border-radius: 1.96px;
+  margin-bottom: 5px;
+}
+
+.hamLine2 {
+  width: 75%;
+  height: 2px;
+  background-color: white;
+  border-radius: 1.96px;
+  margin-bottom: 5px;
+}
+
+.hamLine3 {
+  width: 50%;
+  height: 2px;
+  background-color: white;
+  border-radius: 1.96px;
+}
+
 .logoDiv {
   display: flex;
   flex-direction: row;
