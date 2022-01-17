@@ -33,16 +33,9 @@ export default function Nav(props) {
     }
   };
 
-  let s = 0;
   const hamTog = async function (e) {
-    s++;
-    if (s % 2 == 0) {
-      document.getElementById('mDiv').style.display = "none";
-      document.getElementById('hideImg').style.opacity = "1";
-    } else {
-      document.getElementById('mDiv').style.display = "block";
-      document.getElementById('hideImg').style.opacity = "0";
-    }
+    document.getElementById('mDiv').style.display = "block";
+    document.getElementById('hideImg').style.opacity = "0";
   }
 
   return (
