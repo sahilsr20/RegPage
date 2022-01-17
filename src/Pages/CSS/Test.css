@@ -3,6 +3,9 @@
   position: relative;
   overflow-x: hidden;
 }
+#darkMode{
+  background-color:#0F0E0E;
+}
 
 #textDiv {
   opacity: 0;
