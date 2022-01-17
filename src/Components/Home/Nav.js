@@ -10,28 +10,7 @@ import img1 from "./../../ReqImg/FedLogo.svg";
 import img2 from "./../../ReqImg/LightDarkIcon.svg";
 
 export default function Nav(props) {
-  const [iniImg, setImg] = useState(img0);
-
-  const options = {
-    bottom: "64px",
-    right: "unset",
-    left: "32px",
-    time: "0.5s",
-    mixColor: "#fff",
-    backgroundColor: "#fff",
-    buttonColorDark: "#1E1E1E",
-    buttonColorLight: "#fff",
-    saveInCookies: false,
-    autoMatchOsTheme: true,
-  };
-
-  const darkLight = async function (e) {
-    const darkmode = new Darkmode(options);
-    darkmode.toggle();
-    if (darkmode.isActivated() == true) {
-      setImg(img2);
-    }
-  };
+  // const [iniImg, setImg] = useState(img0);
 
   const hamTog = async function (e) {
     document.getElementById('mDiv').style.display = "block";
@@ -65,10 +44,10 @@ export default function Nav(props) {
         </div>
         <div>
           <img
-            src={iniImg}
+            src={img0}
             alt="LightDarkImg"
             className={HCss.LightDarkImg}
-            onClick={darkLight}
+          // onClick={darkLight}
           />
         </div>
       </div>
