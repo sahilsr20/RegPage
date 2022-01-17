@@ -34,12 +34,12 @@ export default function Nav(props) {
       </div>
       <div className={HCss.logoDiv}>
         <img src={img1} alt="FedLogo" />
-        <p className={HCss.fedP}>FED</p>
+        <p className={HCss.fedP} id={isLightTheme === false? "darkModeTitle" : ""}>FED</p>
       </div>
       <div className={HCss.rightDiv}>
         <div className={HCss.logoDivMobo}>
           <img src={img1} alt="FedLogo" />
-          <p className={HCss.fedP} >FED</p>
+          <p className={HCss.fedP} id={isLightTheme === false? "darkModeTitle" : ""}>FED</p>
         </div>
         <div className={HCss.tabs}>
           <NavEventsDiv pTag="Events" New="New!" />
@@ -53,7 +53,7 @@ export default function Nav(props) {
           <img
             src={img0}
             alt="LightDarkImg"
-            className={HCss.LightDarkImg}
+            className={HCss.LightDarkImg} 
             onClick={toggleLightMode}
           />
         </div>

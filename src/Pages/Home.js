@@ -26,13 +26,13 @@ export default function Home() {
       />
       <Events
         eventName="Past Events"
-        btnName0="Comming Soon 🚀"
-        btnName1="Comming Soon 🚀"
+        btnName0="Coming Soon 🚀"
+        btnName1="Coming Soon 🚀"
       />
       <Events
-        eventName="Comming Soon"
-        btnName0="Comming Soon 🚀"
-        btnName1="Comming Soon 🚀"
+        eventName="Coming Soon"
+        btnName0="Coming Soon 🚀"
+        btnName1="Coming Soon 🚀"
       />
       {showModal && <Modal modal={setShowModal} />}
       <Footer />
