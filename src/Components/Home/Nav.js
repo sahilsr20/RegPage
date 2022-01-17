@@ -17,7 +17,11 @@ export default function Nav(props) {
   const isLightTheme = useSelector((state) => state.isLightTheme);
 
   const hamTog = async function (e) {
-    document.getElementById("mDiv").style.display = "block";
+    if (document.getElementById("mDiv")) {
+      document.getElementById("mDiv").style.display = "block";
+    } else {
+      document.getElementById("darkModeNavMobo").style.display = "block";
+    }
   };
   const toggleLightMode = () => {
     dispatch({ type: "toggleTheme" });
@@ -30,9 +34,18 @@ export default function Nav(props) {
     >
       <NavMobo />
       <div className={HCss.hamburgwerDiv} onClick={hamTog}>
-        <div className={HCss.hamLine1} id={isLightTheme === false? "darkModeHam" : ""}></div>
-        <div className={HCss.hamLine2} id={isLightTheme === false? "darkModeHam" : ""}></div>
-        <div className={HCss.hamLine3} id={isLightTheme === false? "darkModeHam" : ""}></div>
+        <div
+          className={HCss.hamLine1}
+          id={isLightTheme === false ? "darkModeHam" : ""}
+        ></div>
+        <div
+          className={HCss.hamLine2}
+          id={isLightTheme === false ? "darkModeHam" : ""}
+        ></div>
+        <div
+          className={HCss.hamLine3}
+          id={isLightTheme === false ? "darkModeHam" : ""}
+        ></div>
       </div>
       <div className={HCss.logoDiv}>
         <img src={img1} alt="FedLogo" />

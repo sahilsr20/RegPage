@@ -8,10 +8,10 @@ import FormFour from "./FormFour";
 import FormSubmitted from "./FormSubmitted";
 
 import HighlightOffIcon from "@material-ui/icons/HighlightOff";
-import {useSelector} from 'react-redux';
+import { useSelector } from "react-redux";
 
 const Modal = (props) => {
-  const isLightTheme = useSelector((state) => state.isLightTheme)
+  const isLightTheme = useSelector((state) => state.isLightTheme);
   const [form, setForm] = useState("first");
   const closeModal = () => {
     localStorage.clear();
@@ -20,7 +20,10 @@ const Modal = (props) => {
 
   return (
     <div className="backdrop">
-      <div className="modal-card" id={isLightTheme===false? "darkmodal" : ""}>
+      <div
+        className="modal-card"
+        id={isLightTheme === false ? "darkmodal" : ""}
+      >
         {form === "first" && <FormOne formState={setForm} />}
         {form === "second" && <FormTwo formState={setForm} />}
         {form === "frame31" && <Frame31 formState={setForm} />}

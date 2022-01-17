@@ -2,11 +2,27 @@
   display: none;
 }
 
+#darkModeNavMobo {
+  display: none;
+  background-color: #0f0e0e;
+  color: #ffffff;
+}
+
 @media only screen and (max-width: 900px) {
+  #darkModeNavMobo {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: white;
+    width: 100%;
+    height: 812px;
+    z-index: 2;
+    background-color: #0f0e0e;
+    color: #ffffff;
+  }
   #mDiv {
-    display: none;
-    opacity: 1;
-    visibility: visible;
+    display: block;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -36,7 +52,10 @@
     font-size: 18.38px;
     border-style: none;
   }
-  #darkModeHam{
+  #darkModeHam {
     background-color: #f7f7f7;
+  }
+  #darkX {
+    color: white;
   }
 }

@@ -1,6 +1,6 @@
 .backdrop {
   width: 100%;
-  height: 100vh;
+  height: 275vh !important;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 10;
   position: absolute;
@@ -10,6 +10,7 @@
 }
 
 .modal-card {
+  margin-top: 30px;
   background-color: #f8f8f8;
   width: 70%;
   z-index: 20;
@@ -29,6 +30,6 @@
   cursor: pointer;
 }
 
-#darkmodal{
-  background-color: #0F0E0E;
+#darkmodal {
+  background-color: #0f0e0e;
 }
