@@ -38,12 +38,14 @@ export default function Nav(props) {
         <p className={HCss.fedP}>FED</p>
       </div>
       <div className={HCss.rightDiv}>
-        <NavEventsDiv pTag="Events" New="New!" />
-        <p>Podcasts</p>
-        <p>Blogs</p>
-        <p>Our Team</p>
-        <p>Join Us</p>
-        <p>Design System</p>
+        <div className={HCss.tabs}>
+          <NavEventsDiv pTag="Events" New="New!" />
+          <p>Podcasts</p>
+          <p>Blogs</p>
+          <p>Our Team</p>
+          <p>Join Us</p>
+          <p>Design System</p>
+        </div>
         <div>
           <img
             src={iniImg}
