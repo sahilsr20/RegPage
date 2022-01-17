@@ -21,7 +21,7 @@ const Footer = () => {
             <img src={img4} alt="" className={FCss.socialIcons} />
             <img src={img1} alt="" className={FCss.socialIcons} />
             <img src={img2} alt="" className={FCss.socialIcons} />
-            <img src={img3} alt="" className={FCss.socialIcons} />
+            <img src={img3} alt="" className={FCss.socialIconsLast} />
           </div>
         </div>
       </div>
