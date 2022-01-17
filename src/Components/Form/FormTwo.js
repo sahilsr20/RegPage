@@ -4,12 +4,11 @@ import { useDispatch } from "react-redux";
 import BasicTextInput from "./BasicITextInput";
 import RadioInputs from "./RadioInputs";
 import FormCss from "./CSS/FormOne.module.css";
-import {useSelector} from 'react-redux';
+import { useSelector } from "react-redux";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
-
 const FormTwo = (props) => {
-  const isLightTheme = useSelector((state) => state.isLightTheme)
+  const isLightTheme = useSelector((state) => state.isLightTheme);
   const [error, setError] = useState(null);
   const collegeMailRef = useRef();
   const moibleNumberRef = useRef();
@@ -77,7 +76,10 @@ const FormTwo = (props) => {
     props.formState("frame31");
   };
   return (
-    <div className={FormCss.fOnemDiv} id={isLightTheme === false? FormCss.darkform : "darkFormOne"}>
+    <div
+      className={FormCss.fOnemDiv}
+      id={isLightTheme === false ? FormCss.darkform : "darkFormOne"}
+    >
       <div className={FormCss.contDiv}>
         <BasicTextInput
           ref={collegeMailRef}
@@ -104,10 +106,25 @@ const FormTwo = (props) => {
         {error && <h1>{error}</h1>}
       </div>
 
-      <button onClick={backFunction} className={FormCss.backBtn} id={isLightTheme === false? FormCss.darknext : "btnN"}>
+      <button
+        onClick={backFunction}
+        className={FormCss.backBtn}
+        id={isLightTheme === false ? FormCss.darknextN : "btnN"}
+      >
         Back
-      </button>      
-      <button onClick={nextFunction} className={FormCss.nextBtn} id={isLightTheme === false? FormCss.darknext : "btnN"}>
+      </button>
+      <button
+        onClick={backFunction}
+        className={FormCss.backBtnMobo}
+        id={isLightTheme === false ? FormCss.darknext : "btnNMobo"}
+      >
+        <ArrowBackIcon />
+      </button>
+      <button
+        onClick={nextFunction}
+        className={FormCss.nextBtn}
+        id={isLightTheme === false ? FormCss.darknextN : "btnN"}
+      >
         Next
       </button>
     </div>

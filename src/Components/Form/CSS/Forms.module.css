@@ -59,10 +59,16 @@ input[type="radio"]:checked {
   margin-bottom: 16px;
 }
 
-#darkform{
+#darkform {
   background-color: #1e1e1e;
   color: white;
 }
-#darkradio{
+#darkradio {
   color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .impTag {
+    width: 85%;
+  }
 }

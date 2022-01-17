@@ -19,12 +19,16 @@
   margin-bottom: 22px;
 } */
 
+.backBtnMobo {
+  display: none;
+}
+
 .nextBtn,
 .backBtn,
 .backBtnMobo,
 .btn {
   font-family: "Manrope", sans-serif;
-  padding: 10px 107.5px;
+  padding: 10px 100px;
   font-weight: 700;
   font-size: 15px;
   cursor: pointer;
@@ -33,6 +37,7 @@
   border-width: 0px;
   color: #f45725;
   margin-bottom: 30px;
+  margin-left: 30px;
 }
 
 .nextBtn {
@@ -120,16 +125,30 @@
   margin-top: 40px;
 }
 
-#darkform{
-  background-color: #0F0E0E;
+#darkform {
+  background-color: #0f0e0e;
 }
 
-#darknext{
-  background-color: #1E1E1E;
+#darknextN {
+  background-color: #1e1e1e;
 }
 
-#darktitle{
+#darktitle {
   color: white;
+}
+
+#darknextB {
+  background-color: #1e1e1e;
+}
+
+#btnNMobo {
+  display: none;
+}
+
+@media only screen and (max-width: 1070px) {
+  .btn {
+    padding: 10px 25px;
+  }
 }
 
 @media only screen and (max-width: 820px) {
@@ -137,9 +156,26 @@
     display: none;
   }
   .backBtnMobo {
+    display: flex;
     position: absolute;
     left: 5%;
     top: 3%;
     padding: 10px 30px;
   }
+  .btnNMobo {
+    background-color: transparent;
+  }
+  #darknext {
+    background-color: transparent;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .flexDiv {
+    flex-direction: column;
+  }
+  /* .backBtnMobo {
+    width: 85%;
+    padding: 10px 24px;
+  } */
 }

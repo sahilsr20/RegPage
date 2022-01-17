@@ -1,6 +1,7 @@
 import React from "react";
 import FormCss from "./CSS/FormOne.module.css";
 import { useDispatch, useSelector } from "react-redux";
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
 const Frame31 = (props) => {
   const isLightTheme = useSelector((state) => state.isLightTheme);
@@ -19,30 +20,47 @@ const Frame31 = (props) => {
     props.formState("second");
   };
   return (
-    <div className={FormCss.fOnemDiv} id={isLightTheme === false? FormCss.darkform : "darkFormOne"}>
+    <div
+      className={FormCss.fOnemDiv}
+      id={isLightTheme === false ? FormCss.darkform : "darkFormOne"}
+    >
       <div className={FormCss.contDiv}>
-        <h1 className={FormCss.H1p} id={isLightTheme === false? FormCss.darktitle: "h1Play"}>
+        <h1
+          className={FormCss.H1p}
+          id={isLightTheme === false ? FormCss.darktitle : "h1Play"}
+        >
           Playing with a team?
         </h1>
         <div className={FormCss.flexDiv}>
           <button
             onClick={() => dispatchFunc(false)}
             className={FormCss.btn}
-            id={isLightTheme === false? FormCss.darknext : "btnN"}
+            id={isLightTheme === false ? FormCss.darknextB : "btnN"}
           >
             Going solo
           </button>
           <button
             onClick={() => dispatchFunc(true)}
             className={FormCss.btn}
-            id={isLightTheme === false? FormCss.darknext : "marN"}
+            id={isLightTheme === false ? FormCss.darknextB : "marN"}
           >
             Imma team player
           </button>
         </div>
       </div>
-      <button onClick={backFunc} className={FormCss.backBtn} id={isLightTheme === false? FormCss.darknext : "btnN"}>
+      <button
+        onClick={backFunc}
+        className={FormCss.backBtn}
+        id={isLightTheme === false ? FormCss.darknextN : "btnN"}
+      >
         Back
+      </button>
+      <button
+        onClick={backFunc}
+        className={FormCss.backBtnMobo}
+        id={isLightTheme === false ? FormCss.darknext : "btnNMobo"}
+      >
+        <ArrowBackIcon />
       </button>
     </div>
   );

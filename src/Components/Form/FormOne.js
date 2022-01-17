@@ -4,10 +4,10 @@ import { useDispatch } from "react-redux";
 import BasicTextInput from "./BasicITextInput";
 import RadioInputs from "./RadioInputs";
 import FrOneCss from "./CSS/FormOne.module.css";
-import {useSelector} from 'react-redux';
+import { useSelector } from "react-redux";
 
 const FormOne = (props) => {
-  const isLightTheme = useSelector((state) => state.isLightTheme)
+  const isLightTheme = useSelector((state) => state.isLightTheme);
   useEffect(() => {
     localStorage.clear();
   }, []);
@@ -19,7 +19,6 @@ const FormOne = (props) => {
   const dispatch = useDispatch();
 
   const nextFunction = async () => {
-    
     if (firstNameRef.current.value.length === 0) {
       setError("first name cannot be empty");
       return;
@@ -61,10 +60,12 @@ const FormOne = (props) => {
       },
     });
     props.formState("second");
-    
   };
   return (
-    <div className={FrOneCss.fOnemDiv} id={isLightTheme === false? FrOneCss.darkform : ""}>
+    <div
+      className={FrOneCss.fOnemDiv}
+      id={isLightTheme === false ? FrOneCss.darkform : ""}
+    >
       <BasicTextInput
         ref={firstNameRef}
         name="FirstName"
@@ -78,7 +79,11 @@ const FormOne = (props) => {
         radioList={["He/Him", "She/Her", "They/Them"]}
       />
       {error && <h1 className={FrOneCss.errorH1}>{error}</h1>}
-      <button onClick={nextFunction} className={FrOneCss.nextBtn} id={isLightTheme === false? FrOneCss.darknext : "btnN"}>
+      <button
+        onClick={nextFunction}
+        className={FrOneCss.nextBtn}
+        id={isLightTheme === false ? FrOneCss.darknextN : "btnN"}
+      >
         Next
       </button>
     </div>

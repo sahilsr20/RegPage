@@ -10,7 +10,7 @@
 
 @media only screen and (max-width: 900px) {
   #darkModeNavMobo {
-    display: block;
+    display: none;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -22,7 +22,7 @@
     color: #ffffff;
   }
   #mDiv {
-    display: block;
+    display: none;
     position: absolute;
     top: 0px;
     left: 0px;

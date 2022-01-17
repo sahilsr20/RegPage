@@ -10,7 +10,10 @@ import { useSelector } from "react-redux";
 const FormSubmitted = () => {
   const isLightTheme = useSelector((state) => state.isLightTheme);
   return (
-    <div className={FSubCss.fOnemDiv} id={isLightTheme === false? FSubCss.darkform : "darkFormOne"}>
+    <div
+      className={FSubCss.fOnemDiv}
+      id={isLightTheme === false ? FSubCss.darkform : "darkFormOne"}
+    >
       <div className={FSubCss.mCOnDiv}>
         <p className={FSubCss.ThanksP}>
           Thanks for apibus vitae blandit nisl massa habitasse. Dignissim enim,

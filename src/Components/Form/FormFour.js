@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import RadioInputs from "./RadioInputs";
 import FormCss from "./CSS/FormOne.module.css";
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 // import dataConvert from "./dataConvert";
 // import axios from "axios";
 
@@ -63,9 +64,17 @@ const FormFour = (props) => {
     props.formState("frame31");
   };
   return (
-    <div className={FormCss.fOnemDiv} id={isLightTheme === false? FormCss.darkform : "darkFormOne"}>
+    <div
+      className={FormCss.fOnemDiv}
+      id={isLightTheme === false ? FormCss.darkform : "darkFormOne"}
+    >
       <div className={FormCss.contDiv}>
-        <div className={FormCss.teamP} id={isLightTheme === false? FormCss.darktitle: "h1Play"}>Team Details</div>
+        <div
+          className={FormCss.teamP}
+          id={isLightTheme === false ? FormCss.darktitle : "h1Play"}
+        >
+          Team Details
+        </div>
         {teamOrSolo === false && (
           <h2 className={FormCss.immaTeam} id={FormCss.tH2}>
             Solo
@@ -78,16 +87,23 @@ const FormFour = (props) => {
         )}
         {stage === "eventBefore" && (
           <div>
-            <h1 className={FormCss.H1have} id={isLightTheme === false? FormCss.darktitle: "h1Play"}>
+            <h1
+              className={FormCss.H1have}
+              id={isLightTheme === false ? FormCss.darktitle : "h1Play"}
+            >
               Have you attended any fed event before?
             </h1>
-            <button onClick={yesButtonFunc} className={FormCss.btn} id={isLightTheme === false? FormCss.darknext : "btnN"}>
+            <button
+              onClick={yesButtonFunc}
+              className={FormCss.btn}
+              id={isLightTheme === false ? FormCss.darknextN : "btnN"}
+            >
               Yes
             </button>
             <button
               onClick={FirstTimeButtonFunc}
               className={FormCss.btn}
-              id={isLightTheme === false? FormCss.darknext : "marN"}
+              id={isLightTheme === false ? FormCss.darknextN : "marN"}
             >
               This is our first time
             </button>
@@ -95,7 +111,10 @@ const FormFour = (props) => {
         )}
         {stage !== "eventBefore" && (
           <div>
-            <h1 className={FormCss.H1have} id={isLightTheme === false? FormCss.darktitle: "h1Play"}>
+            <h1
+              className={FormCss.H1have}
+              id={isLightTheme === false ? FormCss.darktitle : "h1Play"}
+            >
               Have you attended any fed event before?
             </h1>
             <h2 className={FormCss.H2have}>{stage}</h2>
@@ -118,11 +137,26 @@ const FormFour = (props) => {
           )}
         </div>
       </div>
-      <button onClick={backFunction} className={FormCss.backBtn} id={isLightTheme === false? FormCss.darknext : "btnN"}>
+      <button
+        onClick={backFunction}
+        className={FormCss.backBtn}
+        id={isLightTheme === false ? FormCss.darknextN : "btnN"}
+      >
         back
       </button>
+      <button
+        onClick={backFunction}
+        className={FormCss.backBtnMobo}
+        id={isLightTheme === false ? FormCss.darknext : "btnNMobo"}
+      >
+        <ArrowBackIcon />
+      </button>
       {stage !== "eventBefore" && (
-        <button onClick={submitFunction} className={FormCss.nextBtn} id={isLightTheme === false? FormCss.darknext : "btnN"}>
+        <button
+          onClick={submitFunction}
+          className={FormCss.nextBtn}
+          id={isLightTheme === false ? FormCss.darknextN : "btnN"}
+        >
           Submit
         </button>
       )}
