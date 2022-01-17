@@ -5,6 +5,8 @@ import BasicTextInput from "./BasicITextInput";
 import RadioInputs from "./RadioInputs";
 import FormCss from "./CSS/FormOne.module.css";
 import {useSelector} from 'react-redux';
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+
 
 const FormTwo = (props) => {
   const isLightTheme = useSelector((state) => state.isLightTheme)
@@ -104,7 +106,7 @@ const FormTwo = (props) => {
 
       <button onClick={backFunction} className={FormCss.backBtn} id={isLightTheme === false? FormCss.darknext : "btnN"}>
         Back
-      </button>
+      </button>      
       <button onClick={nextFunction} className={FormCss.nextBtn} id={isLightTheme === false? FormCss.darknext : "btnN"}>
         Next
       </button>

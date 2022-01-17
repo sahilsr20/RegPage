@@ -3,11 +3,11 @@ import Nav from "./../Components/Home/Nav";
 import Events from "../Components/Home/Events";
 import Modal from "../Components/Form/Modal";
 import Footer from "./../Components/Home/Footer";
-import {useSelector} from 'react-redux';
+import { useSelector } from "react-redux";
 import "./CSS/Test.css";
 
 export default function Home() {
-  const isLightTheme = useSelector((state) => state.isLightTheme)
+  const isLightTheme = useSelector((state) => state.isLightTheme);
   const [showModal, setShowModal] = useState(false);
 
   const closeBtnF = async function (e) {
@@ -16,8 +16,11 @@ export default function Home() {
   };
 
   return (
-    <div className="HnDiv" id={isLightTheme === false? "darkModeBody" : ""} >      
-    <Nav />
+    <div
+      className="HnDiv"
+      id={isLightTheme === false ? "darkModeBody" : ""}
+    >
+      <Nav />
       <Events
         showModal={setShowModal}
         eventName="Upcoming Events"
