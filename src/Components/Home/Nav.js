@@ -33,15 +33,19 @@ export default function Nav(props) {
   return (
     <div className={HCss.HmDiv} id="darkNav">
       <div className={HCss.hamburgwerDiv}>
-        <div className={HCss.hamLine1}></div>
-        <div className={HCss.hamLine2}></div>
-        <div className={HCss.hamLine3}></div>
+        <div className={HCss.hamLine1} id="darkHamLine"></div>
+        <div className={HCss.hamLine2} id="darkHamLine"></div>
+        <div className={HCss.hamLine3} id="darkHamLine"></div>
       </div>
       <div className={HCss.logoDiv}>
         <img src={img1} alt="FedLogo" />
         <p className={HCss.fedP}>FED</p>
       </div>
       <div className={HCss.rightDiv}>
+        <div className={HCss.logoDivMobo}>
+          <img src={img1} alt="FedLogo" />
+          <p className={HCss.fedP}>FED</p>
+        </div>
         <div className={HCss.tabs}>
           <NavEventsDiv pTag="Events" New="New!" />
           <p>Podcasts</p>
