@@ -4,8 +4,10 @@ import { useDispatch } from "react-redux";
 import BasicTextInput from "./BasicITextInput";
 import RadioInputs from "./RadioInputs";
 import FrOneCss from "./CSS/FormOne.module.css";
+import {useSelector} from 'react-redux';
 
 const FormOne = (props) => {
+  const isLightTheme = useSelector((state) => state.isLightTheme)
   useEffect(() => {
     localStorage.clear();
   }, []);
@@ -17,6 +19,7 @@ const FormOne = (props) => {
   const dispatch = useDispatch();
 
   const nextFunction = async () => {
+    
     if (firstNameRef.current.value.length === 0) {
       setError("first name cannot be empty");
       return;
@@ -58,9 +61,10 @@ const FormOne = (props) => {
       },
     });
     props.formState("second");
+    
   };
   return (
-    <div className={FrOneCss.fOnemDiv} id="darkFormOne">
+    <div className={FrOneCss.fOnemDiv} id={isLightTheme === false? "darkModeTitle" : ""}>
       <BasicTextInput
         ref={firstNameRef}
         name="FirstName"
