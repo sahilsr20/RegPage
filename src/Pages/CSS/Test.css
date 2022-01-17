@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap");
 .HnDiv {
   position: relative;
+  overflow-x: hidden;
 }
 
 #textDiv {
@@ -15,67 +16,6 @@
   backdrop-filter: blur(2px);
   justify-content: center;
   align-items: center;
-}
-
-.slide {
-  background-color: #f8f8f8;
-  height: 100%;
-  width: 60%;
-}
-
-.slick-next:before {
-  content: "Next" !important;
-  font-family: "Manrope", sans-serif;
-  font-size: 15px;
-  color: #f45725 !important;
-  padding: 10px 107px;
-  border-radius: 16px;
-  background-color: white;
-}
-
-.slick-slider {
-  position: static;
-}
-
-.slick-prev,
-.slick-next {
-  position: absolute;
-  top: 92% !important;
-  z-index: 2;
-  transform: translate(0, 0%);
-}
-
-.slick-next {
-  right: 34% !important;
-}
-
-.slick-prev {
-  left: 3% !important;
-}
-
-.slick-prev:before {
-  font-family: "Manrope", sans-serif;
-  font-size: 15px;
-  content: "Prev" !important;
-  color: #f45725 !important;
-  background-color: white;
-  padding: 10px 107px;
-  border-radius: 16px;
-}
-
-#closeBtn {
-  position: absolute;
-  top: 3%;
-  right: 25%;
-  color: #f45725;
-  z-index: 2;
-  cursor: pointer;
-}
-
-.formPDiv {
-  background-color: #f8f8f8;
-  height: 85vh;
-  overflow-y: scroll;
 }
 
 ::-webkit-scrollbar {

@@ -159,7 +159,7 @@ li {
   display: none;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+  width: 95%;
   margin-bottom: 40px;
 }
 
@@ -226,6 +226,9 @@ li {
   .leftDiv ul {
     margin-bottom: 40px;
   }
+  .impEmail {
+    margin: 22px 0px 19px 15px;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -250,7 +253,16 @@ li {
   .socialIcons {
     margin-right: 10px;
   }
-  /* .flex1 { */
-  /* background-color: red; */
-  /* } */
+}
+
+@media only screen and (max-width: 400px) {
+  .mailMobo {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 310px) {
+  .getBtn {
+    margin-left: -15%;
+  }
 }
