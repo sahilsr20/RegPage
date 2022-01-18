@@ -21,24 +21,26 @@ export default function Home() {
       id={isLightTheme === false ? "darkModeBody" : ""}
     >
       <Nav />
-      <Events
-        showModal={setShowModal}
-        eventName="Upcoming Events"
-        btnName0="Register Now 🚀"
-        btnName1="Register Now 🚀"
-      />
-      <Events
-        eventName="Past Events"
-        btnName0="Coming Soon 🚀"
-        btnName1="Coming Soon 🚀"
-      />
-      <Events
-        eventName="Coming Soon"
-        btnName0="Coming Soon 🚀"
-        btnName1="Coming Soon 🚀"
-      />
-      {showModal && <Modal modal={setShowModal} />}
-      <Footer />
+      <div className="marginDown">
+        <Events
+          showModal={setShowModal}
+          eventName="Upcoming Events"
+          btnName0="Register Now 🚀"
+          btnName1="Register Now 🚀"
+        />
+        <Events
+          eventName="Past Events"
+          btnName0="Coming Soon 🚀"
+          btnName1="Coming Soon 🚀"
+        />
+        <Events
+          eventName="Coming Soon"
+          btnName0="Coming Soon 🚀"
+          btnName1="Coming Soon 🚀"
+        />
+        {showModal && <Modal modal={setShowModal} />}
+        <Footer />
+      </div>
     </div>
   );
 }

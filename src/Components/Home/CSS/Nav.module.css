@@ -1,17 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap");
-.HmDiv {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
+.HmDiv,
+#sticky {
+  position: fixed;
+  top: 0%;
+  width: 94%;
+  display: flex;
   height: 40px;
   padding: 20px 40px 60px 40px;
-  display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: #ffffff;
   align-items: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+#sticky {
+  position: fixed;
+  top: 0%;
+  width: 94%;
 }
 
 .logoDivMobo {

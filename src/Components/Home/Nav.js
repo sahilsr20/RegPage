@@ -15,6 +15,7 @@ export default function Nav(props) {
   const dispatch = useDispatch();
   // const [iniImg, setImg] = useState(img0);
   const isLightTheme = useSelector((state) => state.isLightTheme);
+  const [nav, setnav] = useState(false);
 
   const hamTog = async function (e) {
     if (document.getElementById("mDiv")) {
@@ -27,10 +28,19 @@ export default function Nav(props) {
     dispatch({ type: "toggleTheme" });
   };
 
+  const changeBg = () => {
+    if (window.scrollY >= 112) {
+      setnav(true);
+    } else {
+      setnav(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeBg);
   return (
     <div
       className={HCss.HmDiv}
-      id={isLightTheme === false ? "darkModeNav" : ""}
+      id={isLightTheme === false ? "darkModeNavMoboW" : ""}
     >
       <NavMobo />
       <div className={HCss.hamburgwerDiv} onClick={hamTog}>
