@@ -1,4 +1,5 @@
-#mDiv {
+#mDiv,
+.cont {
   display: none;
 }
 
@@ -15,11 +16,14 @@
     top: 0px;
     left: 0px;
     background-color: white;
-    width: 90%;
+    width: 98%;
     height: 812px;
     z-index: 2;
     background-color: #0f0e0e;
     color: #ffffff;
+  }
+  .cont {
+    display: block;
   }
   #mDiv {
     display: none;
@@ -27,7 +31,7 @@
     top: 0px;
     left: 0px;
     background-color: white;
-    width: 90%;
+    width: 98%;
     height: 812px;
     z-index: 2;
   }
@@ -57,5 +61,41 @@
   }
   #darkX {
     color: white;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #darkModeNavMobo {
+    width: 96%;
+  }
+  #mDiv {
+    width: 96%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #darkModeNavMobo {
+    width: 93%;
+  }
+  #mDiv {
+    width: 93%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #darkModeNavMobo {
+    width: 99%;
+  }
+  #mDiv {
+    width: 99%;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  #darkModeNavMobo {
+    width: 94%;
+  }
+  #mDiv {
+    width: 94%;
   }
 }
