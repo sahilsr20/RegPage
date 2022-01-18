@@ -60,7 +60,7 @@ export default function UpCommingRegisterDiv(props) {
               onClick={() => {
                 props.showModal(true);
               }}
-              id={isLightTheme === false ? "darkModeNav" : ""}
+              id={isLightTheme === false ? "darkModeNavBtn" : ""}
             >
               {props.btnName}
             </Link>

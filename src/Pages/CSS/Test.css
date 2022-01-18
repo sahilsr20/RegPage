@@ -13,9 +13,13 @@
   color: #afafaf;
 }
 
-#darkModeNav {
+#darkModeNavBtn {
   background-color: #0f0e0e;
   color: #ffffff;
+}
+
+#darkModeNavBtn:hover {
+  background-color: #f45725;
 }
 
 #darkModeNavMoboW {
