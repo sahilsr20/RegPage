@@ -41,17 +41,7 @@ export default function UpCommingRegisterDiv(props) {
             aliquam et id. Ut scelerisque in non integert aliquam et id. Ut
             scelerisque in non integer Ut scelerisque in non integert aliquam et
             id. Ut scelerisque in non integerut scelerisque in non integert
-            aliquam et id. Ut scelerisque in non integer. Ridiculus cras mi
-            vivamus placera ridiculus cras mi vivamus placerat aliquam et id. Ut
-            scelerisque in non integert aliquam et id. Ut scelerisque in non
-            integer Ut scelerisque in non integert aliquam et id. Ut scelerisque
-            in non integerut scelerisque in non integert aliquam et id. Ut
-            scelerisque in non integer. Ridiculus cras mi vivamus placera
-            ridiculus cras mi vivamus placerat aliquam et id. Ut scelerisque in
-            non integert aliquam et id. Ut scelerisque in non integer Ut
-            scelerisque in non integert aliquam et id. Ut scelerisque in non
-            integerut scelerisque in non integert aliquam et id. Ut scelerisque
-            in non integer.
+            aliquam et id. Ut scelerisque in non integer.
           </p>
           <div className={RegCss.LinkDiv}>
             <Link

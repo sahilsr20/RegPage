@@ -37,6 +37,7 @@ const initialState = {
   whichOne: null,
   source: null,
   isLightTheme: true,
+  isMobile: false,
 };
 
 const reducerFunction = (state = initialState, action) => {
@@ -201,8 +202,11 @@ const reducerFunction = (state = initialState, action) => {
     console.log("fetched state");
     console.log(newState);
     return newState;
+  } else if (action.type === "isMobile") {
+    let newState = { ...state };
+    newState.isMobile = action.isMobile;
+    return newState;
   }
-
   return state;
 };
 

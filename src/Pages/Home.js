@@ -1,13 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Nav from "./../Components/Home/Nav";
 import Events from "../Components/Home/Events";
 import Modal from "../Components/Form/Modal";
 import Footer from "./../Components/Home/Footer";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import "./CSS/Test.css";
 
 export default function Home() {
   const isLightTheme = useSelector((state) => state.isLightTheme);
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    let windowWidth = window.innerWidth;
+    if (windowWidth <= 400) {
+      dispatch({ type: "isMobile", isMobile: true });
+    } else {
+      dispatch({ type: "isMobile", isMobile: false });
+    }
+  }, []);
+
+  const isMobile = useSelector((state) => state.isMobile);
   const [showModal, setShowModal] = useState(false);
 
   const closeBtnF = async function (e) {
@@ -16,10 +28,7 @@ export default function Home() {
   };
 
   return (
-    <div
-      className="HnDiv"
-      id={isLightTheme === false ? "darkModeBody" : ""}
-    >
+    <div className="HnDiv" id={isLightTheme === false ? "darkModeBody" : ""}>
       <Nav />
       <div className="marginDown">
         <Events

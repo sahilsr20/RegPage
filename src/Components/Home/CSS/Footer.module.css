@@ -221,9 +221,10 @@ li {
 @media only screen and (max-width: 800px) {
   .leftDiv {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
   }
   .leftDiv ul {
+    /* text-align: left; */
     margin-bottom: 40px;
   }
   .impEmail {
@@ -273,8 +274,8 @@ li {
   }
 }
 
-@media only screen and (max-width: 310px) {
+/* @media only screen and (max-width: 310px) {
   .getBtn {
     margin-left: -15%;
   }
-}
+} */
