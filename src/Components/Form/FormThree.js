@@ -202,8 +202,10 @@ const FormThree = (props) => {
             >
               Add Member
             </button>
-            <h3>team member details</h3>
-            <p>
+            <h3 id={isLightTheme === false ? "h3TeamNameD" : "h3TeamName"}>
+              Team Member Details
+            </h3>
+            <p id={isLightTheme === false ? "PTeamNameD" : "PTeamName"}>
               1. {state.teamLeaderDetails.firstname} {"    "}
               {state.teamLeaderDetails.lastname}
             </p>
@@ -213,7 +215,7 @@ const FormThree = (props) => {
             className={FormCss.backBtn}
             id={isLightTheme === false ? FormCss.darknextN : "btnN"}
           >
-            back
+            Back
           </button>
           <button
             onClick={backPageFunc}
@@ -243,7 +245,9 @@ const FormThree = (props) => {
               name="collegeMailId"
               label="College Email ID"
             />
-            <h3>Note: you can only form team of max 3 members</h3>
+            <h3 className={FormCss.h3Note}>
+              Note: you can only form team of max 3 members
+            </h3>
             {error && <h1>{error}</h1>}
             <button
               onClick={saveThirdMember}
@@ -252,12 +256,14 @@ const FormThree = (props) => {
             >
               Add Member
             </button>
-            <h3>team member details</h3>
-            <p>
+            <h3 id={isLightTheme === false ? "h3TeamNameD" : "h3TeamName"}>
+              Team Member Details
+            </h3>
+            <p id={isLightTheme === false ? "PTeamNameD" : "PTeamName"}>
               1. {state.teamLeaderDetails.firstname} {"    "}
               {state.teamLeaderDetails.lastname}
             </p>
-            <p>
+            <p id={isLightTheme === false ? "PTeamNameD" : "PTeamName"}>
               2. {state.secondMemberDetails.firstname} {"    "}
               {state.secondMemberDetails.lastname}
             </p>
@@ -267,7 +273,7 @@ const FormThree = (props) => {
             className={FormCss.backBtn}
             id={isLightTheme === false ? FormCss.darknextN : "btnN"}
           >
-            back
+            Back
           </button>
           <button
             onClick={backPageFunc}
@@ -281,32 +287,49 @@ const FormThree = (props) => {
             className={FormCss.nextBtn}
             id={isLightTheme === false ? FormCss.darknextN : "btnN"}
           >
-            next
+            Next
           </button>
         </div>
       )}
       {stage === "teamCheck" && (
         <div>
           <div className={FormCss.contDiv}>
-            <h3>team member details</h3>
-            <p>
-              1. {state.teamLeaderDetails.firstname}{" "}
-              {state.teamLeaderDetails.lastname}{" "}
+            <h3 id={isLightTheme === false ? "h3TeamNameD" : "h3TeamName"}>
+              Team Member Details
+            </h3>
+            <p id={isLightTheme === false ? "PTeamNameD" : "PTeamName"}>
+              1. {state.teamLeaderDetails.firstname}
+              {state.teamLeaderDetails.lastname}
             </p>
-            <p>
+            <p id={isLightTheme === false ? "PTeamNameD" : "PTeamName"}>
               2. {state.secondMemberDetails.firstname}{" "}
               {state.secondMemberDetails.lastname}{" "}
             </p>
-            <p>
+            <p id={isLightTheme === false ? "PTeamNameD" : "PTeamName"}>
               3. {state.thirdMemberDetails.firstname}{" "}
               {state.thirdMemberDetails.lastname}{" "}
             </p>
           </div>
-          <button onClick={backPageFunc} className={FormCss.backBtn}>
-            back
+          <button
+            onClick={backPageFunc}
+            className={FormCss.backBtn}
+            id={isLightTheme === false ? FormCss.darknextN : "btnN"}
+          >
+            Back
           </button>
-          <button onClick={nextPageFunc} className={FormCss.nextBtn}>
-            next
+          <button
+            onClick={backPageFunc}
+            className={FormCss.backBtnMobo}
+            id={isLightTheme === false ? FormCss.darknext : "btnNMobo"}
+          >
+            <ArrowBackIcon />
+          </button>
+          <button
+            onClick={nextPageFunc}
+            className={FormCss.nextBtn}
+            id={isLightTheme === false ? FormCss.darknextN : "btnN"}
+          >
+            Next
           </button>
         </div>
       )}

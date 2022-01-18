@@ -133,12 +133,17 @@
   background-color: #1e1e1e;
 }
 
-#darktitle {
+#darktitle,
+#h3TeamNameD {
   color: white;
 }
 
 #darknextB {
   background-color: #1e1e1e;
+}
+
+.h3Note {
+  margin-bottom: 20px;
 }
 
 #btnNMobo {

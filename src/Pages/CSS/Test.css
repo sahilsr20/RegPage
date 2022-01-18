@@ -13,6 +13,25 @@
   color: #afafaf;
 }
 
+#h3TeamName,
+#h3TeamNameD {
+  margin-bottom: 20px;
+}
+#PTeamNameD,
+#h3TeamNameD {
+  color: white;
+}
+
+#PTeamName,
+#PTeamNameD {
+  margin-bottom: 10px;
+}
+
+#h3TeamName,
+#PTeamName {
+  color: black;
+}
+
 #darkModeNavBtn {
   background-color: #0f0e0e;
   color: #ffffff;
