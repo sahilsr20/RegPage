@@ -3,10 +3,10 @@ const dataConvert = (state) => {
     firstname: state.basicDetails1.firstName,
     lastname: state.basicDetails1.lastName,
     pronoun: state.basicDetails1.pronoun,
-    teamname: state.basicDetails1.teamName,
+    teamname: state.basicDetails2.teamName,
     clgmail: state.basicDetails2.collegeEmailId,
-    contact: state.basicDetails2.contactNumber,
-    mobile: state.basicDetails2.contactNumber,
+    contact: state.basicDetails1.contactNumber,
+    mobile: state.basicDetails1.contactNumber,
     clg: state.basicDetails2.collegeName,
     year: state.basicDetails2.currentYear,
     team: state.teamOrSolo === true ? "true" : "false",
@@ -14,7 +14,7 @@ const dataConvert = (state) => {
     // firsttime: !state.attendedOtherEvent,
     advert: state.source,
   };
-  if (state.teamOrSolo === "team") {
+  if (state.teamOrSolo) {
     obj = {
       ...obj,
       teamleader: {
@@ -42,7 +42,7 @@ const dataConvert = (state) => {
   if (state.attendedOtherEvent) {
     obj = {
       ...obj,
-      event: "Omega",
+      event: state.whichOne,
     };
   }
   return obj;

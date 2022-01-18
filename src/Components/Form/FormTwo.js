@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
-// import axios from "axios";
+import axios from "axios";
 import BasicTextInput from "./BasicITextInput";
 import RadioInputs from "./RadioInputs";
 import FormCss from "./CSS/FormOne.module.css";
@@ -11,7 +11,7 @@ const FormTwo = (props) => {
   const isLightTheme = useSelector((state) => state.isLightTheme);
   const [error, setError] = useState(null);
   const collegeMailRef = useRef();
-  const moibleNumberRef = useRef();
+  const teamNameRef = useRef();
   const currentYearRef = useRef();
   const collegeRadioRef = useRef();
   const OtherRef = useRef();
@@ -27,10 +27,10 @@ const FormTwo = (props) => {
       collegeMailRef.current.value.length === 0 ||
       !collegeMailRef.current.value.includes("@")
     ) {
-      setError("invalid College Mail");
+      setError("collegeMail");
       return;
-    } else if (moibleNumberRef.current.value.length !== 10) {
-      setError("invalid Mobile Number");
+    } else if (teamNameRef.current.value.length === 0) {
+      setError("teamName");
       return;
     }
     let currentYear = null;
@@ -39,24 +39,26 @@ const FormTwo = (props) => {
         currentYear = currentYearRef.current[i].value;
     }
     if (!currentYear) {
-      setError("choose your current year");
+      setError("currentYear");
       return;
     }
     if (
       !collegeRadioRef.current[0].checked &&
       OtherRef.current.value.length === 0
     ) {
-      setError("college name required");
+      setError("collegeName");
       return;
     }
 
     // CHECK DATABASE FOR DUPLICATE EMAIL
-    // const url = "http://localhost:8080/fedReg/checkMail";
-    // const response = await axios.post(url, {
+    // const url = "http://localhost:8080/fedReg/checkBoth";
+    // const response = await axios.get(url, {
     //   clgmail: collegeMailRef.current.value,
+    //   teamname: teamNameRef.current.value,
     // });
     // if (!response.data.passed) {
     //   setError("email already registered, please try a different one");
+    //   console.log("email already registered, please try a different one");
     //   return;
     // }
 
@@ -67,7 +69,7 @@ const FormTwo = (props) => {
       type: "basicDetailsTwo",
       data: {
         collegeEmailId: collegeMailRef.current.value,
-        contactNumber: moibleNumberRef.current.value,
+        teamName: teamNameRef.current.value,
         collegeName: collegeName,
         currentYear: currentYear,
       },
@@ -82,14 +84,16 @@ const FormTwo = (props) => {
     >
       <div className={FormCss.contDiv}>
         <BasicTextInput
+          error={error === "collegeMail" && true}
           ref={collegeMailRef}
           name="CollegeEmailId"
           label="College Email Id"
         />
         <BasicTextInput
-          ref={moibleNumberRef}
-          name="Mobile Number"
-          label="Mobile Number"
+          error={error === "teamName" && true}
+          ref={teamNameRef}
+          name="Team Name"
+          label="Team Name"
         />
         <RadioInputs
           question="College Name"
@@ -103,7 +107,6 @@ const FormTwo = (props) => {
           question="Which Year"
           radioList={["first", "second", "third", "fourth", "other"]}
         />
-        {error && <h1>{error}</h1>}
       </div>
 
       <button

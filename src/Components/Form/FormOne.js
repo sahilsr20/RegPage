@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-// import axios from "axios";
 import BasicTextInput from "./BasicITextInput";
 import RadioInputs from "./RadioInputs";
 import FrOneCss from "./CSS/FormOne.module.css";
@@ -14,19 +13,19 @@ const FormOne = (props) => {
   const [error, setError] = useState(null);
   const firstNameRef = useRef();
   const lastNameRef = useRef();
-  const teamNameRef = useRef();
+  const contactNumberRef = useRef();
   const pronounRef = useRef();
   const dispatch = useDispatch();
 
   const nextFunction = async () => {
     if (firstNameRef.current.value.length === 0) {
-      setError("first name cannot be empty");
+      setError("firstname");
       return;
     } else if (lastNameRef.current.value.length === 0) {
-      setError("last name cannot be empty");
+      setError("lastname");
       return;
-    } else if (teamNameRef.current.value.length === 0) {
-      setError("Team name cannot be empty");
+    } else if (contactNumberRef.current.value.length !== 10) {
+      setError("contactNumber");
       return;
     }
     let pronoun = null;
@@ -35,27 +34,19 @@ const FormOne = (props) => {
         pronoun = pronounRef.current[i].value;
     }
     if (!pronoun) {
-      setError("please select the pronoun");
+      setError("pronoun");
       return;
     }
     console.log(pronoun);
 
     // SEND A REQUEST TO CHECK FOR DUPLICATE TEAM NAME
-    // const url = "http://localhost:8080/fedReg/checkTeam";
-    // const response = await axios.post(url, {
-    //   teamname: teamNameRef.current.value,
-    // });
-    // if (!response.data.passed) {
-    //   setError("team already exists, please choose a different team name");
-    //   return;
-    // }
 
     dispatch({
       type: "basicDetailsOne",
       data: {
         firstName: firstNameRef.current.value,
         lastName: lastNameRef.current.value,
-        teamName: teamNameRef.current.value,
+        contactNumber: contactNumberRef.current.value,
         pronoun: pronoun,
       },
     });
@@ -67,18 +58,28 @@ const FormOne = (props) => {
       id={isLightTheme === false ? FrOneCss.darkform : ""}
     >
       <BasicTextInput
+        error={error === "firstname" && true}
         ref={firstNameRef}
         name="FirstName"
         label="Basic Details"
       />
-      <BasicTextInput ref={lastNameRef} name="LastName" />
-      <BasicTextInput ref={teamNameRef} name="teamName" label="Team Name" />
+      <BasicTextInput
+        ref={lastNameRef}
+        name="LastName"
+        error={error === "lastname" && true}
+      />
+      <BasicTextInput
+        ref={contactNumberRef}
+        name="contactNumber"
+        label="Contact Number"
+        error={error === "contactNumber" && true}
+      />
       <RadioInputs
         ref={pronounRef}
+        error={error === "pronoun" && true}
         question="Pronoun"
         radioList={["He/Him", "She/Her", "They/Them"]}
       />
-      {error && <h1 className={FrOneCss.errorH1}>{error}</h1>}
       <button
         onClick={nextFunction}
         className={FrOneCss.nextBtn}

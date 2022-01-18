@@ -8,6 +8,7 @@ const FormThree = (props) => {
   const isLightTheme = useSelector((state) => state.isLightTheme);
   const [stage, setStage] = useState("leader");
   const [error, setError] = useState(null);
+  const state = useSelector((state) => state);
   const dispatch = useDispatch();
   const firstNameRef = useRef();
   const lastNameRef = useRef();
@@ -103,6 +104,7 @@ const FormThree = (props) => {
       },
     });
     setError(null);
+    setStage("teamCheck");
   };
   const nextPageFunc = () => {
     //navigate to the next page
@@ -201,6 +203,10 @@ const FormThree = (props) => {
               Add Member
             </button>
             <h3>team member details</h3>
+            <p>
+              1. {state.teamLeaderDetails.firstname} {"    "}
+              {state.teamLeaderDetails.lastname}
+            </p>
           </div>
           <button
             onClick={backPageFunc}
@@ -237,7 +243,7 @@ const FormThree = (props) => {
               name="collegeMailId"
               label="College Email ID"
             />
-            <h1>Note: you can only form team of max 3 members</h1>
+            <h3>Note: you can only form team of max 3 members</h3>
             {error && <h1>{error}</h1>}
             <button
               onClick={saveThirdMember}
@@ -246,6 +252,15 @@ const FormThree = (props) => {
             >
               Add Member
             </button>
+            <h3>team member details</h3>
+            <p>
+              1. {state.teamLeaderDetails.firstname} {"    "}
+              {state.teamLeaderDetails.lastname}
+            </p>
+            <p>
+              2. {state.secondMemberDetails.firstname} {"    "}
+              {state.secondMemberDetails.lastname}
+            </p>
           </div>
           <button
             onClick={backPageFunc}
@@ -266,6 +281,31 @@ const FormThree = (props) => {
             className={FormCss.nextBtn}
             id={isLightTheme === false ? FormCss.darknextN : "btnN"}
           >
+            next
+          </button>
+        </div>
+      )}
+      {stage === "teamCheck" && (
+        <div>
+          <div className={FormCss.contDiv}>
+            <h3>team member details</h3>
+            <p>
+              1. {state.teamLeaderDetails.firstname}{" "}
+              {state.teamLeaderDetails.lastname}{" "}
+            </p>
+            <p>
+              2. {state.secondMemberDetails.firstname}{" "}
+              {state.secondMemberDetails.lastname}{" "}
+            </p>
+            <p>
+              3. {state.thirdMemberDetails.firstname}{" "}
+              {state.thirdMemberDetails.lastname}{" "}
+            </p>
+          </div>
+          <button onClick={backPageFunc} className={FormCss.backBtn}>
+            back
+          </button>
+          <button onClick={nextPageFunc} className={FormCss.nextBtn}>
             next
           </button>
         </div>

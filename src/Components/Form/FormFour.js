@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import RadioInputs from "./RadioInputs";
 import FormCss from "./CSS/FormOne.module.css";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
-// import dataConvert from "./dataConvert";
+import dataConvert from "./dataConvert";
 // import axios from "axios";
 
 const FormFour = (props) => {
@@ -26,12 +26,11 @@ const FormFour = (props) => {
     setStage("this is our First Time");
   };
   const submitFunction = async () => {
+    console.log("whichone ref");
+    console.log(whichOneRef);
     let whichOne = null;
     for (let i = 0; i < 4; i++) {
-      if (
-        stage === "attendedOtherEvent" &&
-        whichOneRef.current[i].checked === true
-      )
+      if (whichOneRef.current && whichOneRef.current[i].checked === true)
         whichOne = whichOneRef.current[i].value;
     }
     console.log(whichOne);
@@ -47,9 +46,9 @@ const FormFour = (props) => {
     dispatch({ type: "source", source: knowEvent });
 
     // REQUEST TO SUBMIT THE DATA
-    // const obj = dataConvert(state);
-    // console.log("the object");
-    // console.log(obj);
+    const obj = dataConvert(state);
+    console.log("the object");
+    console.log(obj);
     // const url = "http://localhost:8080/fedReg/saveData";
     // const response = await axios.post(url, { ...obj });
     // console.log("this is response");

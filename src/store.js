@@ -3,14 +3,15 @@ import { createStore } from "redux";
 const initialState = {
   basicDetails1: {
     firstname: null, //
+    contactNumber: null,
     lastname: null, //
-    teamName: null,
     pronoun: null,
   },
   basicDetails2: {
     collegeEmailId: null, //y
-    contactNumber: null, //
+    // contactNumber: null, //
     collegeName: null,
+    teamName: null,
     currentYear: null,
   },
   teamOrSolo: null,
@@ -44,7 +45,7 @@ const reducerFunction = (state = initialState, action) => {
     const obj = {
       firstName: action.data.firstName,
       lastName: action.data.lastName,
-      teamName: action.data.teamName,
+      contactNumber: action.data.contactNumber,
       pronoun: action.data.pronoun,
     };
     newState.basicDetails1 = {
@@ -58,7 +59,7 @@ const reducerFunction = (state = initialState, action) => {
     let newState = { ...state };
     const obj = {
       collegeEmailId: action.data.collegeEmailId,
-      contactNumber: action.data.contactNumber,
+      teamName: action.data.teamName,
       collegeName: action.data.collegeName,
       currentYear: action.data.currentYear,
     };

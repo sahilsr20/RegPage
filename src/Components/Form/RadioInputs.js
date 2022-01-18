@@ -1,9 +1,9 @@
 import React from "react";
 import FrCss from "./CSS/Forms.module.css";
-import {useSelector} from 'react-redux';
+import { useSelector } from "react-redux";
 
 const RadioInput = (props) => {
-  const isLightTheme = useSelector((state) => state.isLightTheme)
+  const isLightTheme = useSelector((state) => state.isLightTheme);
   return (
     <div>
       <input
@@ -12,7 +12,11 @@ const RadioInput = (props) => {
         value={props.value}
         className={FrCss.radioInp}
       ></input>
-      <label htmlFor={props.value} className={FrCss.radioLable} id={isLightTheme === false? FrCss.darkradio : ""}>
+      <label
+        htmlFor={props.value}
+        className={FrCss.radioLable}
+        id={isLightTheme === false ? FrCss.darkradio : ""}
+      >
         {props.value}
       </label>
     </div>
@@ -20,10 +24,16 @@ const RadioInput = (props) => {
 };
 
 const RadioInputs = React.forwardRef((props, ref) => {
-  const isLightTheme = useSelector((state) => state.isLightTheme)
+  const isLightTheme = useSelector((state) => state.isLightTheme);
   return (
     <div>
-      <h2 className={FrCss.radioH2} id={isLightTheme === false? FrCss.darkradio : ""}>{props.question}</h2>
+      <h2
+        style={{ color: props.error ? "red" : "black" }}
+        className={FrCss.radioH2}
+        id={isLightTheme === false ? FrCss.darkradio : ""}
+      >
+        {props.question}
+      </h2>
       <form ref={ref}>
         {props.radioList.map((value) => {
           return <RadioInput key={value} value={value} name={props.question} />;
