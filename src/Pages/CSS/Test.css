@@ -3,13 +3,16 @@
   position: relative;
   overflow-x: hidden;
 }
+
 .marginDown {
   margin-top: 158px;
 }
+
 #darkModeBody {
   background-color: #0f0e0e;
   color: #afafaf;
 }
+
 #darkModeNav {
   background-color: #0f0e0e;
   color: #ffffff;
@@ -24,6 +27,7 @@
 #darkModeTitle {
   color: #ffffff;
 }
+
 #darkModeEventBoxbg {
   background-color: #1e1e1e;
 }
