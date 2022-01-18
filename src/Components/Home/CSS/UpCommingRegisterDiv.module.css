@@ -96,3 +96,15 @@
     float: none;
   }
 }
+
+@media only screen and (max-width: 400px) {
+  .regBtn {
+    padding: 10px 40px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .regBtn {
+    padding: 10px 20px;
+  }
+}

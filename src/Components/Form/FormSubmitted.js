@@ -19,7 +19,10 @@ const FormSubmitted = () => {
           Thanks for apibus vitae blandit nisl massa habitasse. Dignissim enim,
           vitae, massa consectetur!!
         </p>
-        <img src={img0} alt="tick" />
+        <iframe
+          src="https://embed.lottiefiles.com/animation/64787"
+          className={FSubCss.successGif}
+        ></iframe>
         <Link to="" className={FSubCss.LinkTweet}>
           Tweet about this event
         </Link>

@@ -65,3 +65,20 @@
   background-color: #0f0e0e;
   color: white;
 }
+
+.successGif {
+  border-style: none;
+  height: 285px;
+}
+
+@media only screen and (max-width: 900px) {
+  .mCOnDiv {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .mCOnDiv {
+    width: 93%;
+  }
+}
