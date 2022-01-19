@@ -26,7 +26,7 @@ const RadioInput = (props) => {
 const RadioInputs = React.forwardRef((props, ref) => {
   const isLightTheme = useSelector((state) => state.isLightTheme);
   return (
-    <div>
+    <div className={FrCss.radioDivMainMobo}>
       <h2
         className={FrCss.radioH2}
         id={isLightTheme === false ? FrCss.darkradio : ""}

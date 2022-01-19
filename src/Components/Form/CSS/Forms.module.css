@@ -22,6 +22,10 @@
   border-color: #f45725;
 }
 
+.radioDivMainMobo {
+  padding-left: 10px;
+}
+
 .lableTag {
   display: block;
   margin-bottom: 20px;
@@ -69,6 +73,7 @@ input[type="radio"]:checked {
 
 .textInp {
   position: relative;
+  padding-left: 10px;
 }
 
 .errorMsg {

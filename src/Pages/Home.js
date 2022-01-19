@@ -12,7 +12,7 @@ export default function Home() {
   const dispatch = useDispatch();
   useEffect(() => {
     let windowWidth = window.innerWidth;
-    if (windowWidth <= 400) {
+    if (windowWidth <= 500) {
       dispatch({ type: "isMobile", isMobile: true });
     } else {
       dispatch({ type: "isMobile", isMobile: false });

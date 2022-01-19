@@ -18,12 +18,14 @@ const Modal = (props) => {
     localStorage.clear();
     props.modal(false);
   };
-
+  const themeAttribute = isLightTheme
+    ? { backgroundColor: "#f8f8f8" }
+    : { backgroundColor: "#0f0e0e" };
   return (
     <div>
       {isMobile ? (
         <div
-          style={{ backgroundColor: "white" }}
+          style={themeAttribute}
           className="modal-card"
           id={isLightTheme === false ? "darkmodal" : ""}
         >

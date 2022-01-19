@@ -34,15 +34,15 @@ const FormThree = (props) => {
       return;
     }
 
-    const url = "http://localhost:8080/fedReg/checkMail";
-    const response = await axios.post(url, {
-      clgmail: collegeMail.current.value,
-    });
-    if (response.data.error) {
-      setError(response.data.error);
-      console.log(response.data.error);
-      return;
-    }
+    // const url = "http://localhost:8080/fedReg/checkMail";
+    // const response = await axios.post(url, {
+    //   clgmail: collegeMail.current.value,
+    // });
+    // if (response.data.error) {
+    //   setError(response.data.error);
+    //   console.log(response.data.error);
+    //   return;
+    // }s
     dispatch({
       type: "teamLeaderDetails",
       data: {
@@ -72,15 +72,15 @@ const FormThree = (props) => {
       setError("Email is not valid");
       return;
     }
-    const url = "http://localhost:8080/fedReg/checkMail";
-    const response = await axios.post(url, {
-      clgmail: collegeMail.current.value,
-    });
-    if (response.data.error) {
-      setError(response.data.error);
-      console.log(response.data.error);
-      return;
-    }
+    // const url = "http://localhost:8080/fedReg/checkMail";
+    // const response = await axios.post(url, {
+    //   clgmail: collegeMail.current.value,
+    // });
+    // if (response.data.error) {
+    //   setError(response.data.error);
+    //   console.log(response.data.error);
+    //   return;
+    // }
     dispatch({
       type: "secondMemberDetails",
       data: {
@@ -110,15 +110,15 @@ const FormThree = (props) => {
       setError("Email is not valid");
       return;
     }
-    const url = "http://localhost:8080/fedReg/checkMail";
-    const response = await axios.post(url, {
-      clgmail: collegeMail.current.value,
-    });
-    if (response.data.error) {
-      setError(response.data.error);
-      console.log(response.data.error);
-      return;
-    }
+    // const url = "http://localhost:8080/fedReg/checkMail";
+    // const response = await axios.post(url, {
+    //   clgmail: collegeMail.current.value,
+    // });
+    // if (response.data.error) {
+    //   setError(response.data.error);
+    //   console.log(response.data.error);
+    //   return;
+    // }
     //add third member to the state
     dispatch({
       type: "thirdMemberDetails",
