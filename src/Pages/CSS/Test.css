@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap");
 .HnDiv {
   position: relative;
+  overflow-x: hidden;
 }
 
 .marginDown {

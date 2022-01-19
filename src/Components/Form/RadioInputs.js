@@ -11,6 +11,7 @@ const RadioInput = (props) => {
         name={props.name}
         value={props.value}
         className={FrCss.radioInp}
+        id={props.value}
       ></input>
       <label
         htmlFor={props.value}
