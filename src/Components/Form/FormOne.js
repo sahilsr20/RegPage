@@ -77,7 +77,7 @@ const FormOne = (props) => {
       <RadioInputs
         ref={pronounRef}
         error={error === "pronoun" && true}
-        question="Pronoun"
+        question="Pronouns"
         radioList={["He/Him", "She/Her", "They/Them"]}
       />
       <button

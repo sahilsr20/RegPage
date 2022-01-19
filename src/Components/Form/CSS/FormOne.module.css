@@ -163,9 +163,9 @@
   .backBtnMobo {
     display: flex;
     position: absolute;
-    left: 5%;
-    top: 3%;
-    padding: 10px 30px;
+    left: 0%;
+    top: 4%;
+    padding: 0px 0px;
   }
   .btnNMobo {
     background-color: transparent;

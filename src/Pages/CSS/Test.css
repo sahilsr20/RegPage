@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap");
 .HnDiv {
   position: relative;
-  overflow-x: auto;
 }
 
 .marginDown {
-  margin-top: 158px;
+  margin-top: 120px;
+  padding-top: 10px;
 }
 
 #darkModeBody {
@@ -91,5 +91,8 @@
   #darkModeNavMoboW {
     /* background-color: #1e1e1e; */
     box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.1);
+  }
+  .marginDown {
+    margin-top: 118px;
   }
 }

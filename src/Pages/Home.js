@@ -27,8 +27,13 @@ export default function Home() {
     document.getElementById("textDiv").style.visibility = "hidden";
   };
 
+  let inlineStyle = showModal ? { overflow: "hidden", maxHeight: "100vh" } : {};
   return (
-    <div className="HnDiv" id={isLightTheme === false ? "darkModeBody" : ""}>
+    <div
+      style={inlineStyle}
+      className="HnDiv"
+      id={isLightTheme === false ? "darkModeBody" : ""}
+    >
       <Nav />
       <div className="marginDown">
         <Events

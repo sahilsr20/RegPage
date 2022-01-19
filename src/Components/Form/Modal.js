@@ -11,6 +11,7 @@ import HighlightOffIcon from "@material-ui/icons/HighlightOff";
 import { useSelector } from "react-redux";
 
 const Modal = (props) => {
+  const isMobile = useSelector((state) => state.isMobile);
   const isLightTheme = useSelector((state) => state.isLightTheme);
   const [form, setForm] = useState("first");
   const closeModal = () => {
@@ -19,21 +20,40 @@ const Modal = (props) => {
   };
 
   return (
-    <div className="backdrop">
-      <div
-        className="modal-card"
-        id={isLightTheme === false ? "darkmodal" : ""}
-      >
-        {form === "first" && <FormOne formState={setForm} />}
-        {form === "second" && <FormTwo formState={setForm} />}
-        {form === "frame31" && <Frame31 formState={setForm} />}
-        {form === "third" && <FormThree formState={setForm} />}
-        {form === "fourth" && <FormFour formState={setForm} />}
-        {form === "submitted" && <FormSubmitted />}
-        <button onClick={closeModal}>
-          <HighlightOffIcon fontSize="large" className="closeBtn" />
-        </button>
-      </div>
+    <div>
+      {isMobile ? (
+        <div
+          className="modal-card"
+          id={isLightTheme === false ? "darkmodal" : ""}
+        >
+          {form === "first" && <FormOne formState={setForm} />}
+          {form === "second" && <FormTwo formState={setForm} />}
+          {form === "frame31" && <Frame31 formState={setForm} />}
+          {form === "third" && <FormThree formState={setForm} />}
+          {form === "fourth" && <FormFour formState={setForm} />}
+          {form === "submitted" && <FormSubmitted />}
+          <button onClick={closeModal}>
+            <HighlightOffIcon fontSize="large" className="closeBtn" />
+          </button>
+        </div>
+      ) : (
+        <div className="backdrop">
+          <div
+            className="modal-card"
+            id={isLightTheme === false ? "darkmodal" : ""}
+          >
+            {form === "first" && <FormOne formState={setForm} />}
+            {form === "second" && <FormTwo formState={setForm} />}
+            {form === "frame31" && <Frame31 formState={setForm} />}
+            {form === "third" && <FormThree formState={setForm} />}
+            {form === "fourth" && <FormFour formState={setForm} />}
+            {form === "submitted" && <FormSubmitted />}
+            <button onClick={closeModal}>
+              <HighlightOffIcon fontSize="large" className="closeBtn" />
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
