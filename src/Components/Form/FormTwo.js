@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import axios from "axios";
 import BasicTextInput from "./BasicITextInput";
 import RadioInputs from "./RadioInputs";
+import RadioInput2 from "./RadioInput2";
 import FormCss from "./CSS/FormOne.module.css";
 import { useSelector } from "react-redux";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
@@ -12,9 +13,8 @@ const FormTwo = (props) => {
   const [error, setError] = useState(null);
   const collegeMailRef = useRef();
   const teamNameRef = useRef();
+  const collegeNameRef = useRef();
   const currentYearRef = useRef();
-  const collegeRadioRef = useRef();
-  const OtherRef = useRef();
   const dispatch = useDispatch();
 
   const backFunction = () => {
@@ -27,10 +27,10 @@ const FormTwo = (props) => {
       collegeMailRef.current.value.length === 0 ||
       !collegeMailRef.current.value.includes("@")
     ) {
-      setError("collegeMail");
+      setError("Email is not valid");
       return;
     } else if (teamNameRef.current.value.length === 0) {
-      setError("teamName");
+      setError("Team name is required");
       return;
     }
     let currentYear = null;
@@ -39,32 +39,36 @@ const FormTwo = (props) => {
         currentYear = currentYearRef.current[i].value;
     }
     if (!currentYear) {
-      setError("currentYear");
+      setError("please select current year");
       return;
     }
-    if (
-      !collegeRadioRef.current[0].checked &&
-      OtherRef.current.value.length === 0
-    ) {
-      setError("collegeName");
+
+    let collegeName;
+    console.log(collegeNameRef);
+    if (collegeNameRef.current[0].checked) {
+      console.log("kiit");
+      collegeName = "KIIT";
+    } else if (collegeNameRef.current[1].value.length !== 0) {
+      console.log("other");
+      collegeName = collegeNameRef.current[1].value;
+    } else {
+      console.log("error");
+      setError("College name is required");
       return;
     }
 
     // CHECK DATABASE FOR DUPLICATE EMAIL
-    // const url = "http://localhost:8080/fedReg/checkBoth";
-    // const response = await axios.get(url, {
-    //   clgmail: collegeMailRef.current.value,
-    //   teamname: teamNameRef.current.value,
-    // });
-    // if (!response.data.passed) {
-    //   setError("email already registered, please try a different one");
-    //   console.log("email already registered, please try a different one");
-    //   return;
-    // }
+    const url = "http://localhost:8080/fedReg/checkBoth";
+    const response = await axios.post(url, {
+      clgmail: collegeMailRef.current.value,
+      teamname: teamNameRef.current.value,
+    });
+    if (response.data.error) {
+      setError(response.data.error);
+      console.log(response.data.error);
+      return;
+    }
 
-    let collegeName = collegeRadioRef.current[0].checked
-      ? collegeRadioRef.current[0].value
-      : OtherRef.current.value;
     dispatch({
       type: "basicDetailsTwo",
       data: {
@@ -84,25 +88,32 @@ const FormTwo = (props) => {
     >
       <div className={FormCss.contDiv}>
         <BasicTextInput
-          error={error === "collegeMail" && true}
+          error={
+            (error === "Email is not valid" ||
+              error === "Email and Team name already registered" ||
+              error === "Email already in use") &&
+            error
+          }
           ref={collegeMailRef}
           name="CollegeEmailId"
           label="College Email Id"
         />
         <BasicTextInput
-          error={error === "teamName" && true}
+          error={
+            (error === "Team name already exists. Try again" ||
+              error === "Team name is required") &&
+            error
+          }
           ref={teamNameRef}
           name="Team Name"
           label="Team Name"
         />
-        <RadioInputs
-          question="College Name"
-          ref={collegeRadioRef}
-          radioList={["KIIT"]}
-          className={FormCss.radioM}
+        <RadioInput2
+          ref={collegeNameRef}
+          error={error === "College name is required" && error}
         />
-        <BasicTextInput ref={OtherRef} name="Other" />
         <RadioInputs
+          error={error === "please select current year" && error}
           ref={currentYearRef}
           question="Which Year"
           radioList={["first", "second", "third", "fourth", "other"]}

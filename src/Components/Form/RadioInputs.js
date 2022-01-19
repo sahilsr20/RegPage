@@ -28,12 +28,12 @@ const RadioInputs = React.forwardRef((props, ref) => {
   return (
     <div>
       <h2
-        style={{ color: props.error ? "red" : "black" }}
         className={FrCss.radioH2}
         id={isLightTheme === false ? FrCss.darkradio : ""}
       >
         {props.question}
       </h2>
+      {props.error && <p className={FrCss.radioerr}>{props.error}</p>}
       <form ref={ref}>
         {props.radioList.map((value) => {
           return <RadioInput key={value} value={value} name={props.question} />;

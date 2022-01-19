@@ -79,6 +79,7 @@ export default function Nav(props) {
             id={isLightTheme === false ? "darkModeImg" : ""}
             src={img0}
             alt="LightDarkImg"
+            id={isLightTheme === false ? "darkImageMode" : ""}
             className={HCss.LightDarkImg}
             onClick={toggleLightMode}
           />

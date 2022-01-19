@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import axios from "axios";
 import BasicTextInput from "./BasicITextInput";
 import FormCss from "./CSS/FormOne.module.css";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
@@ -15,25 +16,33 @@ const FormThree = (props) => {
   const mobileNumber = useRef();
   const collegeMail = useRef();
 
-  const addSecMember = () => {
+  const addSecMember = async () => {
     if (firstNameRef.current.value.length === 0) {
-      setError("first name cannot be empty");
+      setError("First name cannot be empty");
       return;
     } else if (lastNameRef.current.value.length === 0) {
-      setError("last name cannot be empty");
+      setError("Last name cannot be empty");
       return;
     } else if (mobileNumber.current.value.length !== 10) {
-      setError("mobile number is not valid");
+      setError("Mobile number is not valid");
       return;
     } else if (
       collegeMail.current.value.length === 0 ||
       !collegeMail.current.value.includes("@")
     ) {
-      setError("email is not valid");
+      setError("Email is not valid");
       return;
     }
-    //adding team leader details to the state
-    //validate the details and if any error, change the error state
+
+    const url = "http://localhost:8080/fedReg/checkMail";
+    const response = await axios.post(url, {
+      clgmail: collegeMail.current.value,
+    });
+    if (response.data.error) {
+      setError(response.data.error);
+      console.log(response.data.error);
+      return;
+    }
     dispatch({
       type: "teamLeaderDetails",
       data: {
@@ -46,24 +55,32 @@ const FormThree = (props) => {
     setError(null);
     setStage("second");
   };
-  const addThirdMember = () => {
+  const addThirdMember = async () => {
     if (firstNameRef.current.value.length === 0) {
-      setError("first name cannot be empty");
+      setError("First name cannot be empty");
       return;
     } else if (lastNameRef.current.value.length === 0) {
-      setError("last name cannot be empty");
+      setError("Last name cannot be empty");
       return;
     } else if (mobileNumber.current.value.length !== 10) {
-      setError("mobile number is not valid");
+      setError("Mobile number is not valid");
       return;
     } else if (
       collegeMail.current.value.length === 0 ||
       !collegeMail.current.value.includes("@")
     ) {
-      setError("email is not valid");
+      setError("Email is not valid");
       return;
     }
-    //add second member details to state
+    const url = "http://localhost:8080/fedReg/checkMail";
+    const response = await axios.post(url, {
+      clgmail: collegeMail.current.value,
+    });
+    if (response.data.error) {
+      setError(response.data.error);
+      console.log(response.data.error);
+      return;
+    }
     dispatch({
       type: "secondMemberDetails",
       data: {
@@ -76,21 +93,30 @@ const FormThree = (props) => {
     setError(null);
     setStage("third");
   };
-  const saveThirdMember = () => {
+  const saveThirdMember = async () => {
     if (firstNameRef.current.value.length === 0) {
-      setError("first name cannot be empty");
+      setError("First name cannot be empty");
       return;
     } else if (lastNameRef.current.value.length === 0) {
-      setError("last name cannot be empty");
+      setError("Last name cannot be empty");
       return;
     } else if (mobileNumber.current.value.length !== 10) {
-      setError("mobile number is not valid");
+      setError("Mobile number is not valid");
       return;
     } else if (
       collegeMail.current.value.length === 0 ||
       !collegeMail.current.value.includes("@")
     ) {
-      setError("email is not valid");
+      setError("Email is not valid");
+      return;
+    }
+    const url = "http://localhost:8080/fedReg/checkMail";
+    const response = await axios.post(url, {
+      clgmail: collegeMail.current.value,
+    });
+    if (response.data.error) {
+      setError(response.data.error);
+      console.log(response.data.error);
       return;
     }
     //add third member to the state
@@ -107,13 +133,9 @@ const FormThree = (props) => {
     setStage("teamCheck");
   };
   const nextPageFunc = () => {
-    //navigate to the next page
-    // navigate("/four");
     props.formState("fourth");
   };
   const backPageFunc = () => {
-    dispatch({ type: "deleteBasicDetailsTwo" });
-    // navigate("/two");
     props.formState("frame31");
   };
 
@@ -134,22 +156,32 @@ const FormThree = (props) => {
             <h2 className={FormCss.immaTeam}>Imma team player</h2>
             <div style={{ marginTop: "40px" }}>
               <BasicTextInput
+                error={error === "First name cannot be empty" && error}
                 ref={firstNameRef}
                 name="firstName"
                 label="Team leader Details"
               />
-              <BasicTextInput ref={lastNameRef} name="lastName" />
               <BasicTextInput
+                error={error === "Last name cannot be empty" && error}
+                ref={lastNameRef}
+                name="lastName"
+              />
+              <BasicTextInput
+                error={error === "Mobile number is not valid" && error}
                 ref={mobileNumber}
                 name="MobileNumber"
                 label="Mobile Number"
               />
               <BasicTextInput
+                error={
+                  (error === "Email is not valid" ||
+                    error === "Email already in use") &&
+                  error
+                }
                 ref={collegeMail}
                 name="collegeMailId"
                 label="College Email ID"
               />
-              {error && <h1 className={FormCss.errorH1}>{error}</h1>}
               <button
                 onClick={addSecMember}
                 className={FormCss.btn}
@@ -179,22 +211,32 @@ const FormThree = (props) => {
         <div>
           <div className={FormCss.contDiv}>
             <BasicTextInput
+              error={error === "First name cannot be empty" && error}
               ref={firstNameRef}
               name="firstName"
               label="Basic Details"
             />
-            <BasicTextInput ref={lastNameRef} name="lastName" />
             <BasicTextInput
+              error={error === "Last name cannot be empty" && error}
+              ref={lastNameRef}
+              name="lastName"
+            />
+            <BasicTextInput
+              error={error === "Mobile number is not valid" && error}
               ref={mobileNumber}
               name="MobileNumber"
               label="Mobile Number"
             />
             <BasicTextInput
+              error={
+                (error === "Email is not valid" ||
+                  error === "Email already in use") &&
+                error
+              }
               ref={collegeMail}
               name="collegeMailId"
               label="College Email ID"
             />
-            {error && <h1>{error}</h1>}
             <button
               onClick={addThirdMember}
               className={FormCss.btn}
@@ -230,17 +272,28 @@ const FormThree = (props) => {
         <div>
           <div className={FormCss.contDiv}>
             <BasicTextInput
+              error={error === "First name cannot be empty" && error}
               ref={firstNameRef}
               name="firstName"
               label="Basic Details"
             />
-            <BasicTextInput ref={lastNameRef} name="lastName" />
             <BasicTextInput
+              error={error === "Last name cannot be empty" && error}
+              ref={lastNameRef}
+              name="lastName"
+            />
+            <BasicTextInput
+              error={error === "Mobile number is not valid" && error}
               ref={mobileNumber}
               name="MobileNumber"
               label="Mobile Number"
             />
             <BasicTextInput
+              error={
+                (error === "Email is not valid" ||
+                  error === "Email already in use") &&
+                error
+              }
               ref={collegeMail}
               name="collegeMailId"
               label="College Email ID"
@@ -248,7 +301,6 @@ const FormThree = (props) => {
             <h3 className={FormCss.h3Note}>
               Note: you can only form team of max 3 members
             </h3>
-            {error && <h1>{error}</h1>}
             <button
               onClick={saveThirdMember}
               className={FormCss.btn}
@@ -298,7 +350,7 @@ const FormThree = (props) => {
               Team Member Details
             </h3>
             <p id={isLightTheme === false ? "PTeamNameD" : "PTeamName"}>
-              1. {state.teamLeaderDetails.firstname}
+              1. {state.teamLeaderDetails.firstname}{" "}
               {state.teamLeaderDetails.lastname}
             </p>
             <p id={isLightTheme === false ? "PTeamNameD" : "PTeamName"}>

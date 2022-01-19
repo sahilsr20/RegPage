@@ -23,6 +23,7 @@ const Modal = (props) => {
     <div>
       {isMobile ? (
         <div
+          style={{ backgroundColor: "white" }}
           className="modal-card"
           id={isLightTheme === false ? "darkmodal" : ""}
         >

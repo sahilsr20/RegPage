@@ -116,7 +116,14 @@
 
 .LightDarkImg {
   cursor: pointer;
+  background-color: #f7f7f7;
+  border-radius: 100%;
 }
+
+/* #darkImageMode {
+  background: #f7f7f7;
+  background-color: #f7f7f7;
+} */
 
 #darkModeImg {
   background-color: rgb(0, 0, 0);

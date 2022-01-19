@@ -4,7 +4,7 @@ import RadioInputs from "./RadioInputs";
 import FormCss from "./CSS/FormOne.module.css";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import dataConvert from "./dataConvert";
-// import axios from "axios";
+import axios from "axios";
 
 const FormFour = (props) => {
   const isLightTheme = useSelector((state) => state.isLightTheme);
@@ -46,13 +46,9 @@ const FormFour = (props) => {
     dispatch({ type: "source", source: knowEvent });
 
     // REQUEST TO SUBMIT THE DATA
-    const obj = dataConvert(state);
+    const obj = dataConvert(state, knowEvent, whichOne);
     console.log("the object");
     console.log(obj);
-    // const url = "http://localhost:8080/fedReg/saveData";
-    // const response = await axios.post(url, { ...obj });
-    // console.log("this is response");
-    // console.log(response);
 
     localStorage.clear();
     props.formState("submitted");

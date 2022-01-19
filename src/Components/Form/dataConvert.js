@@ -1,18 +1,17 @@
-const dataConvert = (state) => {
+const dataConvert = (state, advert, event) => {
   let obj = {
     firstname: state.basicDetails1.firstName,
     lastname: state.basicDetails1.lastName,
-    pronoun: state.basicDetails1.pronoun,
-    teamname: state.basicDetails2.teamName,
-    clgmail: state.basicDetails2.collegeEmailId,
     contact: state.basicDetails1.contactNumber,
-    mobile: state.basicDetails1.contactNumber,
-    clg: state.basicDetails2.collegeName,
+    teamname: state.basicDetails2.teamName,
     year: state.basicDetails2.currentYear,
+    clgmail: state.basicDetails2.collegeEmailId,
+    clg: state.basicDetails2.collegeName,
+    pronoun: state.basicDetails1.pronoun,
+    mobile: state.basicDetails1.contactNumber,
     team: state.teamOrSolo === true ? "true" : "false",
+    advert: advert,
     firsttime: state.attendedOtherEvent === true ? "false" : "true",
-    // firsttime: !state.attendedOtherEvent,
-    advert: state.source,
   };
   if (state.teamOrSolo) {
     obj = {
@@ -20,32 +19,68 @@ const dataConvert = (state) => {
       teamleader: {
         firstname: state.teamLeaderDetails.firstname,
         lastname: state.teamLeaderDetails.lastname,
-        mobile: state.teamLeaderDetails.contactNumber,
+        contact: state.teamLeaderDetails.contactNumber,
         clgmail: state.teamLeaderDetails.collegeEmailId,
       },
-      teamdetails: [
-        {
+      teamdetails: {
+        firstmember: {
           firstname: state.secondMemberDetails.firstname,
           lastname: state.secondMemberDetails.lastname,
           mobile: state.secondMemberDetails.contactNumber,
           clgmail: state.secondMemberDetails.collegeEmailId,
         },
-        {
+        secondmember: {
           firstname: state.thirdMemberDetails.firstname,
           lastname: state.thirdMemberDetails.lastname,
           mobile: state.thirdMemberDetails.contactNumber,
           clgmail: state.thirdMemberDetails.collegeEmailId,
         },
-      ],
+      },
     };
   }
   if (state.attendedOtherEvent) {
     obj = {
       ...obj,
-      event: state.whichOne,
+      event: event,
     };
   }
   return obj;
 };
 
 export default dataConvert;
+
+// {
+//   "firstname": "anubhav",
+//   "lastname": "rawat",
+//   "contact": "9012411113",
+//   "teamname": "teamone",
+//   "year": "second",
+//   "clgmail": "2030012@kiit.ac.in",
+//   "clg": "KIIT",
+//   "pronoun": "He/Him",
+//   "mobile": "9548284039",
+//   "team": "true",
+//   "teamdetails": {
+//     "firstmember": {
+//       "firstname": "anubhav",
+//       "lastname": "rawat",
+//       "contact": "9548284039",
+//       "clgmail": "2030012@kiit.ac.in"
+//     },
+//     "secondmember": {
+//       "firstname": "anubhav",
+//       "lastname": "rawat",
+//       "contact": "9548284039",
+//       "clgmail": "2030012@kiit.ac.in"
+//     }
+//   },
+//   "teamleader": {
+//     "firstname": "anubhav",
+//     "lastname": "rawat",
+//     "contact": "9012411113",
+//     "clgmail": "2030012@kiit.ac.in"
+//   },
+//   "advert": "instagram",
+//   "firsttime": "false",
+//   "event": "stonkoholic"
+// }

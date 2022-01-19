@@ -27,7 +27,7 @@ export default function Home() {
     document.getElementById("textDiv").style.visibility = "hidden";
   };
 
-  let inlineStyle = showModal ? { overflow: "hidden", maxHeight: "100vh" } : {};
+  let inlineStyle = showModal ? { overflow: "hidden", maxHeight: "115vh" } : {};
   return (
     <div
       style={inlineStyle}

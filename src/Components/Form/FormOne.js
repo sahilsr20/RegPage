@@ -19,13 +19,16 @@ const FormOne = (props) => {
 
   const nextFunction = async () => {
     if (firstNameRef.current.value.length === 0) {
-      setError("firstname");
+      setError("First name cannot be empty");
       return;
     } else if (lastNameRef.current.value.length === 0) {
-      setError("lastname");
+      setError("Last name cannot be empty");
       return;
-    } else if (contactNumberRef.current.value.length !== 10) {
-      setError("contactNumber");
+    } else if (
+      isNaN(contactNumberRef.current.value) ||
+      contactNumberRef.current.value.length !== 10
+    ) {
+      setError("Contact number not valid");
       return;
     }
     let pronoun = null;
@@ -34,7 +37,7 @@ const FormOne = (props) => {
         pronoun = pronounRef.current[i].value;
     }
     if (!pronoun) {
-      setError("pronoun");
+      setError("please select a pronoun");
       return;
     }
     console.log(pronoun);
@@ -58,7 +61,7 @@ const FormOne = (props) => {
       id={isLightTheme === false ? FrOneCss.darkform : ""}
     >
       <BasicTextInput
-        error={error === "firstname" && true}
+        error={error === "First name cannot be empty" && error}
         ref={firstNameRef}
         name="FirstName"
         label="Basic Details"
@@ -66,17 +69,17 @@ const FormOne = (props) => {
       <BasicTextInput
         ref={lastNameRef}
         name="LastName"
-        error={error === "lastname" && true}
+        error={error === "Last name cannot be empty" && error}
       />
       <BasicTextInput
         ref={contactNumberRef}
         name="contactNumber"
         label="Contact Number"
-        error={error === "contactNumber" && true}
+        error={error === "Contact number not valid" && error}
       />
       <RadioInputs
         ref={pronounRef}
-        error={error === "pronoun" && true}
+        error={error === "please select a pronoun" && error}
         question="Pronouns"
         radioList={["He/Him", "She/Her", "They/Them"]}
       />
