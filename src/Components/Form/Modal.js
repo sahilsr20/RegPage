@@ -8,14 +8,16 @@ import FormFour from "./FormFour";
 import FormSubmitted from "./FormSubmitted";
 
 import HighlightOffIcon from "@material-ui/icons/HighlightOff";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 const Modal = (props) => {
   const isMobile = useSelector((state) => state.isMobile);
   const isLightTheme = useSelector((state) => state.isLightTheme);
+  const dispatch = useDispatch();
   const [form, setForm] = useState("first");
   const closeModal = () => {
     localStorage.clear();
+    dispatch({ type: "clearReduxState" });
     props.modal(false);
   };
   const themeAttribute = isLightTheme

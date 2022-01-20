@@ -26,13 +26,13 @@ const dataConvert = (state, advert, event) => {
         firstmember: {
           firstname: state.secondMemberDetails.firstname,
           lastname: state.secondMemberDetails.lastname,
-          mobile: state.secondMemberDetails.contactNumber,
+          contact: state.secondMemberDetails.contactNumber,
           clgmail: state.secondMemberDetails.collegeEmailId,
         },
         secondmember: {
           firstname: state.thirdMemberDetails.firstname,
           lastname: state.thirdMemberDetails.lastname,
-          mobile: state.thirdMemberDetails.contactNumber,
+          contact: state.thirdMemberDetails.contactNumber,
           clgmail: state.thirdMemberDetails.collegeEmailId,
         },
       },

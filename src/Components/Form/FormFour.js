@@ -50,6 +50,13 @@ const FormFour = (props) => {
     console.log("the object");
     console.log(obj);
 
+    const url = "http://localhost:8080/fedReg/saveData";
+    const response = await axios.post(url, obj);
+    if (response.data.error) {
+      console.log(response.data.error);
+      return;
+    }
+
     localStorage.clear();
     props.formState("submitted");
   };

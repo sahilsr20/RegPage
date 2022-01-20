@@ -206,6 +206,9 @@ const reducerFunction = (state = initialState, action) => {
     let newState = { ...state };
     newState.isMobile = action.isMobile;
     return newState;
+  } else if (action.type === "clearReduxState") {
+    let newState = { ...initialState };
+    return newState;
   }
   return state;
 };

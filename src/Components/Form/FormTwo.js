@@ -58,16 +58,16 @@ const FormTwo = (props) => {
     }
 
     // CHECK DATABASE FOR DUPLICATE EMAIL
-    // const url = "http://localhost:8080/fedReg/checkBoth";
-    // const response = await axios.post(url, {
-    //   clgmail: collegeMailRef.current.value,
-    //   teamname: teamNameRef.current.value,
-    // });
-    // if (response.data.error) {
-    //   setError(response.data.error);
-    //   console.log(response.data.error);
-    //   return;
-    // }
+    const url = "http://localhost:8080/fedReg/checkBoth";
+    const response = await axios.post(url, {
+      clgmail: collegeMailRef.current.value,
+      teamname: teamNameRef.current.value,
+    });
+    if (response.data.error) {
+      setError(response.data.error);
+      console.log(response.data.error);
+      return;
+    }
 
     dispatch({
       type: "basicDetailsTwo",

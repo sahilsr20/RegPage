@@ -34,15 +34,19 @@ const FormThree = (props) => {
       return;
     }
 
-    // const url = "http://localhost:8080/fedReg/checkMail";
-    // const response = await axios.post(url, {
-    //   clgmail: collegeMail.current.value,
-    // });
-    // if (response.data.error) {
-    //   setError(response.data.error);
-    //   console.log(response.data.error);
-    //   return;
-    // }s
+    if (collegeMail.current.value !== state.basicDetails2.collegeEmailId) {
+      setError("Email does not match");
+      return;
+    }
+    const url = "http://localhost:8080/fedReg/checkMail";
+    const response = await axios.post(url, {
+      clgmail: collegeMail.current.value,
+    });
+    if (response.data.error) {
+      setError(response.data.error);
+      console.log(response.data.error);
+      return;
+    }
     dispatch({
       type: "teamLeaderDetails",
       data: {
@@ -72,15 +76,19 @@ const FormThree = (props) => {
       setError("Email is not valid");
       return;
     }
-    // const url = "http://localhost:8080/fedReg/checkMail";
-    // const response = await axios.post(url, {
-    //   clgmail: collegeMail.current.value,
-    // });
-    // if (response.data.error) {
-    //   setError(response.data.error);
-    //   console.log(response.data.error);
-    //   return;
-    // }
+    if (collegeMail.current.value === state.teamLeaderDetails.collegeEmailId) {
+      setError("Email already used by a team member");
+      return;
+    }
+    const url = "http://localhost:8080/fedReg/checkMail";
+    const response = await axios.post(url, {
+      clgmail: collegeMail.current.value,
+    });
+    if (response.data.error) {
+      setError(response.data.error);
+      console.log(response.data.error);
+      return;
+    }
     dispatch({
       type: "secondMemberDetails",
       data: {
@@ -110,15 +118,22 @@ const FormThree = (props) => {
       setError("Email is not valid");
       return;
     }
-    // const url = "http://localhost:8080/fedReg/checkMail";
-    // const response = await axios.post(url, {
-    //   clgmail: collegeMail.current.value,
-    // });
-    // if (response.data.error) {
-    //   setError(response.data.error);
-    //   console.log(response.data.error);
-    //   return;
-    // }
+    if (
+      collegeMail.current.value === state.teamLeaderDetails.collegeEmailId ||
+      collegeMail.current.value === state.secondMemberDetails.collegeEmailId
+    ) {
+      setError("Email already used by a team member");
+      return;
+    }
+    const url = "http://localhost:8080/fedReg/checkMail";
+    const response = await axios.post(url, {
+      clgmail: collegeMail.current.value,
+    });
+    if (response.data.error) {
+      setError(response.data.error);
+      console.log(response.data.error);
+      return;
+    }
     //add third member to the state
     dispatch({
       type: "thirdMemberDetails",
@@ -175,7 +190,8 @@ const FormThree = (props) => {
               <BasicTextInput
                 error={
                   (error === "Email is not valid" ||
-                    error === "Email already in use") &&
+                    error === "Email already in use" ||
+                    error === "Email does not match") &&
                   error
                 }
                 ref={collegeMail}
@@ -230,7 +246,8 @@ const FormThree = (props) => {
             <BasicTextInput
               error={
                 (error === "Email is not valid" ||
-                  error === "Email already in use") &&
+                  error === "Email already in use" ||
+                  error === "Email already used by a team member") &&
                 error
               }
               ref={collegeMail}
@@ -291,7 +308,8 @@ const FormThree = (props) => {
             <BasicTextInput
               error={
                 (error === "Email is not valid" ||
-                  error === "Email already in use") &&
+                  error === "Email already in use" ||
+                  error === "Email already used by a team member") &&
                 error
               }
               ref={collegeMail}
