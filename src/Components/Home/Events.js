@@ -13,7 +13,7 @@ export default function Events(props) {
           btnName={props.btnName0}
           showModal={props.showModal}
         />
-        <UpCommingRegisterDiv btnName={props.btnName1} />
+        {/* <UpCommingRegisterDiv btnName={props.btnName1} /> */}
       </div>
     </div>
   );

@@ -134,6 +134,7 @@
 @media only screen and (max-width: 900px) {
   .HmDiv {
     justify-content: space-evenly;
+    padding: 10px 40px 20px 40px;
   }
   .logoDiv {
     display: none;
@@ -167,5 +168,22 @@
 @media only screen and (max-width: 500px) {
   .HmDiv {
     width: 85%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .hamburgwerDiv {
+    margin-right: 48px;
+  }
+  #darkModeImg {
+    margin-left: 50px;
+    margin-right: 10px;
+  }
+  .LightDarkImg {
+    margin-left: 50px;
+    margin-right: 10px;
+  }
+  .HmDiv {
+    padding: 10px 40px 20px 20px;
   }
 }

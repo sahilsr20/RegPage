@@ -5,7 +5,7 @@ import RegCss from "./CSS/UpCommingRegisterDiv.module.css";
 import "./CSS/MoboPop.css";
 import { useSelector } from "react-redux";
 
-import img0 from "./../../ReqImg/hammer.svg";
+import img0 from "./../../ReqImg/eventLog.jpg";
 
 export default function UpCommingRegisterDiv(props) {
   const isLightTheme = useSelector((state) => state.isLightTheme);

@@ -40,9 +40,9 @@ export default function Home() {
           showModal={setShowModal}
           eventName="Upcoming Events"
           btnName0="Register Now 🚀"
-          btnName1="Register Now 🚀"
+          // btnName1="Register Now 🚀"
         />
-        <Events
+        {/* <Events
           eventName="Past Events"
           btnName0="Coming Soon 🚀"
           btnName1="Coming Soon 🚀"
@@ -51,7 +51,7 @@ export default function Home() {
           eventName="Coming Soon"
           btnName0="Coming Soon 🚀"
           btnName1="Coming Soon 🚀"
-        />
+        /> */}
         {showModal && <Modal modal={setShowModal} />}
         <Footer />
       </div>

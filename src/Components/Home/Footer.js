@@ -132,6 +132,7 @@ const Footer = () => {
         <div className={FCss.rightDivTail}>
           <p>To boost the confidence of aspiring entrepreneurs worldwide.</p>
           <p>Together we can change the world.</p>
+          <p>Copyright 2022</p>
         </div>
       </div>
     </footer>

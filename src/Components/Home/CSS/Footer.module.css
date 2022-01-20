@@ -274,8 +274,11 @@ li {
   }
 }
 
-/* @media only screen and (max-width: 310px) {
-  .getBtn {
-    margin-left: -15%;
+@media only screen and (max-width: 400px) {
+  .leftDivTail p {
+    margin-bottom: 5px;
   }
-} */
+  .rightDivTail p {
+    margin-bottom: 5px;
+  }
+}
