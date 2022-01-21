@@ -34,15 +34,24 @@ export default function UpCommingRegisterDiv(props) {
             className={RegCss.h1Title}
             id={isLightTheme === false ? "darkModeTitle" : ""}
           >
-            Lorem, ipsum.
+            FEDestatet Battles
           </h1>
           <p className={RegCss.des} id="darkDes">
-            Ridiculus cras mi vivamus placera ridiculus cras mi vivamus placerat
-            aliquam et id. Ut scelerisque in non integert aliquam et id. Ut
-            scelerisque in non integer Ut scelerisque in non integert aliquam et
-            id. Ut scelerisque in non integerut scelerisque in non integert
-            aliquam et id. Ut scelerisque in non integer.
+            FEDestate Battles are one of the most exotic events that are being
+            organized by FED KIIT this year. The event focuses on the concept of
+            real estate and provides participants with an insight into how the
+            real estate sector functions in a free and entertaining manner.<br /><br />
+            This event is sub-divided into three thrilling rounds: the QUIZ round, the BIDDING round, and the BUILD UP round.<br /><br />
+            <b>FIRST ROUND</b> - The first round is a QUIZ. In this round, competitors will be required to take a quiz.
+            Participants will be awarded points for correctly answering questions. Teams that qualify this round will advance to the next round.<br /><br />
+            <b>SECOND ROUND</b> - The second stage is the BIDDING round, in which qualified teams will be awarded virtual cash to bid on
+            land purchases based on their specifications within a specified time frame. The teams that succeed in this attempt will advance to the third and final round.<br /><br />
+            <b>THIRD ROUND</b> - The third stage is the BUILD UP round, in which participants can expand their industries using the assets purchased in the previous round.
+            They can generate revenue and compete with one another. The company or the industry that earns the highest profit will be announced as the winner of the FEDestate Battles.<br /><br />
+            HOW THE WINNERS WILL BE DECIDED??
+            The Participant that can qualify for the first and second rounds will be allowed to compete in the final round. The participants that succeed in qualifying all the rounds by the correct implementation of their skills will be declared the reigning champion of the FEDestate Battles.
           </p>
+
           <div className={RegCss.LinkDiv}>
             <Link
               to="/"
