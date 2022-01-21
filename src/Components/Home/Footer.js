@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Option from "./../Form/Option";
 import FCss from "./CSS/Footer.module.css";
 import img0 from "./../../ReqImg/FedLogo.svg";
@@ -19,15 +20,28 @@ const Footer = () => {
         </div>
         <div className={FCss.socialMobo}>
           <div className={FCss.flex1}>
-            <img src={img4} alt="" className={FCss.socialIcons} id="hideImg" />
-            <img src={img1} alt="" className={FCss.socialIcons} id="hideImg" />
-            <img src={img2} alt="" className={FCss.socialIcons} id="hideImg" />
-            <img
-              src={img3}
-              alt=""
-              className={FCss.socialIconsLast}
-              id="hideImg"
-            />
+            <a href="https://www.instagram.com/fedkiit" target="_blank">
+              <img
+                src={img4}
+                alt=""
+                className={FCss.socialIcons}
+                id="hideImg"
+              />
+            </a>
+            <a href="https://www.linkedin.com/company/fedkiit/" target="_blank">
+              <img src={img1} alt="" className={FCss.socialIcons} id="hideImg" />
+            </a>
+            <a href="https://open.spotify.com/show/3s0jcteh4gcNcJeECstoMj?si=G7NjOL73Qxq4K6r3fy_-VA&utm_source=whatsapp" target="_blank">
+              <img src={img2} alt="" className={FCss.socialIcons} id="hideImg" />
+            </a>
+            <a href="https://youtube.com/channel/UC7LjeEyGyr656BU2VpCbCJA" target="_blank">
+              <img
+                src={img3}
+                alt=""
+                className={FCss.socialIconsLast}
+                id="hideImg"
+              />
+            </a>
           </div>
         </div>
       </div>
@@ -82,30 +96,38 @@ const Footer = () => {
           <div className={FCss.social}>
             <p className={FCss.bold}>Social</p>
             <div className={FCss.flex1}>
-              <img
-                src={img4}
-                alt=""
-                className={FCss.socialIcons}
-                id="hideImg"
-              />
-              <img
-                src={img1}
-                alt=""
-                className={FCss.socialIcons}
-                id="hideImg"
-              />
-              <img
-                src={img2}
-                alt=""
-                className={FCss.socialIcons}
-                id="hideImg"
-              />
-              <img
-                src={img3}
-                alt=""
-                className={FCss.socialIcons}
-                id="hideImg"
-              />
+              <a href="https://www.instagram.com/fedkiit" target="_blank">
+                <img
+                  src={img4}
+                  alt=""
+                  className={FCss.socialIcons}
+                  id="hideImg"
+                />
+              </a>
+              <a href="https://www.linkedin.com/company/fedkiit/" target="_blank">
+                <img
+                  src={img1}
+                  alt=""
+                  className={FCss.socialIcons}
+                  id="hideImg"
+                />
+              </a>
+              <a href="https://open.spotify.com/show/3s0jcteh4gcNcJeECstoMj?si=G7NjOL73Qxq4K6r3fy_-VA&utm_source=whatsapp" target="_blank">
+                <img
+                  src={img2}
+                  alt=""
+                  className={FCss.socialIcons}
+                  id="hideImg"
+                />
+              </a>
+              <a href="https://youtube.com/channel/UC7LjeEyGyr656BU2VpCbCJA" target="_blank">
+                <img
+                  src={img3}
+                  alt=""
+                  className={FCss.socialIcons}
+                  id="hideImg"
+                />
+              </a>
             </div>
           </div>
 

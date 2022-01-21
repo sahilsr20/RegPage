@@ -71,6 +71,10 @@
   height: 285px;
 }
 
+.successGif .attribution {
+  display: none !important;
+}
+
 @media only screen and (max-width: 900px) {
   .mCOnDiv {
     width: 90%;

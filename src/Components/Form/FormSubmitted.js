@@ -6,6 +6,8 @@ import img0 from "./../../ReqImg/Rectangle.jpg";
 import img1 from "./../../ReqImg/twitter.png";
 import img2 from "./../../ReqImg/linkedin.png";
 import img3 from "./../../ReqImg/instagram.png";
+import imgGif from "./../../ReqImg/success.gif";
+
 import { useSelector } from "react-redux";
 const FormSubmitted = () => {
   const isLightTheme = useSelector((state) => state.isLightTheme);
@@ -19,23 +21,28 @@ const FormSubmitted = () => {
           Thanks for apibus vitae blandit nisl massa habitasse. Dignissim enim,
           vitae, massa consectetur!!
         </p>
-        <iframe
-          src="https://embed.lottiefiles.com/animation/64787"
-          className={FSubCss.successGif}
-        ></iframe>
-        <Link to="" className={FSubCss.LinkTweet}>
+        <img src={imgGif} alt="" className={FSubCss.successGif} />
+        <a href="" className={FSubCss.LinkTweet} target="_blank">
           Tweet about this event
-        </Link>
+        </a>
         <div className={FSubCss.socialDiv}>
           <p className={FSubCss.followP}>Follow us on</p>
           <div className={FSubCss.socialIconsDiv}>
-            <img src={img1} alt="" className={FSubCss.socialIcons} />
-            <img src={img2} alt="" className={FSubCss.socialIcons} />
-            <img src={img3} alt="" className={FSubCss.socialIcons} />
+            <a href="" target="_blank">
+              <img src={img1} alt="" className={FSubCss.socialIcons} />
+            </a>
+            <a href="https://www.linkedin.com/company/fedkiit/" target="_blank">
+              <img src={img2} alt="" className={FSubCss.socialIcons} />
+            </a>
+            <a href="https://www.instagram.com/fedkiit/"
+              target="_blank"
+            >
+              <img src={img3} alt="" className={FSubCss.socialIcons} />
+            </a>
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 
