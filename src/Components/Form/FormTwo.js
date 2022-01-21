@@ -116,7 +116,7 @@ const FormTwo = (props) => {
           error={error === "please select current year" && error}
           ref={currentYearRef}
           question="Which Year"
-          radioList={["first", "second", "third", "fourth", "other"]}
+          radioList={["First", "Second", "Third", "Fourth", "Other"]}
         />
       </div>
 
