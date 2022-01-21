@@ -247,12 +247,6 @@ li {
 }
 
 @media only screen and (max-width: 500px) {
-  .impEmail {
-    width: 150px;
-  }
-}
-
-@media only screen and (max-width: 500px) {
   .socialIcons,
   .socialIconsLast {
     width: 24px;
@@ -261,17 +255,11 @@ li {
   .socialIcons {
     margin-right: 10px;
   }
-}
-
-@media only screen and (max-width: 400px) {
-  .mailMobo {
-    width: 90%;
-  }
-}
-
-@media only screen and (max-width: 500px) {
   footer {
     width: 90%;
+  }
+  .footerTail {
+    margin-right: 20px;
   }
 }
 
@@ -287,5 +275,8 @@ li {
   }
   .rightDivTail p {
     margin-bottom: 5px;
+  }
+  .mailMobo {
+    width: 90%;
   }
 }
