@@ -7,9 +7,6 @@ import { useSelector } from "react-redux";
 
 const FormOne = (props) => {
   const isLightTheme = useSelector((state) => state.isLightTheme);
-  useEffect(() => {
-    localStorage.clear();
-  }, []);
   const [error, setError] = useState(null);
   const firstNameRef = useRef();
   const lastNameRef = useRef();
@@ -63,17 +60,17 @@ const FormOne = (props) => {
       <BasicTextInput
         error={error === "First name cannot be empty" && error}
         ref={firstNameRef}
-        name="FirstName"
+        name="First Name"
         label="Basic Details"
       />
       <BasicTextInput
         ref={lastNameRef}
-        name="LastName"
+        name="Last Name"
         error={error === "Last name cannot be empty" && error}
       />
       <BasicTextInput
         ref={contactNumberRef}
-        name="contactNumber"
+        name="Contact Number"
         label="Contact Number"
         error={error === "Contact number not valid" && error}
       />

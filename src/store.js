@@ -67,14 +67,12 @@ const reducerFunction = (state = initialState, action) => {
     newState.basicDetails2 = {
       ...obj,
     };
-    localStorage.setItem("basicDetailsTwo", JSON.stringify(obj));
     console.log("basicDetailsTwo");
     console.log(newState);
     return newState;
   } else if (action.type === "teamOrSolo") {
     let newState = { ...state };
     newState.teamOrSolo = action.teamOrSolo;
-    localStorage.setItem("teamOrSolo", action.teamOrSolo);
     console.log("teamOrSolo");
     console.log(newState);
     return newState;
@@ -89,7 +87,6 @@ const reducerFunction = (state = initialState, action) => {
     newState.teamLeaderDetails = {
       ...obj,
     };
-    localStorage.setItem("teamLeaderDetails", JSON.stringify(obj));
     console.log("teamLeaderDetails");
     console.log(newState);
     return newState;
@@ -104,7 +101,6 @@ const reducerFunction = (state = initialState, action) => {
     newState.secondMemberDetails = {
       ...obj,
     };
-    localStorage.setItem("secondMemberDetails", JSON.stringify(obj));
     console.log("secondMemberDetails");
     console.log(newState);
     return newState;
@@ -119,48 +115,41 @@ const reducerFunction = (state = initialState, action) => {
     newState.thirdMemberDetails = {
       ...obj,
     };
-    localStorage.setItem("thirdMemberDetails", JSON.stringify(obj));
     console.log("thirdMemberDetails");
     console.log(newState);
     return newState;
   } else if (action.type === "attendedOtherEvent") {
     let newState = { ...state };
     newState.attendedOtherEvent = action.attendedOtherEvent;
-    localStorage.setItem("attendedOtherEvent", action.attendedOtherEvent);
     console.log("attendedOtherEvent");
     console.log(newState);
     return newState;
   } else if (action.type === "whichOne") {
     let newState = { ...state };
     newState.whichOne = action.whichOne;
-    localStorage.setItem("whichOne", action.whichOne);
     console.log("whichOne");
     console.log(newState);
     return newState;
   } else if (action.type === "source") {
     let newState = { ...state };
     newState.source = action.source;
-    localStorage.setItem("source", action.source);
     console.log("source");
     console.log(newState);
     return newState;
   } else if (action.type === "toggleTheme") {
     let newState = { ...state };
     newState.isLightTheme = !state.isLightTheme;
-    localStorage.setItem("toggleTheme", newState.isLightTheme);
     console.log(newState.isLightTheme);
     return newState;
   } else if (action.type === "deleteBasicDetailsOne") {
     let newState = { ...state };
     newState.basicDetails1 = initialState.basicDetails1;
-    localStorage.removeItem("basicDetailsOne");
     console.log("delete basic detail one");
     console.log(newState);
     return newState;
   } else if (action.type === "deleteBasicDetailsTwo") {
     let newState = { ...state };
     newState.basicDetails2 = initialState.basicDetails2;
-    localStorage.removeItem("basicDetailsTwo");
     console.log("delete basic detail two");
     console.log(newState);
     return newState;
@@ -170,36 +159,7 @@ const reducerFunction = (state = initialState, action) => {
     newState.teamLeaderDetails = initialState.teamLeaderDetails;
     newState.secondMemberDetails = initialState.secondMemberDetails;
     newState.thirdMemberDetails = initialState.thirdMemberDetails;
-    localStorage.removeItem("teamLeaderDetails");
-    localStorage.removeItem("secondMemberDetails");
-    localStorage.removeItem("thirdMemberDetails");
     console.log("delete details of third form");
-    console.log(newState);
-    return newState;
-  } else if (action.type === "fetchLocalState") {
-    let newState = {
-      basicDetails1: {
-        ...JSON.parse(localStorage.getItem("basicDetailsOne")),
-      },
-      basicDetails2: {
-        ...JSON.parse(localStorage.getItem("basicDetailsTwo")),
-      },
-      teamOrSolo: localStorage.getItem("teamOrSolo"),
-      teamLeaderDetails: {
-        ...JSON.parse(localStorage.getItem("teamLeaderDetails")),
-      },
-      secondMemberDetails: {
-        ...JSON.parse(localStorage.getItem("secondMemberDetails")),
-      },
-      thirdMemberDetails: {
-        ...JSON.parse(localStorage.getItem("thirdMemberDetails")),
-      },
-      attendedOtherEvent: localStorage.getItem("attendedOtherEvent"),
-      whichOne: localStorage.getItem("whichOne"),
-      source: localStorage.getItem("source"),
-      isLightTheme: localStorage.getItem("isLightTheme"),
-    };
-    console.log("fetched state");
     console.log(newState);
     return newState;
   } else if (action.type === "isMobile") {

@@ -19,13 +19,7 @@ export default function Home() {
     }
   }, []);
 
-  const isMobile = useSelector((state) => state.isMobile);
   const [showModal, setShowModal] = useState(false);
-
-  const closeBtnF = async function (e) {
-    document.getElementById("textDiv").style.opacity = "0";
-    document.getElementById("textDiv").style.visibility = "hidden";
-  };
 
   let inlineStyle = showModal ? { overflow: "hidden", maxHeight: "115vh" } : {};
   return (

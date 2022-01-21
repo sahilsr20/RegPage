@@ -56,8 +56,6 @@ const FormFour = (props) => {
       console.log(response.data.error);
       return;
     }
-
-    localStorage.clear();
     props.formState("submitted");
   };
 
