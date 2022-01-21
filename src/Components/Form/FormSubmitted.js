@@ -22,27 +22,25 @@ const FormSubmitted = () => {
           vitae, massa consectetur!!
         </p>
         <img src={imgGif} alt="" className={FSubCss.successGif} />
-        <a href="" className={FSubCss.LinkTweet} target="_blank">
+        {/* <a href="" className={FSubCss.LinkTweet} target="_blank">
           Tweet about this event
-        </a>
+        </a> */}
         <div className={FSubCss.socialDiv}>
           <p className={FSubCss.followP}>Follow us on</p>
           <div className={FSubCss.socialIconsDiv}>
-            <a href="" target="_blank">
+            {/* <a href="" target="_blank">
               <img src={img1} alt="" className={FSubCss.socialIcons} />
-            </a>
+            </a> */}
             <a href="https://www.linkedin.com/company/fedkiit/" target="_blank">
               <img src={img2} alt="" className={FSubCss.socialIcons} />
             </a>
-            <a href="https://www.instagram.com/fedkiit/"
-              target="_blank"
-            >
+            <a href="https://www.instagram.com/fedkiit/" target="_blank">
               <img src={img3} alt="" className={FSubCss.socialIcons} />
             </a>
           </div>
         </div>
       </div>
-    </div >
+    </div>
   );
 };
 
