@@ -95,7 +95,7 @@ const FormTwo = (props) => {
             error
           }
           ref={collegeMailRef}
-          name="CollegeEmailId"
+          name="College Email Id"
           label="College Email Id"
         />
         <BasicTextInput
