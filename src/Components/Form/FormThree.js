@@ -173,18 +173,18 @@ const FormThree = (props) => {
               <BasicTextInput
                 error={error === "First name cannot be empty" && error}
                 ref={firstNameRef}
-                name="firstName"
+                name="First Name"
                 label="Team leader Details"
               />
               <BasicTextInput
                 error={error === "Last name cannot be empty" && error}
                 ref={lastNameRef}
-                name="lastName"
+                name="Last Name"
               />
               <BasicTextInput
                 error={error === "Mobile number is not valid" && error}
                 ref={mobileNumber}
-                name="MobileNumber"
+                name="Mobile Number"
                 label="Mobile Number"
               />
               <BasicTextInput
@@ -195,7 +195,7 @@ const FormThree = (props) => {
                   error
                 }
                 ref={collegeMail}
-                name="collegeMailId"
+                name="College Mail Id"
                 label="College Email ID"
               />
               <button
@@ -229,18 +229,18 @@ const FormThree = (props) => {
             <BasicTextInput
               error={error === "First name cannot be empty" && error}
               ref={firstNameRef}
-              name="firstName"
+              name="First Name"
               label="Basic Details"
             />
             <BasicTextInput
               error={error === "Last name cannot be empty" && error}
               ref={lastNameRef}
-              name="lastName"
+              name="Last Name"
             />
             <BasicTextInput
               error={error === "Mobile number is not valid" && error}
               ref={mobileNumber}
-              name="MobileNumber"
+              name="Mobile Number"
               label="Mobile Number"
             />
             <BasicTextInput
@@ -251,7 +251,7 @@ const FormThree = (props) => {
                 error
               }
               ref={collegeMail}
-              name="collegeMailId"
+              name="college Mail Id"
               label="College Email ID"
             />
             <button
@@ -291,18 +291,18 @@ const FormThree = (props) => {
             <BasicTextInput
               error={error === "First name cannot be empty" && error}
               ref={firstNameRef}
-              name="firstName"
+              name="First Name"
               label="Basic Details"
             />
             <BasicTextInput
               error={error === "Last name cannot be empty" && error}
               ref={lastNameRef}
-              name="lastName"
+              name="Last Name"
             />
             <BasicTextInput
               error={error === "Mobile number is not valid" && error}
               ref={mobileNumber}
-              name="MobileNumber"
+              name="Mobile Number"
               label="Mobile Number"
             />
             <BasicTextInput
@@ -313,7 +313,7 @@ const FormThree = (props) => {
                 error
               }
               ref={collegeMail}
-              name="collegeMailId"
+              name="College Mail Id"
               label="College Email ID"
             />
             <h3 className={FormCss.h3Note}>
