@@ -61,7 +61,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className={FCss.mailMobo}>
+      {/* <div className={FCss.mailMobo}>
         <label for="email" className={FCss.newLet}>
           Newsletter
         </label>
@@ -73,38 +73,29 @@ const Footer = () => {
           />
           <button className={FCss.getBtn}>Get Started</button>
         </div>
-      </div>
+      </div> */}
       <div className={FCss.main}>
         <div className={FCss.leftDiv}>
           <ul>
-            <li className={FCss.bold}>Company</li>
-            <li>About</li>
-            <li>Newsroom</li>
-            <li>contact</li>
-            <li>Carrers</li>
+            <li className={FCss.bold}>Community</li>
+            <li>Contact</li>
+            <li>Memeber</li>
           </ul>
           <ul>
             <li className={FCss.bold}>About Us</li>
             <li>Manifesto</li>
-            <li>Press</li>
-            <li>Investors</li>
-            <li>Partnerships</li>
+            <li>Partner</li>
             <li>Blog</li>
           </ul>
           <ul>
             <li className={FCss.bold}>Services</li>
             <li>Startups</li>
             <li>Corporates</li>
-            <li>Investors</li>
-            <li>Governments</li>
-            <li>Incubators </li>
+            <li>Incubators</li>
             <li>Accelerators</li>
           </ul>
           <ul>
             <li className={FCss.bold}>Help</li>
-            <li>Accessibility statement</li>
-            <li>Startup Support</li>
-            <li>Coporate Support</li>
             <li>System Status</li>
           </ul>
         </div>
@@ -156,7 +147,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className={FCss.mail}>
+          {/* <div className={FCss.mail}>
             <label for="email" className={FCss.newLet}>
               Newsletter
             </label>
@@ -168,7 +159,7 @@ const Footer = () => {
               />
               <button className={FCss.getBtn}>Get Started</button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className={FCss.footerTail}>
