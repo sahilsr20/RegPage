@@ -29,12 +29,28 @@ const Footer = () => {
               />
             </a>
             <a href="https://www.linkedin.com/company/fedkiit/" target="_blank">
-              <img src={img1} alt="" className={FCss.socialIcons} id="hideImg" />
+              <img
+                src={img1}
+                alt=""
+                className={FCss.socialIcons}
+                id="hideImg"
+              />
             </a>
-            <a href="https://open.spotify.com/show/3s0jcteh4gcNcJeECstoMj?si=G7NjOL73Qxq4K6r3fy_-VA&utm_source=whatsapp" target="_blank">
-              <img src={img2} alt="" className={FCss.socialIcons} id="hideImg" />
+            <a
+              href="https://open.spotify.com/show/3s0jcteh4gcNcJeECstoMj?si=G7NjOL73Qxq4K6r3fy_-VA&utm_source=whatsapp"
+              target="_blank"
+            >
+              <img
+                src={img2}
+                alt=""
+                className={FCss.socialIcons}
+                id="hideImg"
+              />
             </a>
-            <a href="https://youtube.com/channel/UC7LjeEyGyr656BU2VpCbCJA" target="_blank">
+            <a
+              href="https://youtube.com/channel/UC7LjeEyGyr656BU2VpCbCJA"
+              target="_blank"
+            >
               <img
                 src={img3}
                 alt=""
@@ -104,7 +120,10 @@ const Footer = () => {
                   id="hideImg"
                 />
               </a>
-              <a href="https://www.linkedin.com/company/fedkiit/" target="_blank">
+              <a
+                href="https://www.linkedin.com/company/fedkiit/"
+                target="_blank"
+              >
                 <img
                   src={img1}
                   alt=""
@@ -112,7 +131,10 @@ const Footer = () => {
                   id="hideImg"
                 />
               </a>
-              <a href="https://open.spotify.com/show/3s0jcteh4gcNcJeECstoMj?si=G7NjOL73Qxq4K6r3fy_-VA&utm_source=whatsapp" target="_blank">
+              <a
+                href="https://open.spotify.com/show/3s0jcteh4gcNcJeECstoMj?si=G7NjOL73Qxq4K6r3fy_-VA&utm_source=whatsapp"
+                target="_blank"
+              >
                 <img
                   src={img2}
                   alt=""
@@ -120,7 +142,10 @@ const Footer = () => {
                   id="hideImg"
                 />
               </a>
-              <a href="https://youtube.com/channel/UC7LjeEyGyr656BU2VpCbCJA" target="_blank">
+              <a
+                href="https://youtube.com/channel/UC7LjeEyGyr656BU2VpCbCJA"
+                target="_blank"
+              >
                 <img
                   src={img3}
                   alt=""
