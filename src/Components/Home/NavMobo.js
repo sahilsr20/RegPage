@@ -3,6 +3,7 @@ import NavEventsDiv from "./NavEventsDiv";
 import NavEventsMobo from "./NavEventsMobo";
 import "./CSS/MoboPop.css";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 export default function NavMobo() {
   const btnClose = async function (e) {
@@ -26,37 +27,37 @@ export default function NavMobo() {
           </button>
         </div>
         <div>
-          <NavEventsMobo pTag="Events" new="New!" />
-          <p
+        <Link to="/event" className="link"><NavEventsMobo pTag="Events" new="New!" /></Link>
+        <Link to="/construct" className="link"><p
             className="EventP"
             id={isLightTheme === false ? "darkModeTitle" : ""}
           >
             Podcasts
-          </p>
-          <p
+          </p></Link>
+          <Link to="/construct" className="link"><p
             className="EventP"
             id={isLightTheme === false ? "darkModeTitle" : ""}
           >
             Blogs
-          </p>
-          <p
+          </p></Link>
+          <Link to="/construct" className="link"><p
             className="EventP"
             id={isLightTheme === false ? "darkModeTitle" : ""}
           >
             Our Team
-          </p>
-          <p
+          </p></Link>
+          <Link to="/construct" className="link"><p
             className="EventP"
             id={isLightTheme === false ? "darkModeTitle" : ""}
           >
             Join us
-          </p>
-          <p
+          </p></Link>
+          <Link to="/construct" className="link"><p
             className="EventP"
             id={isLightTheme === false ? "darkModeTitle" : ""}
           >
             Design System
-          </p>
+          </p></Link>
           {/* <NavEventsMobo pTag="Design System" /> */}
         </div>
       </div>

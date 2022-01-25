@@ -67,7 +67,7 @@ export default function Nav(props) {
           </p>
         </div>
         <div className={HCss.tabs}>
-          <Link to="/construct" className="link"><NavEventsDiv pTag="Events" New="New!" /></Link>
+          <Link to="/event" className="link"><NavEventsDiv pTag="Events" New="New!" /></Link>
           <Link to="/construct" className="link"><p>Podcasts</p></Link>
           <Link to="/construct" className="link"><p>Blogs</p></Link>
           <Link to="/construct" className="link"><p>Our Team</p></Link>

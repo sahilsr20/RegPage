@@ -3,12 +3,14 @@ import Home from "./Pages/Home";
 import Error from "./Pages/Error";
 import Layout from "./Pages/Layout";
 import Construct from "./Pages/Construct";
+import Event from "./Pages/Event";
 
 function App() {
   return (
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/event" element={<Event />} />
         <Route path="/construct" element={<Construct />} />
         <Route path="*" element={<Error />} />
       </Routes>{" "}

@@ -13,7 +13,7 @@ export default function Construct() {
       <Nav></Nav>
       <div id={isLightTheme === false ? "darkModeConst" : "lightConst"}>
         <img 
-        src={construct} alt="Construction Image" id="imgConst"/>
+        src={construct} alt="SITE UNDER CONSTRUCTION" id="imgConst"/>
       </div>
       <Footer></Footer>
   </div>;
