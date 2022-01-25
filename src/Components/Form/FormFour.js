@@ -113,7 +113,7 @@ const FormFour = (props) => {
               className={FormCss.H1have}
               id={isLightTheme === false ? FormCss.darktitle : "h1Play"}
             >
-              Have you attended any fed event before?
+              Have you attended any FED event before?
             </h1>
             <h2 className={FormCss.H2have}>{stage}</h2>
           </div>

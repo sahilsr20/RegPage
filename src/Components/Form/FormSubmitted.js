@@ -20,7 +20,6 @@ const FormSubmitted = () => {
         <p className={FSubCss.ThanksP}>
           Team FED can't wait to have you aboard. Thankyou for registering in
           Fedestate Battles. Best of Luck,
-          <br />
           see you at the event.
         </p>
         <img src={imgGif} alt="" className={FSubCss.successGif} />

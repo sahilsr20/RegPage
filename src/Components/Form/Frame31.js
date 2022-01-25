@@ -44,7 +44,7 @@ const Frame31 = (props) => {
             className={FormCss.btn}
             id={isLightTheme === false ? FormCss.darknextB : "marN"}
           >
-            Imma team player
+            I am a team player
           </button>
         </div>
       </div>

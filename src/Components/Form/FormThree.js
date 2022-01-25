@@ -159,7 +159,7 @@ const FormThree = (props) => {
             >
               Playing with a team?
             </h1>
-            <h2 className={FormCss.immaTeam}>Imma team player</h2>
+            <h2 className={FormCss.immaTeam}>I am a team player</h2>
             <div style={{ marginTop: "40px" }}>
               <BasicTextInput
                 error={error === "First name cannot be empty" && error}

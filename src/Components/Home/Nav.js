@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 // import Darkmode from "darkmode-js";
 import NavMobo from "./NavMobo";
 import "./CSS/MoboPop.css";
-
+import { Link } from "react-router-dom";
 import img0 from "./../../ReqImg/LightDarkIcon.svg";
 import img1 from "./../../ReqImg/FedLogo.svg";
 import img2 from "./../../ReqImg/LightDarkIcon.svg";
@@ -67,12 +67,12 @@ export default function Nav(props) {
           </p>
         </div>
         <div className={HCss.tabs}>
-          <NavEventsDiv pTag="Events" New="New!" />
-          <p>Podcasts</p>
-          <p>Blogs</p>
-          <p>Our Team</p>
-          <p>Join Us</p>
-          <p>Design System</p>
+          <Link to="/construct" className="link"><NavEventsDiv pTag="Events" New="New!" /></Link>
+          <Link to="/construct" className="link"><p>Podcasts</p></Link>
+          <Link to="/construct" className="link"><p>Blogs</p></Link>
+          <Link to="/construct" className="link"><p>Our Team</p></Link>
+          <Link to="/construct" className="link"><p>Join Us</p></Link>
+          <Link to="/construct" className="link"><p>Design System</p></Link>
         </div>
         <div>
           <img
