@@ -49,22 +49,22 @@ export default function Nav(props) {
       </div>
       <div className={HCss.logoDiv}>
         <img src={img1} alt="FedLogo" />
-        <p
+        <Link to="/event" className="link"><p
           className={HCss.fedP}
           id={isLightTheme === false ? "darkModeTitle" : ""}
         >
           FED
-        </p>
+        </p></Link>
       </div>
       <div className={HCss.rightDiv}>
         <div className={HCss.logoDivMobo}>
           <img src={img1} alt="FedLogo" />
-          <p
+          <Link to="/event" className="link"><p
             className={HCss.fedP}
             id={isLightTheme === false ? "darkModeTitle" : ""}
           >
             FED
-          </p>
+          </p></Link>
         </div>
         <div className={HCss.tabs}>
           <Link to="/event" className="link"><NavEventsDiv pTag="Events" New="New!" /></Link>

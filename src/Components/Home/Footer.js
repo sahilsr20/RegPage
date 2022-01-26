@@ -78,24 +78,24 @@ const Footer = () => {
         <div className={FCss.leftDiv}>
           <ul>
             <li className={FCss.bold}>Community</li>
-            <li>Contact</li>
-            <li>Members</li>
+            <Link to="/construct" className="link"><li>Contact</li></Link>
+            <Link to="/construct" className="link"><li>Members</li></Link>
           </ul>
           <ul>
             <li className={FCss.bold}>About Us</li>
-            <li>Manifesto</li>
-            <li>Partner</li>
-            <li>Blog</li>
+            <Link to="/construct" className="link"><li>Manifesto</li></Link>
+            <Link to="/construct" className="link"><li>Partner</li></Link>
+            <Link to="/construct" className="link"><li>Blog</li></Link>
           </ul>
           <ul>
             <li className={FCss.bold}>Services</li>
-            <li>Startups</li>
-            <li>Incubators </li>
-            <li>Accelerators</li>
+            <Link to="/construct" className="link"><li>Startups</li></Link>
+            <Link to="/construct" className="link"><li>Incubators </li></Link>
+            <Link to="/construct" className="link"><li>Accelerators</li></Link>
           </ul>
           <ul>
             <li className={FCss.bold}>Help</li>
-            <li>Startup Support</li>
+            <Link to="/construct" className="link"><li>Startup Support</li></Link>
           </ul>
         </div>
         <div className={FCss.rightDiv}>
